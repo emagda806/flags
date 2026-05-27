@@ -3,3 +3,29 @@ backend/.venv/
 __pycache__/
 *.pyc
 .DS_Store
+
+# Python/cache
+*.pyo
+*.pyd
+*.pytest_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model artifacts (large)
+backend/model/*.pt
+backend/model/*.pth
+backend/model/*.ckpt
+
+# Training outputs / generated data
+backend/data/flags/
+backend/data/embeddings.npz
+backend/data/embedding_3d.json
+backend/data/country_coords.json
+backend/data/training_history.json
+backend/data/recon_*.png
+
+# OS / editor
+Thumbs.db
+.vscode/
