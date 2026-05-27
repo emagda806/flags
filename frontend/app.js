@@ -15,7 +15,7 @@ const I18N = {
   pl: {
     "doc.title": "Eksploracja flag świata",
     "intro.eyebrow": "Autoenkoder · Klasteryzacja",
-    "intro.title": "Eksploracja flag świata",
+    "intro.title": "Flags",
     "intro.skip": "Pomiń animację",
     "header.title": "Eksploracja flag świata",
     "header.subtitle": "Podobieństwo wizualne flag w przestrzeni latentnej sieci neuronowej",
@@ -61,6 +61,13 @@ const I18N = {
     "trace.missing": "Dla tej flagi brak pre-generowanych etapów w wersji statycznej.",
     "trace.stage.input": "Wejście",
     "trace.stage.output": "Wyjście (rekonstrukcja)",
+    "trace.stage.enc": "Po enkoderze",
+    "trace.stage.latent": "Wektor latentny z",
+    "trace.stage.decStart": "Start dekodera",
+    "trace.stage.conv1": "Po ConvT #1",
+    "trace.stage.conv2": "Po ConvT #2",
+    "trace.stage.conv3": "Po ConvT #3",
+    "trace.stage.rgb": "RGB przed Sigmoid",
     "pipeline.input.name": "Flagi świata",
     "pipeline.input.detail": "{n} obrazów PNG",
     "pipeline.encode.name": "Enkoder CNN",
@@ -86,11 +93,28 @@ const I18N = {
     "trace.error.embedding": "Brak danych embeddingu 3D.",
     "globe.error.three": "Brak biblioteki Three.js",
     "globe.loading": "Ładowanie mapy…",
+    "tour.skip": "Pomiń",
+    "tour.prev": "Wstecz",
+    "tour.next": "Dalej",
+    "tour.finish": "Zaczynamy",
+    "tour.progress": "{current}/{total}",
+    "tour.step1.title": "Witaj w aplikacji",
+    "tour.step1.body": "To interaktywna mapa podobieństwa flag zbudowana na autoenkoderze i klasteryzacji.",
+    "tour.step2.title": "Przełącz język",
+    "tour.step2.body": "W każdej chwili zmienisz język interfejsu między polskim i angielskim.",
+    "tour.step3.title": "Eksploracja i implementacja",
+    "tour.step3.body": "Tu przełączasz się między widokiem eksploracyjnym i sekcją techniczną.",
+    "tour.step4.title": "Mapa flag",
+    "tour.step4.body": "Przybliżaj, oddalaj i klikaj flagi, aby zobaczyć szczegóły oraz podobne kraje.",
+    "tour.step5.title": "Tryb chmura / globus",
+    "tour.step5.body": "Szybko przełączysz prezentację między chmurą flag i globusem klastrów.",
+    "tour.step6.title": "Sekcja techniczna",
+    "tour.step6.body": "W zakładce Implementacja zobaczysz pipeline, rekonstrukcję krok po kroku i projekcje embeddingów.",
   },
   en: {
     "doc.title": "World Flags Explorer",
     "intro.eyebrow": "Autoencoder · Clustering",
-    "intro.title": "World Flags Explorer",
+    "intro.title": "Flags",
     "intro.skip": "Skip animation",
     "header.title": "World Flags Explorer",
     "header.subtitle": "Visual similarity of flags in the neural network latent space",
@@ -136,6 +160,13 @@ const I18N = {
     "trace.missing": "No pre-generated static stages are available for this flag.",
     "trace.stage.input": "Input",
     "trace.stage.output": "Output (reconstruction)",
+    "trace.stage.enc": "After encoder",
+    "trace.stage.latent": "Latent vector z",
+    "trace.stage.decStart": "Decoder start",
+    "trace.stage.conv1": "After ConvT #1",
+    "trace.stage.conv2": "After ConvT #2",
+    "trace.stage.conv3": "After ConvT #3",
+    "trace.stage.rgb": "RGB before Sigmoid",
     "pipeline.input.name": "World flags",
     "pipeline.input.detail": "{n} PNG images",
     "pipeline.encode.name": "CNN encoder",
@@ -161,10 +192,28 @@ const I18N = {
     "trace.error.embedding": "3D embedding data is unavailable.",
     "globe.error.three": "Three.js library is missing",
     "globe.loading": "Loading map…",
+    "tour.skip": "Skip",
+    "tour.prev": "Back",
+    "tour.next": "Next",
+    "tour.finish": "Start",
+    "tour.progress": "{current}/{total}",
+    "tour.step1.title": "Welcome",
+    "tour.step1.body": "This is an interactive flag-similarity map powered by an autoencoder and clustering.",
+    "tour.step2.title": "Language switch",
+    "tour.step2.body": "You can switch the interface language between Polish and English at any time.",
+    "tour.step3.title": "Explore vs implementation",
+    "tour.step3.body": "Use these tabs to move between the exploration view and the technical section.",
+    "tour.step4.title": "Flag map",
+    "tour.step4.body": "Zoom, pan, and click flags to open details and similar countries.",
+    "tour.step5.title": "Cloud / globe mode",
+    "tour.step5.body": "Switch quickly between the flag cloud and the cluster globe.",
+    "tour.step6.title": "Technical section",
+    "tour.step6.body": "In the Implementation tab you can inspect the pipeline, step-by-step reconstruction, and embedding projections.",
   },
 };
 let currentLang = localStorage.getItem("app-lang") || "pl";
 const REGION_NAMES = {};
+const STATIC_TRACE_CODES = new Set(["PL", "DE", "AF"]);
 ["pl", "en"].forEach((lang) => {
   try {
     REGION_NAMES[lang] = new Intl.DisplayNames([lang], { type: "region" });
@@ -252,6 +301,7 @@ function setLanguage(lang) {
   if ($("#pipeline-anim")) renderPipeline();
   if ($("#clusters-gallery")) renderClustersGallery();
   populateGlobeClusterSelect();
+  if (tourState.active) renderTourStep();
   if ($("#panel-cluster-badge")?.textContent) {
     const raw = $("#panel-cluster-badge").dataset.clusterId;
     const n = raw ? Number(raw) + 1 : null;
@@ -266,10 +316,142 @@ function setLanguage(lang) {
 
 function initLanguageSwitch() {
   applyTranslations();
-  $$(".lang-btn").forEach((btn) => {
-    btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+  $(".lang-switch")?.addEventListener("click", (event) => {
+    const btn = event.target.closest(".lang-btn");
+    if (!btn) return;
+    event.preventDefault();
+    setLanguage(btn.dataset.lang);
   });
 }
+
+const tourState = {
+  active: false,
+  step: 0,
+  overlay: null,
+  card: null,
+  target: null,
+  titleEl: null,
+  bodyEl: null,
+  progressEl: null,
+  prevBtn: null,
+  nextBtn: null,
+  skipBtn: null,
+};
+
+const TOUR_STEPS = [
+  { selector: ".header", title: "tour.step1.title", body: "tour.step1.body" },
+  { selector: ".lang-switch", title: "tour.step2.title", body: "tour.step2.body" },
+  { selector: ".tabs", title: "tour.step3.title", body: "tour.step3.body" },
+  { selector: "#prezi-stage", title: "tour.step4.title", body: "tour.step4.body" },
+  { selector: ".explore-subnav", title: "tour.step5.title", body: "tour.step5.body" },
+  { selector: ".tabs [data-tab='details']", title: "tour.step6.title", body: "tour.step6.body" },
+];
+
+function ensureTourUi() {
+  if (tourState.overlay) return;
+  const overlay = document.createElement("div");
+  overlay.className = "tour-overlay";
+  overlay.innerHTML = `
+    <div class="tour-backdrop"></div>
+    <div class="tour-card" role="dialog" aria-live="polite">
+      <p class="tour-progress"></p>
+      <h3 class="tour-title"></h3>
+      <p class="tour-body"></p>
+      <div class="tour-actions">
+        <button type="button" class="tour-btn tour-skip"></button>
+        <button type="button" class="tour-btn tour-prev"></button>
+        <button type="button" class="tour-btn tour-next"></button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+  tourState.overlay = overlay;
+  tourState.card = overlay.querySelector(".tour-card");
+  tourState.titleEl = overlay.querySelector(".tour-title");
+  tourState.bodyEl = overlay.querySelector(".tour-body");
+  tourState.progressEl = overlay.querySelector(".tour-progress");
+  tourState.prevBtn = overlay.querySelector(".tour-prev");
+  tourState.nextBtn = overlay.querySelector(".tour-next");
+  tourState.skipBtn = overlay.querySelector(".tour-skip");
+  tourState.prevBtn.addEventListener("click", () => goTourStep(-1));
+  tourState.nextBtn.addEventListener("click", () => goTourStep(1));
+  tourState.skipBtn.addEventListener("click", () => stopTour());
+}
+
+function startTour() {
+  ensureTourUi();
+  tourState.active = true;
+  tourState.step = 0;
+  tourState.overlay.classList.add("active");
+  renderTourStep();
+}
+
+function stopTour() {
+  tourState.active = false;
+  tourState.overlay?.classList.remove("active");
+  tourState.target?.classList.remove("tour-highlight");
+  tourState.target = null;
+}
+
+function goTourStep(delta) {
+  if (!tourState.active) return;
+  const next = tourState.step + delta;
+  if (next < 0) return;
+  if (next >= TOUR_STEPS.length) {
+    stopTour();
+    return;
+  }
+  tourState.step = next;
+  renderTourStep();
+}
+
+function renderTourStep() {
+  const stepCfg = TOUR_STEPS[tourState.step];
+  if (!stepCfg) {
+    stopTour();
+    return;
+  }
+  tourState.target?.classList.remove("tour-highlight");
+  const target = document.querySelector(stepCfg.selector);
+  if (!target) {
+    goTourStep(1);
+    return;
+  }
+  tourState.target = target;
+  target.classList.add("tour-highlight");
+
+  tourState.titleEl.textContent = t(stepCfg.title);
+  tourState.bodyEl.textContent = t(stepCfg.body);
+  tourState.progressEl.textContent = t("tour.progress", {
+    current: tourState.step + 1,
+    total: TOUR_STEPS.length,
+  });
+  tourState.skipBtn.textContent = t("tour.skip");
+  tourState.prevBtn.textContent = t("tour.prev");
+  tourState.nextBtn.textContent = tourState.step === TOUR_STEPS.length - 1 ? t("tour.finish") : t("tour.next");
+  tourState.prevBtn.disabled = tourState.step === 0;
+
+  const rect = target.getBoundingClientRect();
+  const card = tourState.card;
+  const width = Math.min(360, window.innerWidth - 32);
+  card.style.width = `${width}px`;
+  card.style.left = "16px";
+  card.style.top = "16px";
+  const cardRect = card.getBoundingClientRect();
+  const placeBelow = rect.bottom + cardRect.height + 18 < window.innerHeight;
+  const top = placeBelow ? rect.bottom + 14 : Math.max(12, rect.top - cardRect.height - 14);
+  const centeredLeft = rect.left + rect.width / 2 - cardRect.width / 2;
+  const left = Math.max(12, Math.min(window.innerWidth - cardRect.width - 12, centeredLeft));
+  card.style.left = `${left}px`;
+  card.style.top = `${top}px`;
+}
+
+window.addEventListener("resize", () => {
+  if (tourState.active) renderTourStep();
+});
+window.addEventListener("scroll", () => {
+  if (tourState.active) renderTourStep();
+});
 
 function flagUrl(code) {
   return `${FLAG_CDN}/${code.toLowerCase()}.png`;
@@ -361,6 +543,7 @@ async function loadData() {
   document.body.classList.add("explore-mode");
   initExplore();
   initDetails();
+  setTimeout(() => startTour(), 380);
 }
 
 function fixReconstructionUrls() {
@@ -800,10 +983,11 @@ function initReconstructionTrace() {
     origUrl: assetUrl(r.orig_url),
     recUrl: assetUrl(r.rec_url),
   })).filter((r) => r.code && r.origUrl && r.recUrl);
+  const preferred = samples.filter((r) => STATIC_TRACE_CODES.has(r.code));
   const sortedAll = [...flagsData]
     .map((f) => ({ code: f.code.toUpperCase(), country: countryName(f.code, f.country || f.code) }))
     .sort((a, b) => a.country.localeCompare(b.country, currentLang));
-  reconstructionOptions = samples.length ? samples : sortedAll;
+  reconstructionOptions = preferred.length ? preferred : (samples.length ? samples : sortedAll);
 
   reconstructionOptions.forEach((f) => {
     const opt = document.createElement("option");
@@ -859,16 +1043,17 @@ function renderReconstructionStages(stages) {
   wrap.innerHTML = "";
 
   stages.forEach((stage) => {
+    const stageName = stage.i18n_key ? t(stage.i18n_key) : (stage.name || "Stage");
     const card = document.createElement("article");
     card.className = "trace-stage";
     const img = document.createElement("img");
-    img.alt = stage.name || "Stage";
+    img.alt = stageName;
     img.src = stage.image_b64 ? `data:image/png;base64,${stage.image_b64}` : assetUrl(stage.image_url);
     const meta = document.createElement("div");
     meta.className = "trace-stage-meta";
     const title = document.createElement("p");
     title.className = "trace-stage-name";
-    title.textContent = stage.name || "Stage";
+    title.textContent = stageName;
     const shape = document.createElement("p");
     shape.className = "trace-stage-shape";
     shape.textContent = stage.shape || "";
