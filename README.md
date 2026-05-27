@@ -18,22 +18,34 @@ Core samples from this repository:
   <img src="backend/data/flags/af.png" alt="Afghanistan flag" width="120" />
 </p>
 
+App screenshot (cluster storytelling view):
+
+<p>
+  <img src="docs/screenshots/cluster-descriptions-view.png" alt="Cluster descriptions view" width="840" />
+</p>
+
+App screenshot (globe cluster hover view):
+
+<p>
+  <img src="docs/screenshots/globe-cluster-hover-view.png" alt="Globe cluster hover view" width="840" />
+</p>
+
 Full autoencoder layer walkthrough (PL sample):
 
 <p>
-  <img src="docs/autoencoder-stages/01-wej-cie.png" alt="Stage 1 Input" width="180" />
-  <img src="docs/autoencoder-stages/02-po-enkoderze.png" alt="Stage 2 After encoder" width="180" />
-  <img src="docs/autoencoder-stages/03-wektor-latentny-z.png" alt="Stage 3 Latent vector" width="180" />
+  <img src="docs/autoencoder-stages/01-input.png" alt="Stage 1 Input" width="180" />
+  <img src="docs/autoencoder-stages/02-after-encoder.png" alt="Stage 2 After encoder" width="180" />
+  <img src="docs/autoencoder-stages/03-latent-vector-z.png" alt="Stage 3 Latent vector z" width="180" />
 </p>
 <p>
-  <img src="docs/autoencoder-stages/04-start-dekodera.png" alt="Stage 4 Decoder start" width="180" />
-  <img src="docs/autoencoder-stages/05-po-convt-1.png" alt="Stage 5 After ConvT 1" width="180" />
-  <img src="docs/autoencoder-stages/06-po-convt-2.png" alt="Stage 6 After ConvT 2" width="180" />
+  <img src="docs/autoencoder-stages/04-decoder-start.png" alt="Stage 4 Decoder start" width="180" />
+  <img src="docs/autoencoder-stages/05-after-convt-1.png" alt="Stage 5 After ConvT 1" width="180" />
+  <img src="docs/autoencoder-stages/06-after-convt-2.png" alt="Stage 6 After ConvT 2" width="180" />
 </p>
 <p>
-  <img src="docs/autoencoder-stages/07-po-convt-3.png" alt="Stage 7 After ConvT 3" width="180" />
-  <img src="docs/autoencoder-stages/08-rgb-przed-sigmoid.png" alt="Stage 8 RGB before Sigmoid" width="180" />
-  <img src="docs/autoencoder-stages/09-wyj-cie-rekonstrukcja.png" alt="Stage 9 Reconstruction output" width="180" />
+  <img src="docs/autoencoder-stages/07-after-convt-3.png" alt="Stage 7 After ConvT 3" width="180" />
+  <img src="docs/autoencoder-stages/08-rgb-before-sigmoid.png" alt="Stage 8 RGB before Sigmoid" width="180" />
+  <img src="docs/autoencoder-stages/09-reconstruction-output.png" alt="Stage 9 Reconstruction output" width="180" />
 </p>
 
 ## Architecture At A Glance
