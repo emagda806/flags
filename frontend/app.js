@@ -211,7 +211,8 @@ const I18N = {
     "tour.step6.body": "In the Implementation tab you can inspect the pipeline, step-by-step reconstruction, and embedding projections.",
   },
 };
-let currentLang = localStorage.getItem("app-lang") || "pl";
+let currentLang = localStorage.getItem("app-lang") || "en";
+if (!I18N[currentLang]) currentLang = "en";
 const REGION_NAMES = {};
 const STATIC_TRACE_CODES = new Set(["PL", "DE", "AF"]);
 ["pl", "en"].forEach((lang) => {
