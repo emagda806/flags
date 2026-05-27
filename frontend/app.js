@@ -344,7 +344,7 @@ let tourLaunchTimer = null;
 
 const TOUR_STEPS = [
   { selector: ".header", title: "tour.step1.title", body: "tour.step1.body" },
-  { selector: ".lang-switch", title: "tour.step2.title", body: "tour.step2.body" },
+  { selector: ".lang-switch", title: "tour.step2.title", body: "tour.step2.body", placement: "left" },
   { selector: ".tabs", title: "tour.step3.title", body: "tour.step3.body" },
   { selector: "#prezi-stage", title: "tour.step4.title", body: "tour.step4.body" },
   { selector: ".explore-subnav", title: "tour.step5.title", body: "tour.step5.body" },
@@ -447,14 +447,64 @@ function renderTourStep() {
   const rect = target.getBoundingClientRect();
   const card = tourState.card;
   const width = Math.min(360, window.innerWidth - 32);
+  const pad = 12;
+  const gap = 14;
+  const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+
+  card.classList.remove("tour-arrow-top", "tour-arrow-bottom", "tour-arrow-left", "tour-arrow-right");
+  card.style.removeProperty("--arrow-x");
+  card.style.removeProperty("--arrow-y");
   card.style.width = `${width}px`;
-  card.style.left = "16px";
-  card.style.top = "16px";
+  card.style.left = `${pad}px`;
+  card.style.top = `${pad}px`;
   const cardRect = card.getBoundingClientRect();
-  const placeBelow = rect.bottom + cardRect.height + 18 < window.innerHeight;
-  const top = placeBelow ? rect.bottom + 14 : Math.max(12, rect.top - cardRect.height - 14);
-  const centeredLeft = rect.left + rect.width / 2 - cardRect.width / 2;
-  const left = Math.max(12, Math.min(window.innerWidth - cardRect.width - 12, centeredLeft));
+
+  const canLeft = rect.left - gap - cardRect.width >= pad;
+  const canRight = rect.right + gap + cardRect.width <= window.innerWidth - pad;
+  const canTop = rect.top - gap - cardRect.height >= pad;
+  const canBottom = rect.bottom + gap + cardRect.height <= window.innerHeight - pad;
+
+  let placement = stepCfg.placement || "auto";
+  if (placement === "left" && !canLeft) placement = "auto";
+  if (placement === "right" && !canRight) placement = "auto";
+  if (placement === "top" && !canTop) placement = "auto";
+  if (placement === "bottom" && !canBottom) placement = "auto";
+
+  if (placement === "auto") {
+    if (canBottom) placement = "bottom";
+    else if (canTop) placement = "top";
+    else if (canLeft) placement = "left";
+    else placement = "right";
+  }
+
+  let left = pad;
+  let top = pad;
+  if (placement === "left") {
+    left = rect.left - cardRect.width - gap;
+    top = clamp(rect.top + rect.height / 2 - cardRect.height / 2, pad, window.innerHeight - cardRect.height - pad);
+    const arrowY = clamp(rect.top + rect.height / 2 - top - 7, 14, cardRect.height - 20);
+    card.classList.add("tour-arrow-right");
+    card.style.setProperty("--arrow-y", `${arrowY}px`);
+  } else if (placement === "right") {
+    left = rect.right + gap;
+    top = clamp(rect.top + rect.height / 2 - cardRect.height / 2, pad, window.innerHeight - cardRect.height - pad);
+    const arrowY = clamp(rect.top + rect.height / 2 - top - 7, 14, cardRect.height - 20);
+    card.classList.add("tour-arrow-left");
+    card.style.setProperty("--arrow-y", `${arrowY}px`);
+  } else if (placement === "top") {
+    left = clamp(rect.left + rect.width / 2 - cardRect.width / 2, pad, window.innerWidth - cardRect.width - pad);
+    top = rect.top - cardRect.height - gap;
+    const arrowX = clamp(rect.left + rect.width / 2 - left - 7, 14, cardRect.width - 20);
+    card.classList.add("tour-arrow-bottom");
+    card.style.setProperty("--arrow-x", `${arrowX}px`);
+  } else {
+    left = clamp(rect.left + rect.width / 2 - cardRect.width / 2, pad, window.innerWidth - cardRect.width - pad);
+    top = rect.bottom + gap;
+    const arrowX = clamp(rect.left + rect.width / 2 - left - 7, 14, cardRect.width - 20);
+    card.classList.add("tour-arrow-top");
+    card.style.setProperty("--arrow-x", `${arrowX}px`);
+  }
+
   card.style.left = `${left}px`;
   card.style.top = `${top}px`;
 }

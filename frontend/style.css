@@ -251,14 +251,31 @@ body::before {
 .tour-card::after {
   content: "";
   position: absolute;
-  top: -10px;
-  left: 24px;
   width: 14px;
   height: 14px;
   background: #fdf7ee;
-  border-left: 1px solid rgba(62, 48, 35, 0.24);
-  border-top: 1px solid rgba(62, 48, 35, 0.24);
+  border: 1px solid rgba(62, 48, 35, 0.24);
   transform: rotate(45deg);
+}
+
+.tour-card.tour-arrow-top::after {
+  top: -8px;
+  left: var(--arrow-x, 24px);
+}
+
+.tour-card.tour-arrow-bottom::after {
+  bottom: -8px;
+  left: var(--arrow-x, 24px);
+}
+
+.tour-card.tour-arrow-left::after {
+  left: -8px;
+  top: var(--arrow-y, 24px);
+}
+
+.tour-card.tour-arrow-right::after {
+  right: -8px;
+  top: var(--arrow-y, 24px);
 }
 
 .tour-progress {
