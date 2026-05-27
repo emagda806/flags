@@ -6,7 +6,29 @@ Interactive web app for exploring visual similarity between world flags using:
 - K-Means clustering,
 - UMAP / 3D projections for visualization.
 
-The UI supports two languages (Polish and English), with Polish as the default.
+🌍 🏳️‍🌈 🇵🇱 🇬🇧
+
+The UI supports two languages (English and Polish), with English as the default.
+
+## Architecture At A Glance
+
+```mermaid
+flowchart LR
+  A[Flag images] --> B[Autoencoder encoder]
+  B --> C[Latent vectors z]
+  C --> D[K-Means clusters]
+  C --> E[UMAP 2D/3D projection]
+  D --> F[Cluster metadata]
+  E --> G[Interactive frontend views]
+  F --> G
+```
+
+### Frontend Experience
+
+- `Explore` mode: cloud + globe for visual navigation
+- `Implementation` mode: training curve, reconstruction stages, embedding maps
+- Guided onboarding (PL/EN) with highlighted UI sections
+- Mobile-tuned controls and zoom behavior for cluster exploration
 
 ## Requirements
 
