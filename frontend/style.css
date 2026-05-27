@@ -235,6 +235,7 @@ body::before {
   inset: 0;
   background: rgba(23, 18, 11, 0.5);
   backdrop-filter: blur(2px);
+  z-index: 0;
 }
 
 .tour-card {
@@ -246,6 +247,7 @@ body::before {
   border-radius: 14px;
   padding: 0.95rem 0.95rem 0.85rem;
   pointer-events: auto;
+  z-index: 1;
 }
 
 .tour-card::after {

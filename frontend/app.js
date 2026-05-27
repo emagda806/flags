@@ -494,9 +494,9 @@ function renderTourStep() {
   const canBottom = rect.bottom + gap + cardRect.height <= window.innerHeight - pad;
 
   let placement = stepCfg.placement || "auto";
-  if (placement === "left" && !canLeft) placement = canBottom ? "bottom" : "right";
-  if (placement === "right" && !canRight) placement = canBottom ? "bottom" : "left";
-  if (placement === "top" && !canTop) placement = canBottom ? "bottom" : "right";
+  if (placement === "left" && !canLeft) placement = canTop ? "top" : "bottom";
+  if (placement === "right" && !canRight) placement = canTop ? "top" : "bottom";
+  if (placement === "top" && !canTop) placement = canBottom ? "bottom" : "left";
   if (placement === "bottom" && !canBottom) placement = canTop ? "top" : "left";
 
   if (placement === "auto") {
@@ -534,6 +534,8 @@ function renderTourStep() {
     card.style.setProperty("--arrow-x", `${arrowX}px`);
   }
 
+  left = clamp(left, pad, window.innerWidth - cardRect.width - pad);
+  top = clamp(top, pad, window.innerHeight - cardRect.height - pad);
   card.style.left = `${left}px`;
   card.style.top = `${top}px`;
 }
