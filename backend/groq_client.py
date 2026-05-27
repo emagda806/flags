@@ -24,41 +24,64 @@ def describe_cluster(
   member_count: int,
   sample_countries: list[str],
   heuristic: str,
+  language: str = "pl",
 ) -> str | None:
   _load_env()
   api_key = os.getenv("GROQ_API_KEY", "").strip()
   base_url = os.getenv("GROQ_BASE_URL", "https://api.groq.com/openai/v1").strip().strip('"')
+  model = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile").strip().strip('"')
   if not api_key:
     return None
 
-  samples = ", ".join(sample_countries[:8])
-  prompt = f"""Przeanalizuj grupę #{cluster_id + 1} ({member_count} flag). \
-Cechy kolorystyczne: {heuristic}. \
-Reprezentatywne kraje (tylko kontekst, nie wymieniaj ich): {samples}.
+  lang = (language or "pl").lower()
+  samples = ", ".join(sample_countries[:12])
+  if lang == "en":
+    prompt = f"""Analyze cluster #{cluster_id + 1} ({member_count} flags).
+Color / composition heuristic: {heuristic}.
+Representative countries in this cluster (you may mention up to 2-3 naturally): {samples}.
 
-Napisz PO POLSKU JEDEN akapit (2–3 zdania) opisujący, co wizualnie łączy te flagi. \
+Write ONE concise paragraph in ENGLISH (2-3 sentences) describing the shared visual grammar of these flags.
+Requirements:
+- Start from structure (bands, fields, crosses, emblem geometry, balance)
+- Use concrete color shades (e.g., crimson, navy, emerald, saffron)
+- Mention symbolism geometry only if dominant
+- Avoid generic filler words like "nice", "interesting", "characteristic"
+- End with one sentence about the overall mood or regional association"""
+    system = (
+      "You are a specialist in flag iconography and visual semiotics. "
+      "You write short, precise descriptions for an interactive exhibition. "
+      "Style: concrete, vivid, no academic jargon. "
+      "Always write plain continuous prose in English."
+    )
+  else:
+    prompt = f"""Przeanalizuj grupę #{cluster_id + 1} ({member_count} flag).
+Cechy kolorystyczne: {heuristic}.
+Reprezentatywne kraje w klastrze (możesz naturalnie wspomnieć 2-3): {samples}.
+
+Napisz PO POLSKU JEDEN akapit (2-3 zdania) opisujący, co wizualnie łączy te flagi.
 Wymagania:
-• Zacznij od najbardziej charakterystycznej cechy strukturalnej (układ pasów / pól / kształt symbolu)
-• Podaj konkretne kolory z odcieniem (nie "czerwony" lecz "karminowy" / "ceglany" / "jaskrawy")
-• Wspomnij o geometrii herbów lub symboli, jeśli są dominujące
-• Unikaj słów: "prosty", "charakterystyczny", "typowy", "wyróżniający się"
-• Zakończ zdaniem o nastroju lub geograficznym skojarzeniu, które wyłania się z całości"""
+- Zacznij od najbardziej charakterystycznej cechy strukturalnej (układ pasów / pól / kształt symbolu)
+- Podaj konkretne kolory z odcieniem (nie "czerwony" lecz "karminowy" / "ceglany" / "jaskrawy")
+- Wspomnij o geometrii herbów lub symboli, jeśli są dominujące
+- Unikaj słów: "prosty", "charakterystyczny", "typowy", "wyróżniający się"
+- Zakończ zdaniem o nastroju lub geograficznym skojarzeniu, które wyłania się z całości"""
+    system = (
+      "Jesteś specjalistą od ikonografii i semiotyki flag. "
+      "Piszesz krótkie, precyzyjne opisy dla interaktywnej wystawy. "
+      "Twój styl: konkretny, zmysłowy, bez żargonu akademickiego. "
+      "Zawsze piszesz ciągłym tekstem po polsku."
+    )
 
   try:
     r = requests.post(
       f"{base_url}/chat/completions",
       headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
       json={
-        "model": "openai/gpt-oss-120b",
+        "model": model,
         "messages": [
           {
             "role": "system",
-            "content": (
-              "Jesteś specjalistą od ikonografii i semiotyki flag. "
-              "Piszesz krótkie, precyzyjne opisy dla interaktywnej wystawy. "
-              "Twój styl: konkretny, zmysłowy, bez żargonu akademickiego. "
-              "Nigdy nie używasz list. Zawsze piszesz ciągłym tekstem po polsku."
-            ),
+            "content": system,
           },
           {"role": "user", "content": prompt},
         ],
@@ -68,25 +91,45 @@ Wymagania:
       timeout=30,
     )
     r.raise_for_status()
-    text = r.json()["choices"][0]["message"]["content"].strip()
+    msg = r.json()["choices"][0]["message"]
+    text = (msg.get("content") or "").strip()
+    if not text:
+      text = (msg.get("reasoning") or "").strip()
     return text if text else None
   except Exception as exc:
-    print(f"  GROQ (klaster {cluster_id}): {exc}")
+    print(f"  GROQ ({lang}, klaster {cluster_id}): {exc}")
     return None
 
 
 def enrich_clusters(clusters: list[dict], code_to_country: dict[str, str]) -> list[dict]:
   for cl in clusters:
-    if cl.get("ai_description"):
-      continue
-    names = [code_to_country.get(c.lower(), c) for c in cl.get("sample_codes", [])]
-    desc = describe_cluster(
-      cl["id"],
-      cl["count"],
-      names,
-      cl.get("traits", {}).get("description", ""),
-    )
-    if desc:
-      cl["ai_description"] = desc
-      print(f"  Opis AI — klaster {cl['id'] + 1}")
+    names = []
+    for c in cl.get("sample_codes", []):
+      code = str(c).upper()
+      country = code_to_country.get(str(c).lower(), code)
+      names.append(f"{country} ({code})")
+
+    if not cl.get("ai_description"):
+      desc_pl = describe_cluster(
+        cl["id"],
+        cl["count"],
+        names,
+        cl.get("traits", {}).get("description", ""),
+        language="pl",
+      )
+      if desc_pl:
+        cl["ai_description"] = desc_pl
+        print(f"  Opis AI PL — klaster {cl['id'] + 1}")
+
+    if not cl.get("ai_description_en"):
+      desc_en = describe_cluster(
+        cl["id"],
+        cl["count"],
+        names,
+        cl.get("traits", {}).get("description", ""),
+        language="en",
+      )
+      if desc_en:
+        cl["ai_description_en"] = desc_en
+        print(f"  Opis AI EN — klaster {cl['id'] + 1}")
   return clusters

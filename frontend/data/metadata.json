@@ -4511,7 +4511,8 @@
         "mean_color": "#bd7888",
         "description": "czerwone tony"
       },
-      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #1 charakteryzuje się dominacją czerwonych tonów, które często występują w połączeniu z białymi lub innymi kolorami, tworząc prosty i wyrazisty układ pasów. Większość flag w tej grupie składa się z dwóch lub trzech pasów, przy czym symbole lub herby są stosunkowo rzadkie, a ogólna jasność flag jest dość wysoka, co nadaje im wyrazisty i czytelny wygląd."
+      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #1 charakteryzuje się dominacją czerwonych tonów, które często występują w połączeniu z białymi lub innymi kolorami, tworząc prosty i wyrazisty układ pasów. Większość flag w tej grupie składa się z dwóch lub trzech pasów, przy czym symbole lub herby są stosunkowo rzadkie, a ogólna jasność flag jest dość wysoka, co nadaje im wyrazisty i czytelny wygląd.",
+      "ai_description_en": "The flags in this cluster feature a prominent use of red tones, often in the form of horizontal bands or fields, such as the deep crimson of Poland's and Slovakia's flags, which are complemented by white and navy blue accents. The composition is often balanced by the use of bold, geometric shapes, like the white and red crosses on the flags of Bulgaria and Slovakia, or the emblem on the flag of Russia, which features a golden double-headed eagle on a crimson background. Overall, the strong presence of crimson and navy blue shades evokes a sense of boldness and Slavic heritage, tying these flags to the cultural identity of Eastern European and Slavic countries."
     },
     {
       "id": 1,
@@ -4530,7 +4531,8 @@
         "mean_color": "#887370",
         "description": "mieszane kolory"
       },
-      "ai_description": "Wspólny wizualny charakter grupy flag w tym klastrze charakteryzuje się dominacją prostych układów pasów, często w poziomej lub pionowej orientacji, z wykorzystaniem szerokiej gamy kolorów, od jasnych po ciemne. Większość flag w tej grupie zawiera proste, geometryczne wzory, a symbolika herbowa lub inne dodatkowe elementy są stosunkowo rzadkie, co nadaje tym flagom wyrazisty i zwięzły wygląd."
+      "ai_description": "Wspólny wizualny charakter grupy flag w tym klastrze charakteryzuje się dominacją prostych układów pasów, często w poziomej lub pionowej orientacji, z wykorzystaniem szerokiej gamy kolorów, od jasnych po ciemne. Większość flag w tej grupie zawiera proste, geometryczne wzory, a symbolika herbowa lub inne dodatkowe elementy są stosunkowo rzadkie, co nadaje tym flagom wyrazisty i zwięzły wygląd.",
+      "ai_description_en": "The flags in this cluster feature a mix of horizontal and vertical bands, often with a prominent emblem or geometric shape, such as the eagle on Egypt's flag or the shield on Ghana's flag, set against a backdrop of bold colors like crimson, navy, and emerald. The use of gold, saffron, and white accents adds a sense of richness and depth to these flags, with some, like Austria's, featuring a striking balance of red, white, and red horizontal bands. Overall, the visual grammar of these flags evokes a sense of vibrant diversity and global connectivity, reminiscent of the cultural heritage of Africa, Europe, and the Middle East."
     },
     {
       "id": 2,
@@ -4549,7 +4551,8 @@
         "mean_color": "#958c7a",
         "description": "czerwone tony, zielone tony"
       },
-      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #3 charakteryzuje się dominacją czerwonych i zielonych tonów, które często występują w postaci poziomych lub pionowych pasów. Większość flag w tej grupie ma prosty układ pasów, bez skomplikowanych symboli lub herbów, co nadaje im wyrazisty i czytelny wygląd, przy czym niektóre flagi mają jaśniejsze lub ciemniejsze odcienie, co dodatkowo wyróżnia je w grupie."
+      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #3 charakteryzuje się dominacją czerwonych i zielonych tonów, które często występują w postaci poziomych lub pionowych pasów. Większość flag w tej grupie ma prosty układ pasów, bez skomplikowanych symboli lub herbów, co nadaje im wyrazisty i czytelny wygląd, przy czym niektóre flagi mają jaśniejsze lub ciemniejsze odcienie, co dodatkowo wyróżnia je w grupie.",
+      "ai_description_en": "The flags in this cluster feature a dominant use of horizontal or vertical bands, often divided into two primary fields of deep crimson red and vibrant emerald green, as seen in the flags of Ireland and Mexico. The composition is typically balanced, with the green fields often occupying a larger area, and occasionally, a central emblem or cross breaks the simplicity of the color scheme, such as the golden emblem on the flag of Nigeria. The overall mood evoked by these flags is one of energetic passion and lush vitality, strongly evoking the cultural heritage of Latin America and the Caribbean."
     },
     {
       "id": 3,
@@ -4568,7 +4571,8 @@
         "mean_color": "#6bafca",
         "description": "zielone tony, niebieskie tony"
       },
-      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #4 charakteryzuje się dominacją zielonych i niebieskich tonów, które często występują w połączeniu z pasami ułożonymi poziomo lub pionowo. Wiele flag w tej grupie zawiera również symbole lub herby, które są umieszczone na tle tych dominujących kolorów, a ogólna jasność flag jest dość zróżnicowana, od ciemnych odcieni zielonego i niebieskiego po jaśniejsze, bardziej pastelowe wersje."
+      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #4 charakteryzuje się dominacją zielonych i niebieskich tonów, które często występują w połączeniu z pasami ułożonymi poziomo lub pionowo. Wiele flag w tej grupie zawiera również symbole lub herby, które są umieszczone na tle tych dominujących kolorów, a ogólna jasność flag jest dość zróżnicowana, od ciemnych odcieni zielonego i niebieskiego po jaśniejsze, bardziej pastelowe wersje.",
+      "ai_description_en": "The flags in this cluster feature a prominent use of horizontal or diagonal bands, often combining emerald green and navy blue hues, as seen in the flags of Antarktyka and Argentyna. The composition is often balanced, with a central emblem or symbol, such as the light blue and white fields of Grecja's flag, which incorporate a white cross on a navy blue canton. The overall mood of these flags is one of calmness and serenity, evoking a sense of tropical or coastal regions, particularly in the Southern Hemisphere."
     },
     {
       "id": 4,
@@ -4587,7 +4591,8 @@
         "mean_color": "#3f4a7f",
         "description": "ciemne tło"
       },
-      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #5 charakteryzuje się ciemnym tłem, które często jest w kolorze niebieskim lub czerwonym, oraz układem pasów, które są zwykle poziome i występują w różnych odcieniach. Dominującymi kolorami w tej grupie są odcienie czerwieni, bieli i niebieskiego, a wiele flag zawiera symbole lub herby, które są umieszczone centralnie lub w lewym górnym rogu, nadając im wyrazisty i charakterystyczny wygląd."
+      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #5 charakteryzuje się ciemnym tłem, które często jest w kolorze niebieskim lub czerwonym, oraz układem pasów, które są zwykle poziome i występują w różnych odcieniach. Dominującymi kolorami w tej grupie są odcienie czerwieni, bieli i niebieskiego, a wiele flag zawiera symbole lub herby, które są umieszczone centralnie lub w lewym górnym rogu, nadając im wyrazisty i charakterystyczny wygląd.",
+      "ai_description_en": "The flags in this cluster feature a dominant dark background, often navy or deep blue, which provides a somber base for various emblems and geometric shapes, such as the Union Jack on the flags of Anguilla and the Falkland Islands, or the white and red crosses on the flags of the British Virgin Islands and South Georgia and the South Sandwich Islands. The use of crimson, white, and gold accents adds a touch of vibrancy to these designs, with the British overseas territories often incorporating the British flag's colors. The overall mood of these flags is one of sturdy, maritime resilience, evoking the harsh yet majestic landscapes of the remote islands and territories they represent."
     },
     {
       "id": 5,
@@ -4606,7 +4611,8 @@
         "mean_color": "#7f5b4b",
         "description": "mieszane kolory"
       },
-      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #6 charakteryzuje się układem pasów, które są często ułożone poziomo lub pionowo, a także dominacją mieszanych kolorów, w tym czerwonego, niebieskiego, żółtego i zielonego. Większość flag w tej grupie zawiera herby lub symbole, które są umieszczone centralnie lub w rogach, a ogólna jasność flag jest dość zróżnicowana, od ciemnych, głębokich kolorów po jaśniejsze, pastelowe odcienie."
+      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #6 charakteryzuje się układem pasów, które są często ułożone poziomo lub pionowo, a także dominacją mieszanych kolorów, w tym czerwonego, niebieskiego, żółtego i zielonego. Większość flag w tej grupie zawiera herby lub symbole, które są umieszczone centralnie lub w rogach, a ogólna jasność flag jest dość zróżnicowana, od ciemnych, głębokich kolorów po jaśniejsze, pastelowe odcienie.",
+      "ai_description_en": "The flags in this cluster feature a diverse arrangement of elements, often combining horizontal or vertical bands with emblems or geometric shapes, such as the tricolor designs of Belgium and Romania, which incorporate bold shades of black, yellow, and crimson. The use of vibrant colors like emerald green and navy blue is also prevalent, as seen in the flags of Barbados and Bosnia and Herzegovina, which balance these hues with neutral tones like white and gold. Overall, the eclectic mix of colors and compositions in this cluster evokes a sense of dynamic diversity, reminiscent of the cultural richness found in the Mediterranean and Eastern European regions."
     },
     {
       "id": 6,
@@ -4625,7 +4631,8 @@
         "mean_color": "#b16f4a",
         "description": "czerwone tony"
       },
-      "ai_description": "W klastrze #7 dominują flagi z czerwonymi tonami, które często występują w połączeniu z innymi kolorami, tworząc charakterystyczne układy pasów, zarówno poziomych, jak i pionowych. Większość flag w tej grupie ma prosty układ kolorystyczny, z niewielką liczbą symboli lub herbów, a dominujące kolory są często żywe i intensywne, nadając flagom wyrazisty i zdecydowany wygląd."
+      "ai_description": "W klastrze #7 dominują flagi z czerwonymi tonami, które często występują w połączeniu z innymi kolorami, tworząc charakterystyczne układy pasów, zarówno poziomych, jak i pionowych. Większość flag w tej grupie ma prosty układ kolorystyczny, z niewielką liczbą symboli lub herbów, a dominujące kolory są często żywe i intensywne, nadając flagom wyrazisty i zdecydowany wygląd.",
+      "ai_description_en": "The flags in this cluster feature a prominent use of red tones, often in the form of bold crimson or deep scarlet fields, which dominate the composition, as seen in the flags of Bahrain, Benin, and Brunei. These red backgrounds are often paired with white or golden accents, such as the white crescent moon on Brunei's flag or the golden emblem on Bahrain's, creating a sense of balance and harmony. The overall mood of these flags is one of warmth and vibrancy, evoking the rich cultural heritage of the African, Asian, and Caribbean regions they represent."
     },
     {
       "id": 7,
@@ -4643,7 +4650,8 @@
         "mean_color": "#ae8890",
         "description": "czerwone tony, niebieskie tony"
       },
-      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #8 charakteryzuje się dominacją czerwonych i niebieskich tonów, które często występują w układzie pasów, zarówno poziomych, jak i pionowych. Większość flag w tej grupie ma prosty układ kolorystyczny, z niewielką liczbą symboli lub herbów, a ogólna jasność flag jest dość wysoka, co nadaje im wyrazisty i czytelny wygląd."
+      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #8 charakteryzuje się dominacją czerwonych i niebieskich tonów, które często występują w układzie pasów, zarówno poziomych, jak i pionowych. Większość flag w tej grupie ma prosty układ kolorystyczny, z niewielką liczbą symboli lub herbów, a ogólna jasność flag jest dość wysoka, co nadaje im wyrazisty i czytelny wygląd.",
+      "ai_description_en": "The flags in this cluster feature a dominant composition of horizontal or vertical bands, often divided into crimson and navy blue fields, as seen in the flags of Iran, Israel, and Lebanon. The use of deep, rich shades such as crimson and navy blue creates a bold visual identity, with some flags incorporating emblems or geometric patterns, like the saffron-colored emblem on the Iranian flag. Overall, the cluster's somber and intense color palette evokes a sense of Middle Eastern and South Asian heritage, conveying a sense of tradition and solemnity."
     },
     {
       "id": 8,
@@ -4658,7 +4666,8 @@
         "mean_color": "#95405b",
         "description": "czerwone tony"
       },
-      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #9 charakteryzuje się dominacją czerwonych tonów, które są umieszczone w układzie pasów, często poziomych lub skośnych. Flagi te mają zwykle prosty układ kolorystyczny, bez skomplikowanych symboli lub herbów, a ich jasność jest dość wysoka, co sprawia, że są one wyraźnie widoczne i rozpoznawalne."
+      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #9 charakteryzuje się dominacją czerwonych tonów, które są umieszczone w układzie pasów, często poziomych lub skośnych. Flagi te mają zwykle prosty układ kolorystyczny, bez skomplikowanych symboli lub herbów, a ich jasność jest dość wysoka, co sprawia, że są one wyraźnie widoczne i rozpoznawalne.",
+      "ai_description_en": "The flags in cluster #9 feature a prominent use of red tones, with Gambia's flag showcasing a horizontal tricolor of crimson, blue, and green, while Norway's flag displays a Scandinavian cross with a deep crimson field and white and navy borders. Svalbard and Jan Mayen's flag, although unofficial, often features a similar design to Norway's, emphasizing the connection between the two. The overall mood of these flags is one of boldness and simplicity, evoking a sense of Nordic and West African regional identity."
     },
     {
       "id": 9,
@@ -4677,7 +4686,8 @@
         "mean_color": "#dab9b5",
         "description": "czerwone tony, zielone tony, niebieskie tony"
       },
-      "ai_description": "Wspólny wizualny charakter grupy flag w tym klastrze charakteryzuje się dominacją trzech podstawowych kolorów, tj. czerwonych, zielonych i niebieskich tonów, które często występują w postaci prostych pasów lub prostych kompozycji. Większość flag w tej grupie ma prosty układ pasów, niezbyt wiele symboli lub herbów, a ogólna jasność kolorów jest dość zrównoważona, co nadaje im schludny i czytelny wygląd."
+      "ai_description": "Wspólny wizualny charakter grupy flag w tym klastrze charakteryzuje się dominacją trzech podstawowych kolorów, tj. czerwonych, zielonych i niebieskich tonów, które często występują w postaci prostych pasów lub prostych kompozycji. Większość flag w tej grupie ma prosty układ pasów, niezbyt wiele symboli lub herbów, a ogólna jasność kolorów jest dość zrównoważona, co nadaje im schludny i czytelny wygląd.",
+      "ai_description_en": "The flags in this cluster feature simple, balanced compositions, often with horizontal or vertical bands, such as the bold crimson and emerald green bands of Algeria's flag, or the navy blue and white fields of Japan's flag, which also incorporates a white emblem. The color palette is dominated by deep, rich shades like crimson, navy, and emerald, with some flags, like Finland's, featuring a striking combination of white and a deep blue, reminiscent of a clear sky. The overall mood of these flags is one of calm stability, evoking a sense of regional association with the tranquil landscapes of Northern Europe and the majestic mountains of Asia."
     },
     {
       "id": 10,
@@ -4696,7 +4706,8 @@
         "mean_color": "#476a62",
         "description": "mieszane kolory"
       },
-      "ai_description": "Wspólny wizualny charakter grupy flag w tym klastrze charakteryzuje się zróżnicowanymi układami pasów, często poziomych lub pionowych, oraz dominacją różnych kolorów, co nadaje każdej fladze unikalny wygląd. Flagi w tej grupie często zawierają symbole lub herby, a ich ogólna jasność jest różnorodna, od bardzo jasnych po ciemniejsze odcienie, co dodaje im wyrazistości i odrębności."
+      "ai_description": "Wspólny wizualny charakter grupy flag w tym klastrze charakteryzuje się zróżnicowanymi układami pasów, często poziomych lub pionowych, oraz dominacją różnych kolorów, co nadaje każdej fladze unikalny wygląd. Flagi w tej grupie często zawierają symbole lub herby, a ich ogólna jasność jest różnorodna, od bardzo jasnych po ciemniejsze odcienie, co dodaje im wyrazistości i odrębności.",
+      "ai_description_en": "The flags in this cluster feature a mix of horizontal and vertical bands, often divided into two or three main fields, with emblems or geometric shapes occasionally placed at the center, as seen in the flags of Saudi Arabia and Azerbaijan, which display a green field with a white Arabic inscription and a crimson field with a navy blue emblem, respectively. The color palette is diverse, with shades of emerald, saffron, and navy blue, sometimes combined with white or light-colored backgrounds, as in the flag of the Bahamas, which features a horizontal black, yellow, and blue tricolor with a crimson chevron. The overall mood of these flags is one of vibrant cultural diversity, evoking the rich heritage and history of the Middle East, South America, and the Caribbean regions."
     },
     {
       "id": 11,
@@ -4715,7 +4726,8 @@
         "mean_color": "#9e4a3e",
         "description": "czerwone tony"
       },
-      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #12 charakteryzuje się dominacją czerwonych tonów, które często występują w połączeniu z innymi kolorami, tworząc charakterystyczne układy pasów. Większość flag w tej grupie ma prosty układ pasów, a dominujące czerwone tony są często uzupełnione symbolami lub herbami, które dodają flagom głębi i znaczenia, przy czym ogólna jasność flag jest dość zróżnicowana."
+      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #12 charakteryzuje się dominacją czerwonych tonów, które często występują w połączeniu z innymi kolorami, tworząc charakterystyczne układy pasów. Większość flag w tej grupie ma prosty układ pasów, a dominujące czerwone tony są często uzupełnione symbolami lub herbami, które dodają flagom głębi i znaczenia, przy czym ogólna jasność flag jest dość zróżnicowana.",
+      "ai_description_en": "The flags in cluster #12 feature a dominant red tone, often in the form of a crimson or scarlet field, as seen in the flags of Afghanistan, Albania, and Angola, which typically include a combination of horizontal or vertical bands in contrasting colors such as emerald green, navy blue, or golden yellow. The composition often incorporates a central emblem or symbol, like the Chinese flag's yellow stars on a crimson background, which adds a sense of balance and harmony to the design. The overall mood of these flags is one of boldness and intensity, evoking a sense of passion and energy often associated with the vibrant cultures of Asia and Eastern Europe."
     }
   ],
   "cluster_colors": [

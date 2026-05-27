@@ -238,6 +238,7 @@ function clusterMeta(clusterId) {
 
 function clusterDescription(clusterId) {
   const m = clusterMeta(clusterId);
+  if (currentLang === "en") return m?.ai_description_en || m?.ai_description || m?.traits?.description || "";
   return m?.ai_description || m?.traits?.description || "";
 }
 
@@ -338,6 +339,7 @@ const tourState = {
   nextBtn: null,
   skipBtn: null,
 };
+let tourLaunchTimer = null;
 
 const TOUR_STEPS = [
   { selector: ".header", title: "tour.step1.title", body: "tour.step1.body" },
@@ -385,6 +387,15 @@ function startTour() {
   tourState.step = 0;
   tourState.overlay.classList.add("active");
   renderTourStep();
+}
+
+function scheduleTourStart(delayMs = 120) {
+  if (tourLaunchTimer) clearTimeout(tourLaunchTimer);
+  tourLaunchTimer = setTimeout(() => {
+    if (tourState.active) return;
+    if (!document.querySelector(".header")) return;
+    startTour();
+  }, delayMs);
 }
 
 function stopTour() {
@@ -493,7 +504,10 @@ function finishIntro() {
   introDone = true;
   $("#intro")?.classList.add("intro-done");
   document.body.classList.remove("intro-active");
-  setTimeout(() => $("#intro")?.remove(), 900);
+  setTimeout(() => {
+    $("#intro")?.remove();
+    scheduleTourStart(160);
+  }, 900);
 }
 
 async function runIntro() {
@@ -544,7 +558,7 @@ async function loadData() {
   document.body.classList.add("explore-mode");
   initExplore();
   initDetails();
-  setTimeout(() => startTour(), 380);
+  scheduleTourStart(220);
 }
 
 function fixReconstructionUrls() {
