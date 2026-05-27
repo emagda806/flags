@@ -329,6 +329,7 @@ function initLanguageSwitch() {
 
 const tourState = {
   active: false,
+  dismissed: false,
   step: 0,
   overlay: null,
   card: null,
@@ -383,6 +384,7 @@ function ensureTourUi() {
 }
 
 function startTour() {
+  if (tourState.dismissed) return;
   ensureTourUi();
   tourState.active = true;
   tourState.step = 0;
@@ -391,19 +393,37 @@ function startTour() {
 }
 
 function scheduleTourStart(delayMs = 120) {
+  if (tourState.dismissed) return;
   if (tourLaunchTimer) clearTimeout(tourLaunchTimer);
   tourLaunchTimer = setTimeout(() => {
+    tourLaunchTimer = null;
     if (tourState.active) return;
+    if (tourState.dismissed) return;
     if (!document.querySelector(".header")) return;
     startTour();
   }, delayMs);
 }
 
 function stopTour() {
+  if (tourLaunchTimer) {
+    clearTimeout(tourLaunchTimer);
+    tourLaunchTimer = null;
+  }
   tourState.active = false;
-  tourState.overlay?.classList.remove("active");
   tourState.target?.classList.remove("tour-highlight");
   tourState.target = null;
+  if (tourState.overlay) {
+    tourState.overlay.remove();
+    tourState.overlay = null;
+    tourState.card = null;
+    tourState.titleEl = null;
+    tourState.bodyEl = null;
+    tourState.progressEl = null;
+    tourState.prevBtn = null;
+    tourState.nextBtn = null;
+    tourState.skipBtn = null;
+  }
+  tourState.dismissed = true;
 }
 
 function goTourStep(delta) {
