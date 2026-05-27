@@ -18,13 +18,22 @@ Core samples from this repository:
   <img src="backend/data/flags/af.png" alt="Afghanistan flag" width="120" />
 </p>
 
-Reconstruction examples (input vs output):
+Full autoencoder layer walkthrough (PL sample):
 
 <p>
-  <img src="backend/data/recon_pl_orig.png" alt="Poland input" width="180" />
-  <img src="backend/data/recon_pl_rec.png" alt="Poland reconstruction" width="180" />
-  <img src="backend/data/recon_de_orig.png" alt="Germany input" width="180" />
-  <img src="backend/data/recon_de_rec.png" alt="Germany reconstruction" width="180" />
+  <img src="docs/autoencoder-stages/01-wej-cie.png" alt="Stage 1 Input" width="180" />
+  <img src="docs/autoencoder-stages/02-po-enkoderze.png" alt="Stage 2 After encoder" width="180" />
+  <img src="docs/autoencoder-stages/03-wektor-latentny-z.png" alt="Stage 3 Latent vector" width="180" />
+</p>
+<p>
+  <img src="docs/autoencoder-stages/04-start-dekodera.png" alt="Stage 4 Decoder start" width="180" />
+  <img src="docs/autoencoder-stages/05-po-convt-1.png" alt="Stage 5 After ConvT 1" width="180" />
+  <img src="docs/autoencoder-stages/06-po-convt-2.png" alt="Stage 6 After ConvT 2" width="180" />
+</p>
+<p>
+  <img src="docs/autoencoder-stages/07-po-convt-3.png" alt="Stage 7 After ConvT 3" width="180" />
+  <img src="docs/autoencoder-stages/08-rgb-przed-sigmoid.png" alt="Stage 8 RGB before Sigmoid" width="180" />
+  <img src="docs/autoencoder-stages/09-wyj-cie-rekonstrukcja.png" alt="Stage 9 Reconstruction output" width="180" />
 </p>
 
 ## Architecture At A Glance
