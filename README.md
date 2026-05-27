@@ -6,9 +6,26 @@ Interactive web app for exploring visual similarity between world flags using:
 - K-Means clustering,
 - UMAP / 3D projections for visualization.
 
-🌍 🏳️‍🌈 🇵🇱 🇬🇧
-
 The UI supports two languages (English and Polish), with English as the default.
+
+## Visual Preview
+
+Core samples from this repository:
+
+<p>
+  <img src="backend/data/flags/pl.png" alt="Poland flag" width="120" />
+  <img src="backend/data/flags/de.png" alt="Germany flag" width="120" />
+  <img src="backend/data/flags/af.png" alt="Afghanistan flag" width="120" />
+</p>
+
+Reconstruction examples (input vs output):
+
+<p>
+  <img src="backend/data/recon_pl_orig.png" alt="Poland input" width="180" />
+  <img src="backend/data/recon_pl_rec.png" alt="Poland reconstruction" width="180" />
+  <img src="backend/data/recon_de_orig.png" alt="Germany input" width="180" />
+  <img src="backend/data/recon_de_rec.png" alt="Germany reconstruction" width="180" />
+</p>
 
 ## Architecture At A Glance
 
@@ -22,6 +39,34 @@ flowchart LR
   E --> G[Interactive frontend views]
   F --> G
 ```
+
+## Model Parameters
+
+From `backend/model/model_config.json` and metadata:
+
+- Image size: `64x64` RGB
+- Latent dimension: `128`
+- Loss: `MSE`
+- Training epochs: `100`
+- Countries: `250`
+- Clusters: `12`
+- Scheduler: `ReduceLROnPlateau(patience=10, factor=0.5)`
+
+## Encoder / Decoder Steps
+
+From the `architecture` section in metadata:
+
+1. `Conv2d(3->64, 3x3) + BN + ReLU` -> `64x64`
+2. `Conv2d(64->128, 4x4, stride=2) + BN + ReLU` -> `32x32`
+3. `Conv2d(128->256, 3x3) + BN + ReLU` -> `32x32`
+4. `Conv2d(256->256, 4x4, stride=2) + BN + ReLU` -> `16x16`
+5. `Conv2d(256->256, 3x3) + BN + ReLU` -> `16x16`
+6. `Linear(65536 -> 128)` bottleneck
+
+Decoder:
+
+1. `Linear(128 -> 65536)`
+2. `ConvTranspose2d + Conv2d (256->128->64->3) + Sigmoid` -> `64x64`
 
 ### Frontend Experience
 
