@@ -31,6 +31,7 @@ jobs:
           cp backend/data/training_history.json frontend/data/training_history.json
           cp backend/data/country_coords.json frontend/data/country_coords.json
           cp backend/data/embedding_3d.json frontend/data/embedding_3d.json
+          cp backend/data/recon_*.png frontend/data/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

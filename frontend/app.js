@@ -543,6 +543,7 @@ function initDetails() {
 }
 
 let traceInitDone = false;
+let reconstructionOptions = [];
 
 function initReconstructionTrace() {
   const select = $("#trace-code-select");
@@ -550,8 +551,18 @@ function initReconstructionTrace() {
   if (!select || !wrap || !flagsData.length) return;
 
   if (!traceInitDone) {
-    const sorted = [...flagsData].sort((a, b) => a.country.localeCompare(b.country, "pl"));
-    sorted.forEach((f) => {
+    const samples = (metadata.reconstructions || []).map((r) => ({
+      code: (r.code || "").toUpperCase(),
+      country: r.country || r.code || "",
+      origUrl: assetUrl(r.orig_url),
+      recUrl: assetUrl(r.rec_url),
+    })).filter((r) => r.code && r.origUrl && r.recUrl);
+    const sortedAll = [...flagsData]
+      .map((f) => ({ code: f.code.toUpperCase(), country: f.country || f.code }))
+      .sort((a, b) => a.country.localeCompare(b.country, "pl"));
+    reconstructionOptions = samples.length ? samples : sortedAll;
+
+    reconstructionOptions.forEach((f) => {
       const opt = document.createElement("option");
       opt.value = f.code.toUpperCase();
       opt.textContent = `${f.country} (${f.code.toUpperCase()})`;
@@ -562,7 +573,7 @@ function initReconstructionTrace() {
   }
 
   if (!select.value) {
-    select.value = flagsData[0].code.toUpperCase();
+    select.value = reconstructionOptions[0]?.code || flagsData[0].code.toUpperCase();
   }
   loadReconstructionTrace(select.value);
 }
@@ -570,9 +581,57 @@ function initReconstructionTrace() {
 async function loadReconstructionTrace(code) {
   const wrap = $("#reconstruction-trace");
   if (!wrap) return;
-  void code;
-  wrap.innerHTML =
-    '<p class="card-desc">Widok etapów rekonstrukcji wymaga uruchomionego backendu i nie jest dostępny w wersji GitHub Pages.</p>';
+  wrap.innerHTML = '<p class="card-desc">Ładowanie etapów rekonstrukcji…</p>';
+
+  try {
+    const res = await fetch(`${DATA_BASE}/reconstruction-traces/${code.toLowerCase()}.json`);
+    if (res.ok) {
+      const data = await res.json();
+      renderReconstructionStages(data.stages || []);
+      return;
+    }
+  } catch {
+    // Fallback below.
+  }
+
+  const sample = reconstructionOptions.find((r) => r.code === code.toUpperCase());
+  if (!sample?.origUrl || !sample?.recUrl) {
+    wrap.innerHTML =
+      '<p class="card-desc">Dla tej flagi brak pre-generowanych etapów w wersji statycznej.</p>';
+    return;
+  }
+
+  renderReconstructionStages([
+    { name: "Wejście", shape: "3×64×64", image_url: sample.origUrl },
+    { name: "Wyjście (rekonstrukcja)", shape: "3×64×64", image_url: sample.recUrl },
+  ]);
+}
+
+function renderReconstructionStages(stages) {
+  const wrap = $("#reconstruction-trace");
+  if (!wrap) return;
+  wrap.innerHTML = "";
+
+  stages.forEach((stage) => {
+    const card = document.createElement("article");
+    card.className = "trace-stage";
+    const img = document.createElement("img");
+    img.alt = stage.name || "Etap";
+    img.src = stage.image_b64 ? `data:image/png;base64,${stage.image_b64}` : assetUrl(stage.image_url);
+    const meta = document.createElement("div");
+    meta.className = "trace-stage-meta";
+    const title = document.createElement("p");
+    title.className = "trace-stage-name";
+    title.textContent = stage.name || "Etap";
+    const shape = document.createElement("p");
+    shape.className = "trace-stage-shape";
+    shape.textContent = stage.shape || "";
+    meta.appendChild(title);
+    meta.appendChild(shape);
+    card.appendChild(img);
+    card.appendChild(meta);
+    wrap.appendChild(card);
+  });
 }
 
 // ===== PIPELINE ANIMATION =====
