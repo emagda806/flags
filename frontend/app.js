@@ -344,12 +344,12 @@ const tourState = {
 let tourLaunchTimer = null;
 
 const TOUR_STEPS = [
-  { selector: ".header", title: "tour.step1.title", body: "tour.step1.body" },
-  { selector: ".lang-switch", title: "tour.step2.title", body: "tour.step2.body", placement: "left" },
-  { selector: ".tabs", title: "tour.step3.title", body: "tour.step3.body" },
-  { selector: "#prezi-stage", title: "tour.step4.title", body: "tour.step4.body" },
-  { selector: ".explore-subnav", title: "tour.step5.title", body: "tour.step5.body" },
-  { selector: ".tabs [data-tab='details']", title: "tour.step6.title", body: "tour.step6.body" },
+  { selector: ".header", title: "tour.step1.title", body: "tour.step1.body", placement: "bottom" },
+  { selector: ".lang-switch", title: "tour.step2.title", body: "tour.step2.body", placement: "left", maxWidth: 250 },
+  { selector: ".tabs", title: "tour.step3.title", body: "tour.step3.body", placement: "bottom" },
+  { selector: "#prezi-stage", title: "tour.step4.title", body: "tour.step4.body", placement: "bottom" },
+  { selector: ".explore-subnav", title: "tour.step5.title", body: "tour.step5.body", placement: "top" },
+  { selector: ".tabs [data-tab='details']", title: "tour.step6.title", body: "tour.step6.body", placement: "left" },
 ];
 
 function ensureTourUi() {
@@ -429,21 +429,14 @@ function stopTour() {
 
 function goTourStep(delta) {
   if (!tourState.active) return;
-  let next = tourState.step;
-  while (true) {
-    next += delta;
-    if (next < 0) return;
-    if (next >= TOUR_STEPS.length) {
-      stopTour();
-      return;
-    }
-    const candidate = document.querySelector(TOUR_STEPS[next].selector);
-    if (isTourTargetRenderable(candidate)) {
-      tourState.step = next;
-      renderTourStep();
-      return;
-    }
+  const next = tourState.step + delta;
+  if (next < 0) return;
+  if (next >= TOUR_STEPS.length) {
+    stopTour();
+    return;
   }
+  tourState.step = next;
+  renderTourStep();
 }
 
 function isTourTargetRenderable(el) {
@@ -482,7 +475,7 @@ function renderTourStep() {
 
   const rect = target.getBoundingClientRect();
   const card = tourState.card;
-  const width = Math.min(360, window.innerWidth - 32);
+  const width = Math.min(stepCfg.maxWidth || 360, window.innerWidth - 32);
   const pad = 12;
   const gap = 14;
   const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
@@ -501,10 +494,10 @@ function renderTourStep() {
   const canBottom = rect.bottom + gap + cardRect.height <= window.innerHeight - pad;
 
   let placement = stepCfg.placement || "auto";
-  if (placement === "left" && !canLeft) placement = "auto";
-  if (placement === "right" && !canRight) placement = "auto";
-  if (placement === "top" && !canTop) placement = "auto";
-  if (placement === "bottom" && !canBottom) placement = "auto";
+  if (placement === "left" && !canLeft) placement = canBottom ? "bottom" : "right";
+  if (placement === "right" && !canRight) placement = canBottom ? "bottom" : "left";
+  if (placement === "top" && !canTop) placement = canBottom ? "bottom" : "right";
+  if (placement === "bottom" && !canBottom) placement = canTop ? "top" : "left";
 
   if (placement === "auto") {
     if (canBottom) placement = "bottom";
