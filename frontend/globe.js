@@ -17,6 +17,9 @@ class FlagGlobe {
     this._pendingCluster = null;
     this._countryIdMap = null;
     this.three = {};
+    this.t = (key, vars = {}) => (window.__t ? window.__t(key, vars) : key);
+    this.countryName = (code, fallback = "") =>
+      (window.__countryName ? window.__countryName(code, fallback) : (fallback || code));
     this._init();
   }
 
@@ -32,7 +35,7 @@ class FlagGlobe {
 
   async _init() {
     if (!window.THREE) {
-      this.container.innerHTML = '<p class="error">Brak biblioteki Three.js</p>';
+      this.container.innerHTML = `<p class="error">${this.t("globe.error.three")}</p>`;
       return;
     }
     const THREE = window.THREE;
@@ -45,7 +48,7 @@ class FlagGlobe {
       'position:absolute;inset:0;display:flex;align-items:center;justify-content:center;',
       'color:#5F5E5A;font-size:0.85rem;font-family:inherit;background:#F0EDE8;',
     ].join('');
-    loadEl.textContent = 'Ładowanie mapy…';
+    loadEl.textContent = this.t("globe.loading");
     this.container.appendChild(loadEl);
 
     // Fetch world-atlas topology for land + coastlines
@@ -145,7 +148,7 @@ class FlagGlobe {
       if (picked?.flag) {
         const flag = picked.flag;
         if (tooltip) {
-          const name = flag.country || flag.code.toUpperCase();
+          const name = this.countryName(flag.code, flag.country || flag.code.toUpperCase());
           const imgSrc = `https://flagcdn.com/w160/${flag.code.toLowerCase()}.png`;
           tooltip.innerHTML =
             `<img src="${imgSrc}" style="width:32px;height:20px;object-fit:cover;` +

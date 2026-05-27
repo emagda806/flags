@@ -11,6 +11,167 @@ const THEME = {
   chartText: "#8a7b68",
   scatterStroke: "#fffcf7",
 };
+const I18N = {
+  pl: {
+    "doc.title": "Eksploracja flag świata",
+    "intro.eyebrow": "Autoenkoder · Klasteryzacja",
+    "intro.title": "Eksploracja flag świata",
+    "intro.skip": "Pomiń animację",
+    "header.title": "Eksploracja flag świata",
+    "header.subtitle": "Podobieństwo wizualne flag w przestrzeni latentnej sieci neuronowej",
+    "tabs.mainAria": "Główne sekcje",
+    "tabs.explore": "Eksploracja",
+    "tabs.details": "Implementacja",
+    "explore.mapAria": "Mapa flag",
+    "explore.zoomOut": "Oddal",
+    "explore.zoomIn": "Przybliż",
+    "explore.reset": "Reset",
+    "explore.modeAria": "Tryb eksploracji",
+    "explore.cloud": "Chmura flag",
+    "explore.globe": "Globus",
+    "globe.atlas": "Atlas klastrów",
+    "globe.clusterPickerAria": "Wybór klastra",
+    "globe.hint": "Podświetlone kraje należą do wybranego klastra — kliknij punkt, aby zobaczyć flagę",
+    "globe.containerAria": "Globus z klastrami",
+    "details.pipeline.title": "Pipeline aplikacji",
+    "details.pipeline.desc": "Od pikseli flagi do interaktywnej mapy — łańcuch przetwarzania danych",
+    "details.autoencoder.title": "Jak działa autoenkoder",
+    "details.autoencoder.desc": "Dane przepływają przez enkoder (kompresja 64×64 → ℝ¹²⁸) i dekoder (rekonstrukcja ℝ¹²⁸ → 64×64)",
+    "details.trace.title": "Rekonstrukcja krok po kroku",
+    "details.trace.desc": "Podgląd obrazu flagi po przejściu przez kolejne etapy enkodera i dekodera",
+    "details.trace.flagLabel": "Flaga:",
+    "details.scatter.title": "Mapa klastrów",
+    "details.scatter.desc": "Projekcja wektorów latentnych — najedź na punkt, aby zobaczyć kraj",
+    "details.loss.title": "Krzywa uczenia",
+    "details.loss.desc": "Strata MSE w funkcji epoki treningu",
+    "details.clouds.title": "Chmury klastrów",
+    "details.clouds.desc": "Grupy wizualnie podobnych flag — bez przypisanych nazw krajów",
+    "details.how.title": "Jak to działa?",
+    "details.how.p1": "<strong>Autoenkoder</strong> uczy się kompresować obraz flagi do krótkiego wektora i go odtworzyć. Podobne flagi otrzymują podobne wektory.",
+    "details.how.p2": "<strong>Wektor latentny</strong> to skondensowana reprezentacja cech wizualnych — bez ręcznego opisywania kolorów czy symboli.",
+    "details.how.p3": "<strong>K-Means</strong> grupuje wektory tak, by flagi w jednym klastrze były blisko siebie w przestrzeni wyuczonej przez model.",
+    "details.how.p4": "<strong>UMAP / t-SNE</strong> sprowadza embeddingi do dwóch lub trzech wymiarów wyłącznie na potrzeby wizualizacji.",
+    "sidepanel.close": "Zamknij",
+    "sidepanel.cluster": "Klaster",
+    "sidepanel.similar": "Podobne flagi w klastrze",
+    "error.noStaticData": 'Brak danych statycznych. Upewnij się, że katalog <code>frontend/data</code> istnieje.',
+    "cluster.label": "Klaster {n}",
+    "cluster.hint.more": "+ {n} kolejnych w pełnej eksploracji",
+    "trace.loading": "Ładowanie etapów rekonstrukcji…",
+    "trace.missing": "Dla tej flagi brak pre-generowanych etapów w wersji statycznej.",
+    "trace.stage.input": "Wejście",
+    "trace.stage.output": "Wyjście (rekonstrukcja)",
+    "pipeline.input.name": "Flagi świata",
+    "pipeline.input.detail": "{n} obrazów PNG",
+    "pipeline.encode.name": "Enkoder CNN",
+    "pipeline.encode.detail": "5 warstw splotowych",
+    "pipeline.latent.name": "Wektor latentny",
+    "pipeline.latent.detail": "bottleneck FC",
+    "pipeline.decode.name": "Dekoder CNN",
+    "pipeline.decode.detail": "rekonstrukcja",
+    "pipeline.cluster.name": "K-Means",
+    "pipeline.cluster.detail": "{n} klastrów",
+    "pipeline.cluster.dim": "grupowanie z",
+    "pipeline.reduce.detail": "redukcja wymiarów",
+    "pipeline.output.name": "Mapa klastrów",
+    "pipeline.output.detail": "chmura + globus",
+    "encoder.input": "Wejście",
+    "encoder.output": "Wyjście",
+    "encoder.enc": "ENKODER",
+    "encoder.dec": "DEKODER",
+    "chart.epoch": "Epoka",
+    "trace.error.load3d": "Nie udało się załadować projekcji 3D.",
+    "trace.error.no3d": "Brak projekcji 3D",
+    "trace.error.three": "Brak biblioteki Three.js.",
+    "trace.error.embedding": "Brak danych embeddingu 3D.",
+    "globe.error.three": "Brak biblioteki Three.js",
+    "globe.loading": "Ładowanie mapy…",
+  },
+  en: {
+    "doc.title": "World Flags Explorer",
+    "intro.eyebrow": "Autoencoder · Clustering",
+    "intro.title": "World Flags Explorer",
+    "intro.skip": "Skip animation",
+    "header.title": "World Flags Explorer",
+    "header.subtitle": "Visual similarity of flags in the neural network latent space",
+    "tabs.mainAria": "Main sections",
+    "tabs.explore": "Explore",
+    "tabs.details": "Implementation",
+    "explore.mapAria": "Flag map",
+    "explore.zoomOut": "Zoom out",
+    "explore.zoomIn": "Zoom in",
+    "explore.reset": "Reset",
+    "explore.modeAria": "Exploration mode",
+    "explore.cloud": "Flag cloud",
+    "explore.globe": "Globe",
+    "globe.atlas": "Cluster atlas",
+    "globe.clusterPickerAria": "Cluster picker",
+    "globe.hint": "Highlighted countries belong to the selected cluster — click a point to view the flag",
+    "globe.containerAria": "Cluster globe",
+    "details.pipeline.title": "Application pipeline",
+    "details.pipeline.desc": "From flag pixels to an interactive map — data processing pipeline",
+    "details.autoencoder.title": "How the autoencoder works",
+    "details.autoencoder.desc": "Data flows through the encoder (compression 64×64 → ℝ¹²⁸) and decoder (reconstruction ℝ¹²⁸ → 64×64)",
+    "details.trace.title": "Step-by-step reconstruction",
+    "details.trace.desc": "Preview of the flag image across encoder and decoder stages",
+    "details.trace.flagLabel": "Flag:",
+    "details.scatter.title": "Cluster map",
+    "details.scatter.desc": "Latent vector projection — hover a point to see the country",
+    "details.loss.title": "Learning curve",
+    "details.loss.desc": "MSE loss over training epochs",
+    "details.clouds.title": "Cluster clouds",
+    "details.clouds.desc": "Groups of visually similar flags — without country labels",
+    "details.how.title": "How does it work?",
+    "details.how.p1": "<strong>Autoencoder</strong> learns to compress a flag image into a short vector and reconstruct it. Similar flags get similar vectors.",
+    "details.how.p2": "<strong>Latent vector</strong> is a compressed visual representation — without manually describing colors or symbols.",
+    "details.how.p3": "<strong>K-Means</strong> groups vectors so that flags in one cluster are close to each other in model-learned space.",
+    "details.how.p4": "<strong>UMAP / t-SNE</strong> reduces embeddings to two or three dimensions for visualization purposes.",
+    "sidepanel.close": "Close",
+    "sidepanel.cluster": "Cluster",
+    "sidepanel.similar": "Similar flags in cluster",
+    "error.noStaticData": 'Static data is missing. Make sure the <code>frontend/data</code> directory exists.',
+    "cluster.label": "Cluster {n}",
+    "cluster.hint.more": "+ {n} more in full exploration view",
+    "trace.loading": "Loading reconstruction stages…",
+    "trace.missing": "No pre-generated static stages are available for this flag.",
+    "trace.stage.input": "Input",
+    "trace.stage.output": "Output (reconstruction)",
+    "pipeline.input.name": "World flags",
+    "pipeline.input.detail": "{n} PNG images",
+    "pipeline.encode.name": "CNN encoder",
+    "pipeline.encode.detail": "5 convolutional layers",
+    "pipeline.latent.name": "Latent vector",
+    "pipeline.latent.detail": "bottleneck FC",
+    "pipeline.decode.name": "CNN decoder",
+    "pipeline.decode.detail": "reconstruction",
+    "pipeline.cluster.name": "K-Means",
+    "pipeline.cluster.detail": "{n} clusters",
+    "pipeline.cluster.dim": "grouping in z",
+    "pipeline.reduce.detail": "dimensionality reduction",
+    "pipeline.output.name": "Cluster map",
+    "pipeline.output.detail": "cloud + globe",
+    "encoder.input": "Input",
+    "encoder.output": "Output",
+    "encoder.enc": "ENCODER",
+    "encoder.dec": "DECODER",
+    "chart.epoch": "Epoch",
+    "trace.error.load3d": "Could not load 3D projection.",
+    "trace.error.no3d": "3D projection is unavailable",
+    "trace.error.three": "Three.js library is missing.",
+    "trace.error.embedding": "3D embedding data is unavailable.",
+    "globe.error.three": "Three.js library is missing",
+    "globe.loading": "Loading map…",
+  },
+};
+let currentLang = localStorage.getItem("app-lang") || "pl";
+const REGION_NAMES = {};
+["pl", "en"].forEach((lang) => {
+  try {
+    REGION_NAMES[lang] = new Intl.DisplayNames([lang], { type: "region" });
+  } catch {
+    REGION_NAMES[lang] = null;
+  }
+});
 
 let flagsData = [];
 let metadata = {};
@@ -30,8 +191,85 @@ function clusterDescription(clusterId) {
   return m?.ai_description || m?.traits?.description || "";
 }
 
+function flagNoun(count) {
+  if (currentLang === "en") return count === 1 ? "flag" : "flags";
+  if (count === 1) return "flaga";
+  if (count < 5) return "flagi";
+  return "flag";
+}
+
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => document.querySelectorAll(sel);
+
+function t(key, vars = {}) {
+  const source = I18N[currentLang] || I18N.pl;
+  const fallback = I18N.pl[key] || key;
+  let text = source[key] || fallback;
+  Object.entries(vars).forEach(([name, value]) => {
+    text = text.replaceAll(`{${name}}`, String(value));
+  });
+  return text;
+}
+
+window.__t = t;
+
+function countryName(code, fallback = "") {
+  const normalized = String(code || "").toUpperCase();
+  if (!normalized || normalized.length !== 2) return fallback || normalized;
+  const localized = REGION_NAMES[currentLang]?.of(normalized);
+  if (localized && localized !== normalized) return localized;
+  return fallback || normalized;
+}
+
+window.__countryName = countryName;
+
+function applyTranslations() {
+  document.documentElement.lang = currentLang;
+  $$("[data-i18n]").forEach((el) => {
+    const key = el.dataset.i18n;
+    if (!key) return;
+    el.innerHTML = t(key);
+  });
+  $$("[data-i18n-attr]").forEach((el) => {
+    const defs = (el.dataset.i18nAttr || "").split("|");
+    defs.forEach((def) => {
+      const [attr, key] = def.split(":");
+      if (!attr || !key) return;
+      el.setAttribute(attr, t(key));
+    });
+  });
+  document.title = t("doc.title");
+  $$(".lang-btn").forEach((btn) => btn.classList.toggle("active", btn.dataset.lang === currentLang));
+}
+
+function setLanguage(lang) {
+  if (!I18N[lang]) return;
+  currentLang = lang;
+  localStorage.setItem("app-lang", lang);
+  applyTranslations();
+  updateEncoderBlockLabels();
+  if (traceInitDone) initReconstructionTrace();
+  if ($("#pipeline-anim")) renderPipeline();
+  if ($("#clusters-gallery")) renderClustersGallery();
+  populateGlobeClusterSelect();
+  if ($("#panel-cluster-badge")?.textContent) {
+    const raw = $("#panel-cluster-badge").dataset.clusterId;
+    const n = raw ? Number(raw) + 1 : null;
+    if (n != null) $("#panel-cluster-badge").textContent = t("cluster.label", { n });
+  }
+  const panelCode = $("#panel-code")?.textContent?.trim();
+  if (panelCode) {
+    const flag = flagsData.find((f) => f.code.toUpperCase() === panelCode.toUpperCase());
+    if (flag) $("#panel-country").textContent = countryName(flag.code, flag.country);
+  }
+}
+
+function initLanguageSwitch() {
+  applyTranslations();
+  $$(".lang-btn").forEach((btn) => {
+    btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+  });
+}
 
 function flagUrl(code) {
   return `${FLAG_CDN}/${code.toLowerCase()}.png`;
@@ -110,7 +348,7 @@ async function loadData() {
   if (!metaRes.ok) {
     finishIntro();
     $("#prezi-world").innerHTML =
-      '<p class="error">Brak danych statycznych. Upewnij się, że katalog <code>frontend/data</code> istnieje.</p>';
+      `<p class="error">${t("error.noStaticData")}</p>`;
     return;
   }
   const metadataPayload = await metaRes.json();
@@ -271,7 +509,7 @@ let globeActiveCluster = null;
 
 function populateGlobeClusterSelect() {
   const chipsWrap = $("#globe-cluster-chips");
-  if (!chipsWrap) return;
+  if (!chipsWrap || !flagsData.length) return;
   chipsWrap.innerHTML = "";
   const clusters = [...new Set(flagsData.map((f) => f.cluster))].sort((a, b) => a - b);
   const biggest = clusters.reduce((best, cid) => {
@@ -299,8 +537,8 @@ function populateGlobeClusterSelect() {
     });
 
     btn.appendChild(stack);
-    btn.title = `Klaster ${cid + 1}`;
-    btn.setAttribute("aria-label", `Klaster ${cid + 1}`);
+    btn.title = t("cluster.label", { n: cid + 1 });
+    btn.setAttribute("aria-label", t("cluster.label", { n: cid + 1 }));
     btn.addEventListener("click", () => {
       globeActiveCluster = cid;
       chipsWrap.querySelectorAll(".globe-cluster-chip").forEach((el) => {
@@ -381,9 +619,9 @@ function buildClusterCloud(clusterId, flags, { interactive = true, maxFlags = nu
   header.className = "cluster-cloud-header";
   header.innerHTML = `
     <h3 class="cluster-cloud-name">
-      <span class="cluster-swatch" style="background:${color}" title="Grupa ${clusterId + 1}"></span>
+      <span class="cluster-swatch" style="background:${color}" title="${t("cluster.label", { n: clusterId + 1 })}"></span>
     </h3>
-    <p class="cluster-cloud-meta">${flags.length} ${flags.length === 1 ? "flaga" : flags.length < 5 ? "flagi" : "flag"}</p>
+    <p class="cluster-cloud-meta">${flags.length} ${flagNoun(flags.length)}</p>
     ${desc ? `<p class="cluster-cloud-traits">${desc}</p>` : ""}
   `;
   cloud.appendChild(header);
@@ -411,7 +649,7 @@ function buildClusterCloud(clusterId, flags, { interactive = true, maxFlags = nu
     cell.appendChild(img);
 
     if (interactive) {
-      cell.addEventListener("mouseenter", (e) => showTooltip(e, flag.country));
+      cell.addEventListener("mouseenter", (e) => showTooltip(e, countryName(flag.code, flag.country)));
       cell.addEventListener("mousemove", moveTooltip);
       cell.addEventListener("mouseleave", hideTooltip);
       cell.addEventListener("click", () => {
@@ -430,7 +668,7 @@ function buildClusterCloud(clusterId, flags, { interactive = true, maxFlags = nu
   if (!interactive && flags.length > show.length) {
     const hint = document.createElement("p");
     hint.className = "cluster-cloud-hint";
-    hint.textContent = `+ ${flags.length - show.length} kolejnych w pełnej eksploracji`;
+    hint.textContent = t("cluster.hint.more", { n: flags.length - show.length });
     cloud.appendChild(hint);
   }
 
@@ -464,10 +702,11 @@ function initSidepanel() {
 
 function openSidepanel(flag) {
   $("#panel-flag").src = flagUrl(flag.code);
-  $("#panel-country").textContent = flag.country;
+  $("#panel-country").textContent = countryName(flag.code, flag.country);
   $("#panel-code").textContent = flag.code;
   const badge = $("#panel-cluster-badge");
-  badge.textContent = `Klaster ${flag.cluster + 1}`;
+  badge.dataset.clusterId = String(flag.cluster);
+  badge.textContent = t("cluster.label", { n: flag.cluster + 1 });
   badge.style.background = flag.cluster_color;
 
   const nb = $("#panel-neighbors");
@@ -477,8 +716,8 @@ function openSidepanel(flag) {
     const img = document.createElement("img");
     img.src = flagUrl(code);
     const neighbor = flagsData.find((f) => f.code === code);
-    img.alt = neighbor?.country || code;
-    img.title = neighbor?.country || code;
+    img.alt = countryName(code, neighbor?.country || code);
+    img.title = countryName(code, neighbor?.country || code);
     img.addEventListener("click", () => {
       if (neighbor) openSidepanel(neighbor);
     });
@@ -516,7 +755,10 @@ function initClusterScatter() {
   canvas.addEventListener("mousemove", (e) => {
     const hit = clusterScatter.updateHover2d(e.clientX, e.clientY);
     if (hit) {
-      showTooltip(e, `${hit.country} · klaster ${hit.cluster + 1}`);
+      showTooltip(
+        e,
+        `${countryName(hit.code, hit.country)} · ${t("cluster.label", { n: hit.cluster + 1 }).toLowerCase()}`,
+      );
       canvas.style.cursor = "pointer";
     } else {
       hideTooltip();
@@ -550,29 +792,33 @@ function initReconstructionTrace() {
   const wrap = $("#reconstruction-trace");
   if (!select || !wrap || !flagsData.length) return;
 
-  if (!traceInitDone) {
-    const samples = (metadata.reconstructions || []).map((r) => ({
-      code: (r.code || "").toUpperCase(),
-      country: r.country || r.code || "",
-      origUrl: assetUrl(r.orig_url),
-      recUrl: assetUrl(r.rec_url),
-    })).filter((r) => r.code && r.origUrl && r.recUrl);
-    const sortedAll = [...flagsData]
-      .map((f) => ({ code: f.code.toUpperCase(), country: f.country || f.code }))
-      .sort((a, b) => a.country.localeCompare(b.country, "pl"));
-    reconstructionOptions = samples.length ? samples : sortedAll;
+  const selected = select.value;
+  select.innerHTML = "";
+  const samples = (metadata.reconstructions || []).map((r) => ({
+    code: (r.code || "").toUpperCase(),
+    country: countryName(r.code, r.country || r.code || ""),
+    origUrl: assetUrl(r.orig_url),
+    recUrl: assetUrl(r.rec_url),
+  })).filter((r) => r.code && r.origUrl && r.recUrl);
+  const sortedAll = [...flagsData]
+    .map((f) => ({ code: f.code.toUpperCase(), country: countryName(f.code, f.country || f.code) }))
+    .sort((a, b) => a.country.localeCompare(b.country, currentLang));
+  reconstructionOptions = samples.length ? samples : sortedAll;
 
-    reconstructionOptions.forEach((f) => {
-      const opt = document.createElement("option");
-      opt.value = f.code.toUpperCase();
-      opt.textContent = `${f.country} (${f.code.toUpperCase()})`;
-      select.appendChild(opt);
-    });
+  reconstructionOptions.forEach((f) => {
+    const opt = document.createElement("option");
+    opt.value = f.code.toUpperCase();
+    opt.textContent = `${f.country} (${f.code.toUpperCase()})`;
+    select.appendChild(opt);
+  });
+  if (!traceInitDone) {
     select.addEventListener("change", () => loadReconstructionTrace(select.value));
     traceInitDone = true;
   }
 
-  if (!select.value) {
+  if (selected && reconstructionOptions.some((o) => o.code === selected)) {
+    select.value = selected;
+  } else if (!select.value) {
     select.value = reconstructionOptions[0]?.code || flagsData[0].code.toUpperCase();
   }
   loadReconstructionTrace(select.value);
@@ -581,7 +827,7 @@ function initReconstructionTrace() {
 async function loadReconstructionTrace(code) {
   const wrap = $("#reconstruction-trace");
   if (!wrap) return;
-  wrap.innerHTML = '<p class="card-desc">Ładowanie etapów rekonstrukcji…</p>';
+  wrap.innerHTML = `<p class="card-desc">${t("trace.loading")}</p>`;
 
   try {
     const res = await fetch(`${DATA_BASE}/reconstruction-traces/${code.toLowerCase()}.json`);
@@ -597,13 +843,13 @@ async function loadReconstructionTrace(code) {
   const sample = reconstructionOptions.find((r) => r.code === code.toUpperCase());
   if (!sample?.origUrl || !sample?.recUrl) {
     wrap.innerHTML =
-      '<p class="card-desc">Dla tej flagi brak pre-generowanych etapów w wersji statycznej.</p>';
+      `<p class="card-desc">${t("trace.missing")}</p>`;
     return;
   }
 
   renderReconstructionStages([
-    { name: "Wejście", shape: "3×64×64", image_url: sample.origUrl },
-    { name: "Wyjście (rekonstrukcja)", shape: "3×64×64", image_url: sample.recUrl },
+    { name: t("trace.stage.input"), shape: "3×64×64", image_url: sample.origUrl },
+    { name: t("trace.stage.output"), shape: "3×64×64", image_url: sample.recUrl },
   ]);
 }
 
@@ -616,13 +862,13 @@ function renderReconstructionStages(stages) {
     const card = document.createElement("article");
     card.className = "trace-stage";
     const img = document.createElement("img");
-    img.alt = stage.name || "Etap";
+    img.alt = stage.name || "Stage";
     img.src = stage.image_b64 ? `data:image/png;base64,${stage.image_b64}` : assetUrl(stage.image_url);
     const meta = document.createElement("div");
     meta.className = "trace-stage-meta";
     const title = document.createElement("p");
     title.className = "trace-stage-name";
-    title.textContent = stage.name || "Etap";
+    title.textContent = stage.name || "Stage";
     const shape = document.createElement("p");
     shape.className = "trace-stage-shape";
     shape.textContent = stage.shape || "";
@@ -646,13 +892,13 @@ function renderPipeline() {
   const reduction = metadata.reduction_method || "UMAP";
 
   const steps = [
-    { icon: "🏳️", name: "Flagi świata", detail: `${nCountries} obrazów PNG`, dim: "64 × 64 × 3", phase: "input" },
-    { icon: "⬇", name: "Enkoder CNN", detail: "5 warstw splotowych", dim: "64² → 32² → 16²", phase: "encode" },
-    { icon: "◆", name: "Wektor latentny", detail: "bottleneck FC", dim: "z ∈ ℝ¹²⁸", phase: "latent" },
-    { icon: "⬆", name: "Dekoder CNN", detail: "rekonstrukcja", dim: "16² → 32² → 64²", phase: "decode" },
-    { icon: "⊞", name: "K-Means", detail: `${nClusters} klastrów`, dim: "grupowanie z", phase: "cluster" },
-    { icon: "⊛", name: reduction, detail: "redukcja wymiarów", dim: "128D → 2D", phase: "reduce" },
-    { icon: "🗺️", name: "Mapa klastrów", detail: "chmura + globus", dim: "2D / 3D UMAP", phase: "output" },
+    { icon: "🏳️", name: t("pipeline.input.name"), detail: t("pipeline.input.detail", { n: nCountries }), dim: "64 × 64 × 3", phase: "input" },
+    { icon: "⬇", name: t("pipeline.encode.name"), detail: t("pipeline.encode.detail"), dim: "64² → 32² → 16²", phase: "encode" },
+    { icon: "◆", name: t("pipeline.latent.name"), detail: t("pipeline.latent.detail"), dim: "z ∈ ℝ¹²⁸", phase: "latent" },
+    { icon: "⬆", name: t("pipeline.decode.name"), detail: t("pipeline.decode.detail"), dim: "16² → 32² → 64²", phase: "decode" },
+    { icon: "⊞", name: t("pipeline.cluster.name"), detail: t("pipeline.cluster.detail", { n: nClusters }), dim: t("pipeline.cluster.dim"), phase: "cluster" },
+    { icon: "⊛", name: reduction, detail: t("pipeline.reduce.detail"), dim: "128D → 2D", phase: "reduce" },
+    { icon: "🗺️", name: t("pipeline.output.name"), detail: t("pipeline.output.detail"), dim: "2D / 3D UMAP", phase: "output" },
   ];
 
   let html = '<div class="pipeline-steps">';
@@ -675,7 +921,7 @@ function renderPipeline() {
 
 // ===== ENCODER CANVAS ANIMATION =====
 
-const ENC_BLOCKS = [
+let ENC_BLOCKS = [
   { name: "Wejście",   dim: "3 × 64²",   h: 100, w: 14, sheets: 1, color: "#d4c5b0" },
   { name: "64 × 64²",  dim: "Conv·BN·ReLU", h: 100, w: 20, sheets: 2, color: "#c0a880" },
   { name: "128 × 32²", dim: "stride 2 ↓",   h: 50,  w: 24, sheets: 2, color: "#a88860" },
@@ -686,6 +932,12 @@ const ENC_BLOCKS = [
   { name: "64 × 64²",  dim: "ConvT·BN·ReLU",h: 100, w: 20, sheets: 2, color: "#c0a880" },
   { name: "Wyjście",   dim: "3 × 64²",   h: 100, w: 14, sheets: 1, color: "#d4c5b0" },
 ];
+
+function updateEncoderBlockLabels() {
+  if (!ENC_BLOCKS.length) return;
+  ENC_BLOCKS[0].name = t("encoder.input");
+  ENC_BLOCKS[8].name = t("encoder.output");
+}
 
 let encParticles = [];
 let encAnimId = null;
@@ -839,8 +1091,8 @@ function drawEncoderFrame(canvas, ts) {
   ctx.textAlign = "center";
   ctx.font = "600 9px DM Sans, sans-serif";
   ctx.fillStyle = "rgba(122,99,72,0.7)";
-  ctx.fillText("ENKODER", (centers[0].cx + centers[3].cx) / 2, 13);
-  ctx.fillText("DEKODER", (centers[5].cx + centers[8].cx) / 2, 13);
+  ctx.fillText(t("encoder.enc"), (centers[0].cx + centers[3].cx) / 2, 13);
+  ctx.fillText(t("encoder.dec"), (centers[5].cx + centers[8].cx) / 2, 13);
   ctx.fillStyle = "#b8956a";
   ctx.font = "700 9px DM Sans, sans-serif";
   ctx.fillText("z", latentX, 13);
@@ -976,7 +1228,7 @@ async function drawLossChart() {
 
   ctx.fillStyle = THEME.chartText;
   ctx.font = "500 11px DM Sans, sans-serif";
-  ctx.fillText("Epoka", w / 2 - 18, h - 12);
+  ctx.fillText(t("chart.epoch"), w / 2 - 18, h - 12);
   ctx.save();
   ctx.translate(16, h / 2);
   ctx.rotate(-Math.PI / 2);
@@ -1001,5 +1253,7 @@ function renderClustersGallery() {
   });
 }
 
+initLanguageSwitch();
+updateEncoderBlockLabels();
 initTabs();
 loadData();

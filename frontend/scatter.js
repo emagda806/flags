@@ -35,6 +35,9 @@ class ClusterScatter {
       stroke: "#f8f5ef",
       text: "#5f5e5a",
     };
+    this.t = (key, vars = {}) => (window.__t ? window.__t(key, vars) : key);
+    this.countryName = (code, fallback = "") =>
+      (window.__countryName ? window.__countryName(code, fallback) : (fallback || code));
   }
 
   async ensure3d() {
@@ -53,7 +56,7 @@ class ClusterScatter {
         return;
       }
       const detail = await res.text().catch(() => "");
-      throw new Error(`Brak projekcji 3D (${res.status}) ${detail}`);
+      throw new Error(`${this.t("trace.error.no3d")} (${res.status}) ${detail}`);
     } catch (err) {
       console.warn("[ClusterScatter] Falling back to pseudo-3D:", err);
       // Deterministic pseudo-3D fallback from 2D + cluster spread.
@@ -85,7 +88,7 @@ class ClusterScatter {
         .then(() => this._init3d())
         .catch((err) => {
           console.error("[ClusterScatter] 3D init error:", err);
-          this._render3dMessage("Nie udało się załadować projekcji 3D.");
+          this._render3dMessage(this.t("trace.error.load3d"));
         });
     }
   }
@@ -102,7 +105,7 @@ class ClusterScatter {
       await this._init3d();
     } catch (err) {
       console.error("[ClusterScatter] 3D init error:", err);
-      this._render3dMessage("Nie udało się załadować projekcji 3D.");
+      this._render3dMessage(this.t("trace.error.load3d"));
     }
   }
 
@@ -233,7 +236,7 @@ class ClusterScatter {
 
   async _init3d() {
     if (!window.THREE) {
-      this._render3dMessage("Brak biblioteki Three.js.");
+      this._render3dMessage(this.t("trace.error.three"));
       return;
     }
     await this.ensure3d();
@@ -274,7 +277,7 @@ class ClusterScatter {
       .filter(Boolean);
 
     if (!pts.length) {
-      this._render3dMessage("Brak danych embeddingu 3D.");
+      this._render3dMessage(this.t("trace.error.embedding"));
       return;
     }
 
@@ -354,7 +357,10 @@ class ClusterScatter {
       this._hover3dMesh = hit;
       if (hit) {
         hit.scale.setScalar(1.35);
-        this.onTooltipShow?.(e, `${hit.userData.country} · klaster ${hit.userData.flag.cluster + 1}`);
+        this.onTooltipShow?.(
+          e,
+          `${this.countryName(hit.userData.flag.code, hit.userData.country)} · ${this.t("cluster.label", { n: hit.userData.flag.cluster + 1 }).toLowerCase()}`,
+        );
         this.onTooltipMove?.(e);
         dom.style.cursor = "pointer";
       } else {

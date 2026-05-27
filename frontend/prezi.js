@@ -26,6 +26,8 @@ class PreziExplorer {
     this.onTooltipShow = onTooltipShow;
     this.onTooltipHide = onTooltipHide;
     this.onTooltipMove = onTooltipMove;
+    this.countryName = (code, fallback = "") =>
+      (window.__countryName ? window.__countryName(code, fallback) : (fallback || code));
 
     this.SCENE = { w: 4800, h: 4800 };
     this.CLUSTER_COMPRESS = 0.55;
@@ -236,7 +238,7 @@ class PreziExplorer {
           this.flyTo(x, y, 1.6, 600);
           this.onFlagClick?.(flag);
         });
-        el.addEventListener("mouseenter", (e) => this._showFlagTooltip(e, flag.country));
+        el.addEventListener("mouseenter", (e) => this._showFlagTooltip(e, this.countryName(flag.code, flag.country)));
         el.addEventListener("mousemove", (e) => this.onTooltipMove?.(e));
         el.addEventListener("mouseleave", () => this._hideFlagTooltip());
 

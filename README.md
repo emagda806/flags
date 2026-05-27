@@ -1,13 +1,19 @@
-# Eksploracja flag świata
+# World Flags Explorer
 
-Aplikacja webowa (PL) do eksploracji flag z autoenkoderem i klasteryzacją K-Means.
+Interactive web app for exploring visual similarity between world flags using:
+- a convolutional autoencoder,
+- latent embeddings,
+- K-Means clustering,
+- UMAP / 3D projections for visualization.
 
-## Wymagania
+The UI supports two languages (Polish and English), with Polish as the default.
+
+## Requirements
 
 - Python 3.10+
-- Połączenie z internetem (pobieranie flag przy treningu)
+- Internet connection (required while training to download source flag images)
 
-## Instalacja i uruchomienie
+## Local Run (Backend + Frontend)
 
 ```bash
 cd backend
@@ -15,44 +21,45 @@ python -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
-# Trening (pobiera flagi, uczy model — kilka minut na CPU)
+# Training (downloads flags and trains the model; takes a few minutes on CPU)
 python train.py
 
-# Serwer API + frontend
+# API server + frontend
 uvicorn app:app --reload --host 0.0.0.0 --port 8000
 ```
 
-Otwórz w przeglądarce: http://localhost:8000
+Open: `http://localhost:8000`
 
-## GitHub Pages (wersja statyczna)
+## Deploy to GitHub Pages (Static)
 
-Projekt można wystawić na GitHub Pages. W repo jest workflow `Deploy to GitHub Pages`,
-który publikuje katalog `frontend/` i kopiuje dane JSON z `backend/data/` do `frontend/data/`.
+This repository includes a workflow: `Deploy to GitHub Pages`.
+It publishes `frontend/` and copies static assets from `backend/data/` into `frontend/data/`.
 
-Kroki:
+### Steps
 
-1. Wypchnij repo na GitHub (gałąź `main`).
-2. W ustawieniach repo włącz Pages: **Settings -> Pages -> Source: GitHub Actions**.
-3. Po zakończeniu workflow strona będzie dostępna pod adresem:
-   `https://<twoj-login>.github.io/<nazwa-repo>/`.
+1. Push the repository to GitHub (`main` branch).
+2. In GitHub: **Settings -> Pages -> Source: GitHub Actions**.
+3. Wait for the workflow to finish.
+4. Your app will be available at:
+   `https://<your-username>.github.io/<repo-name>/`
 
-Uwagi:
+### Static-mode notes
 
-- Wersja Pages nie uruchamia backendu FastAPI.
-- Flagi są pobierane z zewnętrznego CDN (`flagcdn.com`).
-- Widok "Rekonstrukcja krok po kroku" wymaga endpointu backendowego i w wersji Pages jest niedostępny.
+- GitHub Pages does not run the FastAPI backend.
+- Flags are loaded from external CDN: `flagcdn.com`.
+- Reconstruction view works from pre-generated static assets (`frontend/data/recon_*.png`).
 
-## Struktura
+## Project Structure
 
-- `backend/train.py` — pipeline danych i trening
-- `backend/app.py` — API FastAPI
-- `backend/model/` — wagi autoenkodera
-- `backend/data/` — flagi, `metadata.json`, embeddingi
-- `frontend/` — HTML/CSS/JS (polski UI)
+- `backend/train.py` — data pipeline and model training
+- `backend/app.py` — FastAPI application
+- `backend/model/` — autoencoder weights and config
+- `backend/data/` — training artifacts, metadata, cached assets
+- `frontend/` — static HTML/CSS/JS frontend
 
-## API
+## API (backend mode)
 
-- `GET /api/flags` — lista flag z klastrami i embeddingami 2D
-- `GET /api/metadata` — pełne metadane (klastry, architektura, rekonstrukcje)
-- `GET /api/flag/{code}` — obraz flagi
-- `GET /api/export/clusters.csv` — eksport klastrów
+- `GET /api/flags` — flags list with clusters and 2D embeddings
+- `GET /api/metadata` — full metadata (clusters, architecture, reconstructions)
+- `GET /api/flag/{code}` — flag image
+- `GET /api/export/clusters.csv` — clusters export
