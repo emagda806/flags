@@ -230,6 +230,7 @@ let clusterScatter = null;
 let flagGlobe = null;
 let countryCoords = {};
 let exploreView = "cloud";
+let detailsInitialized = false;
 
 
 function clusterMeta(clusterId) {
@@ -517,7 +518,9 @@ async function runIntro() {
     return;
   }
 
-  const sample = shuffle(flagsData).slice(0, Math.min(100, flagsData.length));
+  const mobile = window.matchMedia("(max-width: 900px)").matches;
+  const maxIntroFlags = mobile ? 45 : 100;
+  const sample = shuffle(flagsData).slice(0, Math.min(maxIntroFlags, flagsData.length));
 
   sample.forEach((flag) => {
     const img = document.createElement("img");
@@ -557,7 +560,7 @@ async function loadData() {
   await runIntro();
   document.body.classList.add("explore-mode");
   initExplore();
-  initDetails();
+  detailsInitialized = false;
   scheduleTourStart(220);
 }
 
@@ -590,13 +593,19 @@ function initTabs() {
       panel.classList.add("active");
       panel.hidden = false;
       if (id === "details") {
+        if (!detailsInitialized) {
+          initDetails();
+          detailsInitialized = true;
+        }
         drawLossChart();
         startEncoderAnim();
         document.body.classList.remove("explore-mode");
+        clusterScatter?.setActive?.(true);
         clusterScatter?.resize();
       } else if (id === "explore") {
         stopEncoderAnim();
         document.body.classList.add("explore-mode");
+        clusterScatter?.setActive?.(false);
         if (exploreView === "cloud") prezi?.fitAll(0);
         else flagGlobe?.resize();
       } else {

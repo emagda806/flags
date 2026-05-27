@@ -16,6 +16,7 @@ class FlagGlobe {
     this._hoveredMarker = null;
     this._pendingCluster = null;
     this._countryIdMap = null;
+    this._isMobile = window.matchMedia("(max-width: 900px)").matches;
     this.three = {};
     this.t = (key, vars = {}) => (window.__t ? window.__t(key, vars) : key);
     this.countryName = (code, fallback = "") =>
@@ -77,7 +78,7 @@ class FlagGlobe {
 
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(w, h);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, this._isMobile ? 1.25 : 2));
     this.container.appendChild(renderer.domElement);
 
     const globeGroup = new THREE.Group();
@@ -87,7 +88,11 @@ class FlagGlobe {
     const sphereMat = globeTexture
       ? new THREE.MeshBasicMaterial({ map: globeTexture })
       : new THREE.MeshBasicMaterial({ color: 0xe8e4de });
-    const sphere = new THREE.Mesh(new THREE.SphereGeometry(1, 64, 48), sphereMat);
+    const sphereSegments = this._isMobile ? { w: 40, h: 30 } : { w: 64, h: 48 };
+    const sphere = new THREE.Mesh(
+      new THREE.SphereGeometry(1, sphereSegments.w, sphereSegments.h),
+      sphereMat,
+    );
     globeGroup.add(sphere);
 
     // Geographic grid (meridians every 30°, parallels every 30°)
@@ -217,8 +222,8 @@ class FlagGlobe {
   _buildTexture(THREE, topo, opts = {}) {
     const highlightIds = opts.highlightIds || new Set();
     const highlightColor = opts.highlightColor || "#B7B2A8";
-    const W = 2048;
-    const H = 1024;
+    const W = this._isMobile ? 1024 : 2048;
+    const H = this._isMobile ? 512 : 1024;
     const canvas = document.createElement('canvas');
     canvas.width = W;
     canvas.height = H;
@@ -313,10 +318,11 @@ class FlagGlobe {
   // ── Geographic grid ───────────────────────────────────────────────────────
   _buildGrid(THREE) {
     const pts = [];
-    const step = 2; // degrees per segment arc
+    const step = this._isMobile ? 4 : 2; // degrees per segment arc
 
-    // Meridians every 30°
-    for (let lng = -180; lng < 180; lng += 30) {
+    // Meridians
+    const meridianStep = this._isMobile ? 45 : 30;
+    for (let lng = -180; lng < 180; lng += meridianStep) {
       for (let lat = -90 + step; lat <= 90; lat += step) {
         const a = FlagGlobe.latLngToVec3(lat - step, lng, 1.002);
         const b = FlagGlobe.latLngToVec3(lat, lng, 1.002);
@@ -324,8 +330,9 @@ class FlagGlobe {
       }
     }
 
-    // Parallels every 30° (skip poles)
-    for (let lat = -60; lat <= 60; lat += 30) {
+    // Parallels (skip poles)
+    const parallelStep = this._isMobile ? 45 : 30;
+    for (let lat = -60; lat <= 60; lat += parallelStep) {
       const steps = 180;
       for (let i = 0; i < steps; i++) {
         const lng0 = -180 + (360 / steps) * i;

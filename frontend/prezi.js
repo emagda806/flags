@@ -6,6 +6,7 @@ const FLAG_W = 36;
 const FLAG_H = 24;
 /** Mnożnik zoomu przy starcie / „Cały widok” (flagi 64×64 — mniejsze kafelki = ostrzej przy zbliżeniu) */
 const START_ZOOM_BOOST = 1.45;
+const START_ZOOM_BOOST_MOBILE = 1.95;
 
 class PreziExplorer {
   constructor({
@@ -268,7 +269,9 @@ class PreziExplorer {
     if (rect.width < 10) return;
     // Klaster ma zajmować ~70% mniejszego wymiaru viewportu
     const viewMin = Math.min(rect.width, rect.height);
-    const scale = Math.min(1.9, Math.max(0.45, (viewMin * 0.70) / (top.radius * 2)));
+    const mobile = window.matchMedia("(max-width: 768px)").matches;
+    const targetFill = mobile ? 0.9 : 0.7;
+    const scale = Math.min(2, Math.max(0.45, (viewMin * targetFill) / (top.radius * 2)));
     this.flyTo(top.x, top.y, scale, 950);
   }
 
@@ -282,7 +285,9 @@ class PreziExplorer {
       const bw = this.bounds.maxX - this.bounds.minX || 1;
       const bh = this.bounds.maxY - this.bounds.minY || 1;
       const fit = Math.min((rect.width - pad * 2) / bw, (rect.height - pad * 2) / bh);
-      const scale = Math.min(2, Math.max(0.08, fit * START_ZOOM_BOOST));
+      const mobile = window.matchMedia("(max-width: 768px)").matches;
+      const boost = mobile ? START_ZOOM_BOOST_MOBILE : START_ZOOM_BOOST;
+      const scale = Math.min(2, Math.max(0.08, fit * boost));
       const cx = (this.bounds.minX + this.bounds.maxX) / 2;
       const cy = (this.bounds.minY + this.bounds.maxY) / 2;
 

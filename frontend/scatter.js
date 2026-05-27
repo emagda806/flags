@@ -25,6 +25,8 @@ class ClusterScatter {
     this.scatterPoints = [];
     this.embedding3d = null;
     this.three = { renderer: null, scene: null, camera: null, meshes: [], animId: null };
+    this._active = true;
+    this._isMobile = window.matchMedia("(max-width: 900px)").matches;
     this._hover2dCode = null;
     this._hover3dMesh = null;
     this._onPointerUp3d = null;
@@ -98,8 +100,21 @@ class ClusterScatter {
     if (this.three.renderer) this._resize3d();
   }
 
+  setActive(active) {
+    this._active = Boolean(active);
+    if (!this._active) {
+      this._stopThree();
+      this.onTooltipHide?.();
+      return;
+    }
+    if (this.three.renderer && !this.three.animId && this.three.group) {
+      this._startThreeLoop();
+    }
+  }
+
   async initDualView() {
     this.draw2d();
+    if (this._isMobile) return;
     try {
       await this.ensure3d();
       await this._init3d();
@@ -394,12 +409,19 @@ class ClusterScatter {
     });
 
     this.three = { renderer, scene, camera, meshes, group, animId: null };
+    this._startThreeLoop();
+  }
 
+  _startThreeLoop() {
     const tick = () => {
+      if (!this._active) {
+        this.three.animId = null;
+        return;
+      }
       if (!this._orbit.dragging) this._orbit.rotY += 0.0012;
-      group.rotation.y = this._orbit.rotY;
-      group.rotation.x = this._orbit.rotX;
-      renderer.render(scene, camera);
+      this.three.group.rotation.y = this._orbit.rotY;
+      this.three.group.rotation.x = this._orbit.rotX;
+      this.three.renderer.render(this.three.scene, this.three.camera);
       this.three.animId = requestAnimationFrame(tick);
     };
     this.three.animId = requestAnimationFrame(tick);
