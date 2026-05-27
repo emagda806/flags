@@ -455,12 +455,9 @@ function renderTourStep() {
   }
   tourState.target?.classList.remove("tour-highlight");
   const target = document.querySelector(stepCfg.selector);
-  if (!isTourTargetRenderable(target)) {
-    goTourStep(1);
-    return;
-  }
-  tourState.target = target;
-  target.classList.add("tour-highlight");
+  const hasTarget = isTourTargetRenderable(target);
+  tourState.target = hasTarget ? target : null;
+  if (hasTarget) target.classList.add("tour-highlight");
 
   tourState.titleEl.textContent = t(stepCfg.title);
   tourState.bodyEl.textContent = t(stepCfg.body);
@@ -480,58 +477,47 @@ function renderTourStep() {
   const gap = 14;
   const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 
-  card.classList.remove("tour-arrow-top", "tour-arrow-bottom", "tour-arrow-left", "tour-arrow-right");
+  card.classList.remove("tour-arrow-top", "tour-arrow-bottom", "tour-arrow-left", "tour-arrow-right", "tour-no-arrow");
   card.style.removeProperty("--arrow-x");
   card.style.removeProperty("--arrow-y");
   card.style.width = `${width}px`;
   card.style.left = `${pad}px`;
   card.style.top = `${pad}px`;
   const cardRect = card.getBoundingClientRect();
-
-  const canLeft = rect.left - gap - cardRect.width >= pad;
-  const canRight = rect.right + gap + cardRect.width <= window.innerWidth - pad;
-  const canTop = rect.top - gap - cardRect.height >= pad;
-  const canBottom = rect.bottom + gap + cardRect.height <= window.innerHeight - pad;
-
-  let placement = stepCfg.placement || "auto";
-  if (placement === "left" && !canLeft) placement = canTop ? "top" : "bottom";
-  if (placement === "right" && !canRight) placement = canTop ? "top" : "bottom";
-  if (placement === "top" && !canTop) placement = canBottom ? "bottom" : "left";
-  if (placement === "bottom" && !canBottom) placement = canTop ? "top" : "left";
-
-  if (placement === "auto") {
-    if (canBottom) placement = "bottom";
-    else if (canTop) placement = "top";
-    else if (canLeft) placement = "left";
-    else placement = "right";
-  }
-
+  let placement = stepCfg.placement || "bottom";
   let left = pad;
   let top = pad;
-  if (placement === "left") {
-    left = rect.left - cardRect.width - gap;
-    top = clamp(rect.top + rect.height / 2 - cardRect.height / 2, pad, window.innerHeight - cardRect.height - pad);
-    const arrowY = clamp(rect.top + rect.height / 2 - top - 7, 14, cardRect.height - 20);
-    card.classList.add("tour-arrow-right");
-    card.style.setProperty("--arrow-y", `${arrowY}px`);
-  } else if (placement === "right") {
-    left = rect.right + gap;
-    top = clamp(rect.top + rect.height / 2 - cardRect.height / 2, pad, window.innerHeight - cardRect.height - pad);
-    const arrowY = clamp(rect.top + rect.height / 2 - top - 7, 14, cardRect.height - 20);
-    card.classList.add("tour-arrow-left");
-    card.style.setProperty("--arrow-y", `${arrowY}px`);
-  } else if (placement === "top") {
-    left = clamp(rect.left + rect.width / 2 - cardRect.width / 2, pad, window.innerWidth - cardRect.width - pad);
-    top = rect.top - cardRect.height - gap;
-    const arrowX = clamp(rect.left + rect.width / 2 - left - 7, 14, cardRect.width - 20);
-    card.classList.add("tour-arrow-bottom");
-    card.style.setProperty("--arrow-x", `${arrowX}px`);
+  if (hasTarget) {
+    const rect = target.getBoundingClientRect();
+    if (placement === "left") {
+      left = rect.left - cardRect.width - gap;
+      top = rect.top + rect.height / 2 - cardRect.height / 2;
+      const arrowY = clamp(rect.top + rect.height / 2 - top - 7, 14, cardRect.height - 20);
+      card.classList.add("tour-arrow-right");
+      card.style.setProperty("--arrow-y", `${arrowY}px`);
+    } else if (placement === "right") {
+      left = rect.right + gap;
+      top = rect.top + rect.height / 2 - cardRect.height / 2;
+      const arrowY = clamp(rect.top + rect.height / 2 - top - 7, 14, cardRect.height - 20);
+      card.classList.add("tour-arrow-left");
+      card.style.setProperty("--arrow-y", `${arrowY}px`);
+    } else if (placement === "top") {
+      left = rect.left + rect.width / 2 - cardRect.width / 2;
+      top = rect.top - cardRect.height - gap;
+      const arrowX = clamp(rect.left + rect.width / 2 - left - 7, 14, cardRect.width - 20);
+      card.classList.add("tour-arrow-bottom");
+      card.style.setProperty("--arrow-x", `${arrowX}px`);
+    } else {
+      left = rect.left + rect.width / 2 - cardRect.width / 2;
+      top = rect.bottom + gap;
+      const arrowX = clamp(rect.left + rect.width / 2 - left - 7, 14, cardRect.width - 20);
+      card.classList.add("tour-arrow-top");
+      card.style.setProperty("--arrow-x", `${arrowX}px`);
+    }
   } else {
-    left = clamp(rect.left + rect.width / 2 - cardRect.width / 2, pad, window.innerWidth - cardRect.width - pad);
-    top = rect.bottom + gap;
-    const arrowX = clamp(rect.left + rect.width / 2 - left - 7, 14, cardRect.width - 20);
-    card.classList.add("tour-arrow-top");
-    card.style.setProperty("--arrow-x", `${arrowX}px`);
+    left = window.innerWidth / 2 - cardRect.width / 2;
+    top = window.innerHeight / 2 - cardRect.height / 2;
+    card.classList.add("tour-no-arrow");
   }
 
   left = clamp(left, pad, window.innerWidth - cardRect.width - pad);

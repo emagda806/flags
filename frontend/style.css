@@ -280,6 +280,10 @@ body::before {
   top: var(--arrow-y, 24px);
 }
 
+.tour-card.tour-no-arrow::after {
+  display: none;
+}
+
 .tour-progress {
   margin: 0 0 0.2rem;
   font-size: 0.66rem;
