@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eksploracja flag świata</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="intro-active">
+  <div id="intro" class="intro" aria-live="polite">
+    <div id="intro-flags" class="intro-flags"></div>
+    <div class="intro-center">
+      <p class="intro-eyebrow">Autoenkoder · Klasteryzacja</p>
+      <h2 class="intro-title">Eksploracja flag świata</h2>
+    </div>
+    <button type="button" id="intro-skip" class="intro-skip">Pomiń animację</button>
+  </div>
+
+  <div class="page">
+    <header class="header">
+      <p class="eyebrow">Autoenkoder · K-Means · UMAP</p>
+      <h1>Eksploracja flag świata</h1>
+      <p class="subtitle">Podobieństwo wizualne flag w przestrzeni latentnej sieci neuronowej</p>
+    </header>
+
+    <nav class="tabs" role="tablist" aria-label="Główne sekcje">
+      <button class="tab active" data-tab="explore" role="tab" aria-selected="true">Eksploracja</button>
+      <button class="tab" data-tab="details" role="tab" aria-selected="false">Implementacja</button>
+    </nav>
+
+    <main>
+      <section id="tab-explore" class="panel active explore-panel" role="tabpanel">
+
+        <div id="explore-cloud" class="explore-view active">
+          <div class="prezi-stage" id="prezi-stage">
+            <div id="prezi-viewport" class="prezi-viewport" aria-label="Mapa flag">
+              <div id="prezi-world" class="prezi-world"></div>
+            </div>
+            <div class="prezi-controls">
+              <button type="button" id="prezi-zoom-out" class="btn btn-ghost" aria-label="Oddal">−</button>
+              <span id="prezi-zoom-level">20%</span>
+              <button type="button" id="prezi-zoom-in" class="btn btn-ghost" aria-label="Przybliż">+</button>
+              <button type="button" id="prezi-fit-all" class="btn btn-primary">Reset</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="explore-globe" class="explore-view" hidden>
+          <div class="globe-toolbar">
+            <div class="globe-cluster-pick">
+              <span>Atlas klastrów</span>
+              <div id="globe-cluster-chips" class="globe-cluster-chips" aria-label="Wybór klastra"></div>
+            </div>
+            <p class="globe-hint">Podświetlone kraje należą do wybranego klastra — kliknij punkt, aby zobaczyć flagę</p>
+          </div>
+          <div id="globe-container" class="globe-container" aria-label="Globus z klastrami"></div>
+        </div>
+      </section>
+
+      <section id="tab-details" class="panel" role="tabpanel" hidden>
+
+        <article class="card">
+          <h2>Pipeline aplikacji</h2>
+          <p class="card-desc">Od pikseli flagi do interaktywnej mapy — łańcuch przetwarzania danych</p>
+          <div id="pipeline-anim" class="pipeline-anim"></div>
+        </article>
+
+        <article class="card">
+          <h2>Jak działa autoenkoder</h2>
+          <p class="card-desc">Dane przepływają przez enkoder (kompresja 64×64&nbsp;→&nbsp;ℝ¹²⁸) i dekoder (rekonstrukcja ℝ¹²⁸&nbsp;→&nbsp;64×64)</p>
+          <div class="encoder-wrap">
+            <canvas id="encoder-canvas" class="encoder-canvas"></canvas>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Rekonstrukcja krok po kroku</h2>
+          <p class="card-desc">Podgląd obrazu flagi po przejściu przez kolejne etapy enkodera i dekodera</p>
+          <div class="trace-toolbar">
+            <label>
+              Flaga:
+              <select id="trace-code-select"></select>
+            </label>
+          </div>
+          <div id="reconstruction-trace" class="reconstruction-trace"></div>
+        </article>
+
+        <article class="card">
+          <h2>Mapa klastrów</h2>
+          <p class="card-desc">Projekcja wektorów latentnych — najedź na punkt, aby zobaczyć kraj</p>
+          <div class="scatter-stage">
+            <canvas id="scatter-canvas" width="900" height="420"></canvas>
+            <div id="scatter-3d" class="scatter-3d"></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Krzywa uczenia</h2>
+          <p class="card-desc">Strata MSE w funkcji epoki treningu</p>
+          <canvas id="loss-chart" width="800" height="280"></canvas>
+        </article>
+
+        <article class="card">
+          <h2>Chmury klastrów</h2>
+          <p class="card-desc">Grupy wizualnie podobnych flag — bez przypisanych nazw krajów</p>
+          <div id="clusters-gallery" class="clusters-gallery"></div>
+        </article>
+
+        <article class="card prose">
+          <h2>Jak to działa?</h2>
+          <p><strong>Autoenkoder</strong> uczy się kompresować obraz flagi do krótkiego wektora i go odtworzyć. Podobne flagi otrzymują podobne wektory.</p>
+          <p><strong>Wektor latentny</strong> to skondensowana reprezentacja cech wizualnych — bez ręcznego opisywania kolorów czy symboli.</p>
+          <p><strong>K-Means</strong> grupuje wektory tak, by flagi w jednym klastrze były blisko siebie w przestrzeni wyuczonej przez model.</p>
+          <p><strong>UMAP / t-SNE</strong> sprowadza embeddingi do dwóch lub trzech wymiarów wyłącznie na potrzeby wizualizacji.</p>
+        </article>
+      </section>
+    </main>
+
+    <!-- View switcher — rendered outside <main> to avoid any overflow/stacking constraints -->
+    <div class="explore-subnav" role="tablist" aria-label="Tryb eksploracji">
+      <button type="button" class="explore-subtab active" data-explore-view="cloud" aria-label="Chmura flag" title="Chmura flag">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+          <path d="M6 18h11a4 4 0 0 0 .4-7.98A6 6 0 0 0 6.3 8.6 4.5 4.5 0 0 0 6 18z"/>
+        </svg>
+      </button>
+      <button type="button" class="explore-subtab" data-explore-view="globe" aria-label="Globus" title="Globus">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M2 12h20"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <aside id="sidepanel" class="sidepanel" aria-hidden="true">
+    <button type="button" class="sidepanel-close" aria-label="Zamknij">×</button>
+    <div class="sidepanel-inner">
+      <img id="panel-flag" src="" alt="">
+      <p class="panel-eyebrow" id="panel-code"></p>
+      <h2 id="panel-country"></h2>
+      <p class="panel-cluster">
+        <span class="panel-cluster-label">Klaster</span>
+        <span id="panel-cluster-badge"></span>
+      </p>
+      <h3 class="panel-section-title">Podobne flagi w klastrze</h3>
+      <div id="panel-neighbors" class="panel-neighbors"></div>
+    </div>
+  </aside>
+  <div id="overlay" class="overlay hidden"></div>
+  <div id="tooltip" class="tooltip" role="tooltip"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="prezi.js"></script>
+  <script src="scatter.js"></script>
+  <script src="globe.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

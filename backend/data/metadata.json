@@ -1,0 +1,4787 @@
+{
+  "flags": [
+    {
+      "country": "Afganistan",
+      "code": "AF",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "GN",
+        "IM",
+        "AO",
+        "PG",
+        "VU"
+      ],
+      "embedding_2d": [
+        2.3359534740448,
+        8.278030395507812
+      ],
+      "dominant_color": "#50472d"
+    },
+    {
+      "country": "Albania",
+      "code": "AL",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "VN",
+        "KG",
+        "ME",
+        "TR",
+        "CN"
+      ],
+      "embedding_2d": [
+        3.5948970317840576,
+        10.310458183288574
+      ],
+      "dominant_color": "#df0000"
+    },
+    {
+      "country": "Algieria",
+      "code": "DZ",
+      "cluster": 9,
+      "cluster_color": "#a65d7a",
+      "neighbors": [
+        "BL",
+        "FO",
+        "YT",
+        "FI",
+        "VA"
+      ],
+      "embedding_2d": [
+        6.8963518142700195,
+        10.2103271484375
+      ],
+      "dominant_color": "#87a994"
+    },
+    {
+      "country": "Andora",
+      "code": "AD",
+      "cluster": 5,
+      "cluster_color": "#c45c4a",
+      "neighbors": [
+        "RO",
+        "MD",
+        "TD",
+        "SN",
+        "BE"
+      ],
+      "embedding_2d": [
+        1.7845447063446045,
+        8.991010665893555
+      ],
+      "dominant_color": "#9e4a4a"
+    },
+    {
+      "country": "Angola",
+      "code": "AO",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "PG",
+        "TN",
+        "IM",
+        "BY",
+        "ME"
+      ],
+      "embedding_2d": [
+        3.1897566318511963,
+        9.502646446228027
+      ],
+      "dominant_color": "#6e0d16"
+    },
+    {
+      "country": "Anguilla",
+      "code": "AI",
+      "cluster": 4,
+      "cluster_color": "#7b5ea7",
+      "neighbors": [
+        "TC",
+        "SH",
+        "FK",
+        "MS",
+        "PN"
+      ],
+      "embedding_2d": [
+        2.7936408519744873,
+        4.330479621887207
+      ],
+      "dominant_color": "#3a3f76"
+    },
+    {
+      "country": "Antarktyka",
+      "code": "AQ",
+      "cluster": 3,
+      "cluster_color": "#b8956a",
+      "neighbors": [
+        "GT",
+        "HN",
+        "KZ",
+        "FM",
+        "SO"
+      ],
+      "embedding_2d": [
+        2.6246719360351562,
+        6.453335762023926
+      ],
+      "dominant_color": "#51bce6"
+    },
+    {
+      "country": "Antigua i Barbuda",
+      "code": "AG",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "TN",
+        "MV",
+        "HK",
+        "IM",
+        "MA"
+      ],
+      "embedding_2d": [
+        4.1162214279174805,
+        9.98250961303711
+      ],
+      "dominant_color": "#89343d"
+    },
+    {
+      "country": "Antyle Holenderskie",
+      "code": "BQ",
+      "cluster": 4,
+      "cluster_color": "#7b5ea7",
+      "neighbors": [
+        "AU",
+        "NZ",
+        "CK",
+        "MS",
+        "GS"
+      ],
+      "embedding_2d": [
+        3.936612129211426,
+        7.858583450317383
+      ],
+      "dominant_color": "#7888a2"
+    },
+    {
+      "country": "Arabia Saudyjska",
+      "code": "SA",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "TM",
+        "CC",
+        "MO",
+        "BD",
+        "BR"
+      ],
+      "embedding_2d": [
+        3.104207992553711,
+        7.557467460632324
+      ],
+      "dominant_color": "#0c5b39"
+    },
+    {
+      "country": "Argentyna",
+      "code": "AR",
+      "cluster": 3,
+      "cluster_color": "#b8956a",
+      "neighbors": [
+        "HN",
+        "FM",
+        "UZ",
+        "LC",
+        "SO"
+      ],
+      "embedding_2d": [
+        4.482913494110107,
+        5.889734268188477
+      ],
+      "dominant_color": "#a0c4e4"
+    },
+    {
+      "country": "Armenia",
+      "code": "AM",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "MV",
+        "MA",
+        "MZ",
+        "LA",
+        "IM"
+      ],
+      "embedding_2d": [
+        5.344921112060547,
+        9.954506874084473
+      ],
+      "dominant_color": "#9a493b"
+    },
+    {
+      "country": "Aruba",
+      "code": "AW",
+      "cluster": 3,
+      "cluster_color": "#b8956a",
+      "neighbors": [
+        "FM",
+        "SO",
+        "LC",
+        "FJ",
+        "KZ"
+      ],
+      "embedding_2d": [
+        3.184866428375244,
+        6.1680989265441895
+      ],
+      "dominant_color": "#5996c4"
+    },
+    {
+      "country": "Australia",
+      "code": "AU",
+      "cluster": 4,
+      "cluster_color": "#7b5ea7",
+      "neighbors": [
+        "NZ",
+        "CK",
+        "MS",
+        "HM",
+        "GS"
+      ],
+      "embedding_2d": [
+        2.638094902038574,
+        4.343964099884033
+      ],
+      "dominant_color": "#343874"
+    },
+    {
+      "country": "Austria",
+      "code": "AT",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "HU",
+        "YE",
+        "NL",
+        "EG",
+        "IQ"
+      ],
+      "embedding_2d": [
+        6.309970855712891,
+        6.420263290405273
+      ],
+      "dominant_color": "#da5e72"
+    },
+    {
+      "country": "Azerbejdżan",
+      "code": "AZ",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "NC",
+        "ST",
+        "GA",
+        "MQ",
+        "GY"
+      ],
+      "embedding_2d": [
+        4.3760504722595215,
+        7.009586811065674
+      ],
+      "dominant_color": "#6b8573"
+    },
+    {
+      "country": "Bahamy",
+      "code": "BS",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "GY",
+        "CX",
+        "GA",
+        "ST",
+        "SA"
+      ],
+      "embedding_2d": [
+        4.029982089996338,
+        7.206147193908691
+      ],
+      "dominant_color": "#356e59"
+    },
+    {
+      "country": "Bahrajn",
+      "code": "BH",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "QA",
+        "MG",
+        "MT",
+        "ML",
+        "TL"
+      ],
+      "embedding_2d": [
+        2.648397922515869,
+        10.081355094909668
+      ],
+      "dominant_color": "#e56e65"
+    },
+    {
+      "country": "Bangladesz",
+      "code": "BD",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "SA",
+        "MO",
+        "CC",
+        "BR",
+        "TM"
+      ],
+      "embedding_2d": [
+        2.87567400932312,
+        7.735325813293457
+      ],
+      "dominant_color": "#335c4b"
+    },
+    {
+      "country": "Barbados",
+      "code": "BB",
+      "cluster": 5,
+      "cluster_color": "#c45c4a",
+      "neighbors": [
+        "TD",
+        "RO",
+        "VC",
+        "MD",
+        "AD"
+      ],
+      "embedding_2d": [
+        2.0162930488586426,
+        8.386792182922363
+      ],
+      "dominant_color": "#4a545f"
+    },
+    {
+      "country": "Belgia",
+      "code": "BE",
+      "cluster": 5,
+      "cluster_color": "#c45c4a",
+      "neighbors": [
+        "TD",
+        "RO",
+        "SN",
+        "AD",
+        "MD"
+      ],
+      "embedding_2d": [
+        2.0058727264404297,
+        8.831856727600098
+      ],
+      "dominant_color": "#a45a21"
+    },
+    {
+      "country": "Belize",
+      "code": "BZ",
+      "cluster": 5,
+      "cluster_color": "#c45c4a",
+      "neighbors": [
+        "BB",
+        "TD",
+        "RO",
+        "MD",
+        "AD"
+      ],
+      "embedding_2d": [
+        2.5044097900390625,
+        7.23394250869751
+      ],
+      "dominant_color": "#57307f"
+    },
+    {
+      "country": "Benin",
+      "code": "BJ",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "CM",
+        "CG",
+        "PT",
+        "ML",
+        "TL"
+      ],
+      "embedding_2d": [
+        2.323564052581787,
+        9.411089897155762
+      ],
+      "dominant_color": "#917934"
+    },
+    {
+      "country": "Bermudy",
+      "code": "BM",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "WF",
+        "TL",
+        "MK",
+        "TO",
+        "LK"
+      ],
+      "embedding_2d": [
+        4.034894943237305,
+        9.604365348815918
+      ],
+      "dominant_color": "#bc3850"
+    },
+    {
+      "country": "Bhutan",
+      "code": "BT",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "MK",
+        "MM",
+        "LK",
+        "TL",
+        "NU"
+      ],
+      "embedding_2d": [
+        4.482491493225098,
+        10.39490032196045
+      ],
+      "dominant_color": "#fba730"
+    },
+    {
+      "country": "Białoruś",
+      "code": "BY",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "VU",
+        "MA",
+        "IM",
+        "BF",
+        "MW"
+      ],
+      "embedding_2d": [
+        4.193637371063232,
+        8.114657402038574
+      ],
+      "dominant_color": "#94402f"
+    },
+    {
+      "country": "Boliwia",
+      "code": "BO",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "GH",
+        "NE",
+        "IN",
+        "IQ",
+        "EG"
+      ],
+      "embedding_2d": [
+        5.105525970458984,
+        7.446246147155762
+      ],
+      "dominant_color": "#927729"
+    },
+    {
+      "country": "Botswana",
+      "code": "BW",
+      "cluster": 3,
+      "cluster_color": "#b8956a",
+      "neighbors": [
+        "FM",
+        "FJ",
+        "AR",
+        "SO",
+        "LC"
+      ],
+      "embedding_2d": [
+        3.479759931564331,
+        5.8860321044921875
+      ],
+      "dominant_color": "#6794b3"
+    },
+    {
+      "country": "Bośnia i Hercegowina",
+      "code": "BA",
+      "cluster": 5,
+      "cluster_color": "#c45c4a",
+      "neighbors": [
+        "RO",
+        "TD",
+        "BB",
+        "VC",
+        "MD"
+      ],
+      "embedding_2d": [
+        1.8975218534469604,
+        8.683330535888672
+      ],
+      "dominant_color": "#4a5574"
+    },
+    {
+      "country": "Brazylia",
+      "code": "BR",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "SA",
+        "TM",
+        "BD",
+        "CC",
+        "MO"
+      ],
+      "embedding_2d": [
+        3.1875905990600586,
+        7.827763557434082
+      ],
+      "dominant_color": "#36913f"
+    },
+    {
+      "country": "Brunei",
+      "code": "BN",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "BT",
+        "LT",
+        "LK",
+        "NU",
+        "WF"
+      ],
+      "embedding_2d": [
+        4.4632463455200195,
+        10.453290939331055
+      ],
+      "dominant_color": "#cab345"
+    },
+    {
+      "country": "Brytyjskie Terytorium Oceanu Indyjskiego",
+      "code": "IO",
+      "cluster": 4,
+      "cluster_color": "#7b5ea7",
+      "neighbors": [
+        "CK",
+        "PN",
+        "GS",
+        "FK",
+        "KY"
+      ],
+      "embedding_2d": [
+        3.2171499729156494,
+        4.988097667694092
+      ],
+      "dominant_color": "#84809d"
+    },
+    {
+      "country": "Brytyjskie Wyspy Dziewicze",
+      "code": "VG",
+      "cluster": 4,
+      "cluster_color": "#7b5ea7",
+      "neighbors": [
+        "KY",
+        "PN",
+        "GS",
+        "FK",
+        "MS"
+      ],
+      "embedding_2d": [
+        2.849703311920166,
+        4.425641059875488
+      ],
+      "dominant_color": "#373f6d"
+    },
+    {
+      "country": "Burkina Faso",
+      "code": "BF",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "BY",
+        "VU",
+        "GW",
+        "CN",
+        "MA"
+      ],
+      "embedding_2d": [
+        4.619632244110107,
+        8.381462097167969
+      ],
+      "dominant_color": "#7a663a"
+    },
+    {
+      "country": "Burundi",
+      "code": "BI",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "MM",
+        "MR",
+        "GD",
+        "TL",
+        "BT"
+      ],
+      "embedding_2d": [
+        4.577991008758545,
+        10.15119743347168
+      ],
+      "dominant_color": "#ac9872"
+    },
+    {
+      "country": "Bułgaria",
+      "code": "BG",
+      "cluster": 0,
+      "cluster_color": "#8b4513",
+      "neighbors": [
+        "RU",
+        "SK",
+        "CZ",
+        "PL",
+        "VE"
+      ],
+      "embedding_2d": [
+        5.622485637664795,
+        10.767281532287598
+      ],
+      "dominant_color": "#9d937f"
+    },
+    {
+      "country": "Chile",
+      "code": "CL",
+      "cluster": 0,
+      "cluster_color": "#8b4513",
+      "neighbors": [
+        "PL",
+        "CZ",
+        "BG",
+        "SK",
+        "RU"
+      ],
+      "embedding_2d": [
+        5.5053019523620605,
+        10.896574974060059
+      ],
+      "dominant_color": "#c5737e"
+    },
+    {
+      "country": "Chiny",
+      "code": "CN",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "HK",
+        "IM",
+        "TR",
+        "MA",
+        "KG"
+      ],
+      "embedding_2d": [
+        3.88647198677063,
+        10.14525032043457
+      ],
+      "dominant_color": "#ee2124"
+    },
+    {
+      "country": "Chorwacja",
+      "code": "HR",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "PY",
+        "NL",
+        "EG",
+        "IN",
+        "IQ"
+      ],
+      "embedding_2d": [
+        5.710612773895264,
+        6.172379970550537
+      ],
+      "dominant_color": "#ae5883"
+    },
+    {
+      "country": "Curaçao",
+      "code": "CW",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "CV",
+        "SA",
+        "LI",
+        "GU",
+        "MO"
+      ],
+      "embedding_2d": [
+        3.436037302017212,
+        7.2333173751831055
+      ],
+      "dominant_color": "#234573"
+    },
+    {
+      "country": "Cypr",
+      "code": "CY",
+      "cluster": 9,
+      "cluster_color": "#a65d7a",
+      "neighbors": [
+        "BL",
+        "VI",
+        "YT",
+        "JP",
+        "KR"
+      ],
+      "embedding_2d": [
+        7.360069751739502,
+        10.388816833496094
+      ],
+      "dominant_color": "#f6ecde"
+    },
+    {
+      "country": "Czad",
+      "code": "TD",
+      "cluster": 5,
+      "cluster_color": "#c45c4a",
+      "neighbors": [
+        "RO",
+        "MD",
+        "SN",
+        "AD",
+        "BE"
+      ],
+      "embedding_2d": [
+        1.9324164390563965,
+        8.862283706665039
+      ],
+      "dominant_color": "#965431"
+    },
+    {
+      "country": "Czarnogóra",
+      "code": "ME",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "KG",
+        "VN",
+        "TN",
+        "CN",
+        "AL"
+      ],
+      "embedding_2d": [
+        3.6962432861328125,
+        10.281183242797852
+      ],
+      "dominant_color": "#e52b02"
+    },
+    {
+      "country": "Czechy",
+      "code": "CZ",
+      "cluster": 0,
+      "cluster_color": "#8b4513",
+      "neighbors": [
+        "CL",
+        "PL",
+        "BG",
+        "RU",
+        "GL"
+      ],
+      "embedding_2d": [
+        5.51912784576416,
+        10.776885986328125
+      ],
+      "dominant_color": "#b47788"
+    },
+    {
+      "country": "Dalekie Wyspy Mniejsze Stanów Zjednoczonych",
+      "code": "UM",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "US",
+        "MA",
+        "KI",
+        "IM",
+        "SR"
+      ],
+      "embedding_2d": [
+        5.1587748527526855,
+        9.11333179473877
+      ],
+      "dominant_color": "#b07791"
+    },
+    {
+      "country": "Dania",
+      "code": "DK",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "IM",
+        "TR",
+        "MA",
+        "HK",
+        "CN"
+      ],
+      "embedding_2d": [
+        5.676423072814941,
+        8.139906883239746
+      ],
+      "dominant_color": "#d4475e"
+    },
+    {
+      "country": "Demokratyczna Republika Konga",
+      "code": "CD",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "NA",
+        "MH",
+        "XK",
+        "SB",
+        "TZ"
+      ],
+      "embedding_2d": [
+        3.1120805740356445,
+        7.453122138977051
+      ],
+      "dominant_color": "#4a74b2"
+    },
+    {
+      "country": "Dominika",
+      "code": "DM",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "BD",
+        "BR",
+        "SA",
+        "CC",
+        "AX"
+      ],
+      "embedding_2d": [
+        3.568830728530884,
+        7.680266380310059
+      ],
+      "dominant_color": "#406e40"
+    },
+    {
+      "country": "Dominikana",
+      "code": "DO",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "TT",
+        "DK",
+        "WS",
+        "CH",
+        "IM"
+      ],
+      "embedding_2d": [
+        5.70678186416626,
+        7.885536193847656
+      ],
+      "dominant_color": "#925f79"
+    },
+    {
+      "country": "Dżibuti",
+      "code": "DJ",
+      "cluster": 3,
+      "cluster_color": "#b8956a",
+      "neighbors": [
+        "UZ",
+        "FM",
+        "AR",
+        "KZ",
+        "LC"
+      ],
+      "embedding_2d": [
+        3.9596757888793945,
+        6.144107818603516
+      ],
+      "dominant_color": "#74c2a7"
+    },
+    {
+      "country": "Egipt",
+      "code": "EG",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "YE",
+        "IQ",
+        "AT",
+        "SD",
+        "SY"
+      ],
+      "embedding_2d": [
+        6.2733988761901855,
+        6.3621931076049805
+      ],
+      "dominant_color": "#98575b"
+    },
+    {
+      "country": "Ekwador",
+      "code": "EC",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "CO",
+        "MM",
+        "LT",
+        "BT",
+        "TL"
+      ],
+      "embedding_2d": [
+        4.887584209442139,
+        10.23282527923584
+      ],
+      "dominant_color": "#bb8731"
+    },
+    {
+      "country": "Emiraty Arabskie",
+      "code": "AE",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "KW",
+        "SD",
+        "SY",
+        "YE",
+        "EH"
+      ],
+      "embedding_2d": [
+        6.575211524963379,
+        6.095256328582764
+      ],
+      "dominant_color": "#716459"
+    },
+    {
+      "country": "Erytrea",
+      "code": "ER",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "MA",
+        "BY",
+        "CN",
+        "IM",
+        "GN"
+      ],
+      "embedding_2d": [
+        3.891235589981079,
+        7.594144821166992
+      ],
+      "dominant_color": "#945b57"
+    },
+    {
+      "country": "Estonia",
+      "code": "EE",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "UA",
+        "LI",
+        "GF",
+        "TM",
+        "SA"
+      ],
+      "embedding_2d": [
+        3.8099193572998047,
+        8.85705852508545
+      ],
+      "dominant_color": "#557b9a"
+    },
+    {
+      "country": "Etiopia",
+      "code": "ET",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "ZM",
+        "MA",
+        "IM",
+        "ES",
+        "HK"
+      ],
+      "embedding_2d": [
+        3.7974936962127686,
+        8.644088745117188
+      ],
+      "dominant_color": "#847032"
+    },
+    {
+      "country": "Falklandy",
+      "code": "FK",
+      "cluster": 4,
+      "cluster_color": "#7b5ea7",
+      "neighbors": [
+        "KY",
+        "VG",
+        "MS",
+        "GS",
+        "AI"
+      ],
+      "embedding_2d": [
+        2.9725000858306885,
+        4.554152488708496
+      ],
+      "dominant_color": "#3c4178"
+    },
+    {
+      "country": "Fidżi",
+      "code": "FJ",
+      "cluster": 3,
+      "cluster_color": "#b8956a",
+      "neighbors": [
+        "FM",
+        "SO",
+        "AR",
+        "BW",
+        "AW"
+      ],
+      "embedding_2d": [
+        3.289095163345337,
+        5.321123123168945
+      ],
+      "dominant_color": "#7b9cc1"
+    },
+    {
+      "country": "Filipiny",
+      "code": "PH",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "LI",
+        "UA",
+        "HT",
+        "GF",
+        "MQ"
+      ],
+      "embedding_2d": [
+        3.3965182304382324,
+        8.909299850463867
+      ],
+      "dominant_color": "#87517e"
+    },
+    {
+      "country": "Finlandia",
+      "code": "FI",
+      "cluster": 9,
+      "cluster_color": "#a65d7a",
+      "neighbors": [
+        "FO",
+        "YT",
+        "DZ",
+        "BL",
+        "VI"
+      ],
+      "embedding_2d": [
+        6.923686981201172,
+        10.284713745117188
+      ],
+      "dominant_color": "#9aacc4"
+    },
+    {
+      "country": "Francja",
+      "code": "FR",
+      "cluster": 2,
+      "cluster_color": "#3d7a5c",
+      "neighbors": [
+        "MF",
+        "IT",
+        "MX",
+        "PE",
+        "IE"
+      ],
+      "embedding_2d": [
+        1.1040012836456299,
+        7.083374500274658
+      ],
+      "dominant_color": "#99657c"
+    },
+    {
+      "country": "Francuskie Terytoria Południowe i Antarktyczne",
+      "code": "TF",
+      "cluster": 4,
+      "cluster_color": "#7b5ea7",
+      "neighbors": [
+        "KY",
+        "GS",
+        "MS",
+        "VG",
+        "PN"
+      ],
+      "embedding_2d": [
+        2.7865853309631348,
+        5.476048946380615
+      ],
+      "dominant_color": "#4a5e9d"
+    },
+    {
+      "country": "Gabon",
+      "code": "GA",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "ST",
+        "BS",
+        "AX",
+        "AZ",
+        "GY"
+      ],
+      "embedding_2d": [
+        4.68696928024292,
+        6.64560079574585
+      ],
+      "dominant_color": "#67a168"
+    },
+    {
+      "country": "Gambia",
+      "code": "GM",
+      "cluster": 8,
+      "cluster_color": "#4a6fa5",
+      "neighbors": [
+        "SJ",
+        "NO",
+        "BV"
+      ],
+      "embedding_2d": [
+        5.244543552398682,
+        9.780817985534668
+      ],
+      "dominant_color": "#754e54"
+    },
+    {
+      "country": "Georgia Południowa i Sandwich Południowy",
+      "code": "GS",
+      "cluster": 4,
+      "cluster_color": "#7b5ea7",
+      "neighbors": [
+        "VG",
+        "PN",
+        "MS",
+        "KY",
+        "SH"
+      ],
+      "embedding_2d": [
+        3.0788657665252686,
+        4.437811374664307
+      ],
+      "dominant_color": "#36396d"
+    },
+    {
+      "country": "Ghana",
+      "code": "GH",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "BO",
+        "NE",
+        "IN",
+        "PY",
+        "IQ"
+      ],
+      "embedding_2d": [
+        4.9777936935424805,
+        7.246821880340576
+      ],
+      "dominant_color": "#926928"
+    },
+    {
+      "country": "Gibraltar",
+      "code": "GI",
+      "cluster": 0,
+      "cluster_color": "#8b4513",
+      "neighbors": [
+        "GL",
+        "PL",
+        "SK",
+        "BG",
+        "CZ"
+      ],
+      "embedding_2d": [
+        5.848616123199463,
+        11.023519515991211
+      ],
+      "dominant_color": "#e48c8f"
+    },
+    {
+      "country": "Grecja",
+      "code": "GR",
+      "cluster": 3,
+      "cluster_color": "#b8956a",
+      "neighbors": [
+        "BW",
+        "FM",
+        "AR",
+        "SO",
+        "FJ"
+      ],
+      "embedding_2d": [
+        3.461073875427246,
+        5.7585625648498535
+      ],
+      "dominant_color": "#73a1d0"
+    },
+    {
+      "country": "Grenada",
+      "code": "GD",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "MR",
+        "LT",
+        "TL",
+        "ML",
+        "MK"
+      ],
+      "embedding_2d": [
+        4.970743656158447,
+        9.567005157470703
+      ],
+      "dominant_color": "#a26b30"
+    },
+    {
+      "country": "Grenlandia",
+      "code": "GL",
+      "cluster": 0,
+      "cluster_color": "#8b4513",
+      "neighbors": [
+        "GI",
+        "PL",
+        "SK",
+        "BG",
+        "CZ"
+      ],
+      "embedding_2d": [
+        5.778171062469482,
+        11.034174919128418
+      ],
+      "dominant_color": "#e38695"
+    },
+    {
+      "country": "Gruzja",
+      "code": "GE",
+      "cluster": 9,
+      "cluster_color": "#a65d7a",
+      "neighbors": [
+        "GG",
+        "CY",
+        "YT",
+        "BL",
+        "JP"
+      ],
+      "embedding_2d": [
+        7.190466403961182,
+        10.305949211120605
+      ],
+      "dominant_color": "#ffa2a2"
+    },
+    {
+      "country": "Guam",
+      "code": "GU",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "MO",
+        "SA",
+        "XK",
+        "NR",
+        "MP"
+      ],
+      "embedding_2d": [
+        2.6929099559783936,
+        7.117064476013184
+      ],
+      "dominant_color": "#242f75"
+    },
+    {
+      "country": "Guernsey",
+      "code": "GG",
+      "cluster": 9,
+      "cluster_color": "#a65d7a",
+      "neighbors": [
+        "GE",
+        "BL",
+        "CY",
+        "FO",
+        "YT"
+      ],
+      "embedding_2d": [
+        7.109091758728027,
+        10.275763511657715
+      ],
+      "dominant_color": "#f7b5ac"
+    },
+    {
+      "country": "Gujana",
+      "code": "GY",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "BS",
+        "ST",
+        "BD",
+        "TM",
+        "MQ"
+      ],
+      "embedding_2d": [
+        3.9345717430114746,
+        7.417018413543701
+      ],
+      "dominant_color": "#7c8450"
+    },
+    {
+      "country": "Gujana Francuska",
+      "code": "GF",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "CC",
+        "MQ",
+        "TM",
+        "ST",
+        "UA"
+      ],
+      "embedding_2d": [
+        3.5034022331237793,
+        8.65027904510498
+      ],
+      "dominant_color": "#83af1c"
+    },
+    {
+      "country": "Gwadelupa",
+      "code": "GP",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "BD",
+        "TK",
+        "CC",
+        "SA",
+        "LI"
+      ],
+      "embedding_2d": [
+        2.6951427459716797,
+        8.668011665344238
+      ],
+      "dominant_color": "#313828"
+    },
+    {
+      "country": "Gwatemala",
+      "code": "GT",
+      "cluster": 3,
+      "cluster_color": "#b8956a",
+      "neighbors": [
+        "FM",
+        "LC",
+        "SO",
+        "AQ",
+        "AW"
+      ],
+      "embedding_2d": [
+        2.6707582473754883,
+        6.205089569091797
+      ],
+      "dominant_color": "#81b5da"
+    },
+    {
+      "country": "Gwinea",
+      "code": "GN",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "AF",
+        "GW",
+        "IM",
+        "MA",
+        "CN"
+      ],
+      "embedding_2d": [
+        2.4765658378601074,
+        8.148900985717773
+      ],
+      "dominant_color": "#987c33"
+    },
+    {
+      "country": "Gwinea Bissau",
+      "code": "GW",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "BF",
+        "VU",
+        "GN",
+        "CN",
+        "BY"
+      ],
+      "embedding_2d": [
+        4.289729595184326,
+        8.300278663635254
+      ],
+      "dominant_color": "#967f2b"
+    },
+    {
+      "country": "Gwinea Równikowa",
+      "code": "GQ",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "KW",
+        "AT",
+        "HU",
+        "SD",
+        "IN"
+      ],
+      "embedding_2d": [
+        6.519711971282959,
+        6.472107410430908
+      ],
+      "dominant_color": "#988760"
+    },
+    {
+      "country": "Haiti",
+      "code": "HT",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "LI",
+        "PH",
+        "SA",
+        "MP",
+        "UA"
+      ],
+      "embedding_2d": [
+        3.4571282863616943,
+        8.888378143310547
+      ],
+      "dominant_color": "#743173"
+    },
+    {
+      "country": "Hiszpania",
+      "code": "ES",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "TR",
+        "IM",
+        "HK",
+        "CN",
+        "TN"
+      ],
+      "embedding_2d": [
+        5.133949279785156,
+        7.780336380004883
+      ],
+      "dominant_color": "#cd6210"
+    },
+    {
+      "country": "Holandia",
+      "code": "NL",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "PY",
+        "HU",
+        "SL",
+        "LU",
+        "AT"
+      ],
+      "embedding_2d": [
+        5.820058822631836,
+        5.941397666931152
+      ],
+      "dominant_color": "#99748f"
+    },
+    {
+      "country": "Honduras",
+      "code": "HN",
+      "cluster": 3,
+      "cluster_color": "#b8956a",
+      "neighbors": [
+        "AR",
+        "UZ",
+        "KZ",
+        "SO",
+        "FM"
+      ],
+      "embedding_2d": [
+        4.830014228820801,
+        5.984968662261963
+      ],
+      "dominant_color": "#51d1ec"
+    },
+    {
+      "country": "Hongkong",
+      "code": "HK",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "CN",
+        "IM",
+        "TN",
+        "MA",
+        "KG"
+      ],
+      "embedding_2d": [
+        4.175077438354492,
+        10.036030769348145
+      ],
+      "dominant_color": "#ef2f37"
+    },
+    {
+      "country": "Indie",
+      "code": "IN",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "NE",
+        "HU",
+        "BO",
+        "PY",
+        "IQ"
+      ],
+      "embedding_2d": [
+        5.877224445343018,
+        6.577371597290039
+      ],
+      "dominant_color": "#a4936e"
+    },
+    {
+      "country": "Indonezja",
+      "code": "ID",
+      "cluster": 9,
+      "cluster_color": "#a65d7a",
+      "neighbors": [
+        "MC",
+        "SG",
+        "RS",
+        "BL",
+        "CY"
+      ],
+      "embedding_2d": [
+        5.905559539794922,
+        9.148296356201172
+      ],
+      "dominant_color": "#ff7f7f"
+    },
+    {
+      "country": "Irak",
+      "code": "IQ",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "EG",
+        "YE",
+        "SY",
+        "IN",
+        "SD"
+      ],
+      "embedding_2d": [
+        6.206017971038818,
+        6.264987945556641
+      ],
+      "dominant_color": "#92565b"
+    },
+    {
+      "country": "Iran",
+      "code": "IR",
+      "cluster": 7,
+      "cluster_color": "#9b6b4f",
+      "neighbors": [
+        "PF",
+        "TJ",
+        "LB",
+        "LS",
+        "IL"
+      ],
+      "embedding_2d": [
+        6.369515895843506,
+        6.4806413650512695
+      ],
+      "dominant_color": "#af8f72"
+    },
+    {
+      "country": "Irlandia",
+      "code": "IE",
+      "cluster": 2,
+      "cluster_color": "#3d7a5c",
+      "neighbors": [
+        "IT",
+        "MX",
+        "FR",
+        "MF",
+        "NG"
+      ],
+      "embedding_2d": [
+        1.1462976932525635,
+        7.078253269195557
+      ],
+      "dominant_color": "#b0b589"
+    },
+    {
+      "country": "Islandia",
+      "code": "IS",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "SE",
+        "AX",
+        "DM",
+        "NC",
+        "XK"
+      ],
+      "embedding_2d": [
+        4.296494960784912,
+        6.71733283996582
+      ],
+      "dominant_color": "#536398"
+    },
+    {
+      "country": "Izrael",
+      "code": "IL",
+      "cluster": 7,
+      "cluster_color": "#9b6b4f",
+      "neighbors": [
+        "LS",
+        "LB",
+        "PF",
+        "IR",
+        "TJ"
+      ],
+      "embedding_2d": [
+        5.560420036315918,
+        6.9383015632629395
+      ],
+      "dominant_color": "#a4b6e5"
+    },
+    {
+      "country": "Jamajka",
+      "code": "JM",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "BS",
+        "SB",
+        "TK",
+        "GP",
+        "SA"
+      ],
+      "embedding_2d": [
+        2.9310526847839355,
+        8.45567798614502
+      ],
+      "dominant_color": "#566621"
+    },
+    {
+      "country": "Japonia",
+      "code": "JP",
+      "cluster": 9,
+      "cluster_color": "#a65d7a",
+      "neighbors": [
+        "BL",
+        "VI",
+        "CY",
+        "YT",
+        "KR"
+      ],
+      "embedding_2d": [
+        7.367036819458008,
+        10.185812950134277
+      ],
+      "dominant_color": "#f2cfd6"
+    },
+    {
+      "country": "Jemen",
+      "code": "YE",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "EG",
+        "IQ",
+        "SD",
+        "AT",
+        "NL"
+      ],
+      "embedding_2d": [
+        6.382608890533447,
+        6.234681129455566
+      ],
+      "dominant_color": "#995960"
+    },
+    {
+      "country": "Jersey",
+      "code": "JE",
+      "cluster": 9,
+      "cluster_color": "#a65d7a",
+      "neighbors": [
+        "VI",
+        "KR",
+        "CY",
+        "BL",
+        "YT"
+      ],
+      "embedding_2d": [
+        7.522231101989746,
+        10.575811386108398
+      ],
+      "dominant_color": "#f1bfc1"
+    },
+    {
+      "country": "Jordania",
+      "code": "JO",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "EH",
+        "PS",
+        "AE",
+        "BO",
+        "GH"
+      ],
+      "embedding_2d": [
+        6.598870754241943,
+        5.7724785804748535
+      ],
+      "dominant_color": "#64574b"
+    },
+    {
+      "country": "Kajmany",
+      "code": "KY",
+      "cluster": 4,
+      "cluster_color": "#7b5ea7",
+      "neighbors": [
+        "VG",
+        "GS",
+        "PN",
+        "FK",
+        "MS"
+      ],
+      "embedding_2d": [
+        3.0214855670928955,
+        4.5463433265686035
+      ],
+      "dominant_color": "#393d71"
+    },
+    {
+      "country": "Kambodża",
+      "code": "KH",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "NC",
+        "ST",
+        "BS",
+        "CW",
+        "XK"
+      ],
+      "embedding_2d": [
+        4.590944290161133,
+        7.651987075805664
+      ],
+      "dominant_color": "#6e2b73"
+    },
+    {
+      "country": "Kamerun",
+      "code": "CM",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "BJ",
+        "TL",
+        "PT",
+        "CG",
+        "MK"
+      ],
+      "embedding_2d": [
+        2.409358024597168,
+        9.53902530670166
+      ],
+      "dominant_color": "#997633"
+    },
+    {
+      "country": "Kanada",
+      "code": "CA",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "CN",
+        "AL",
+        "TR",
+        "KG",
+        "ME"
+      ],
+      "embedding_2d": [
+        3.583570957183838,
+        10.352940559387207
+      ],
+      "dominant_color": "#ff5c5c"
+    },
+    {
+      "country": "Katar",
+      "code": "QA",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "BH",
+        "MG",
+        "MT",
+        "WF",
+        "TO"
+      ],
+      "embedding_2d": [
+        2.6272923946380615,
+        10.028769493103027
+      ],
+      "dominant_color": "#b0627a"
+    },
+    {
+      "country": "Kazachstan",
+      "code": "KZ",
+      "cluster": 3,
+      "cluster_color": "#b8956a",
+      "neighbors": [
+        "SO",
+        "FM",
+        "HN",
+        "LC",
+        "PM"
+      ],
+      "embedding_2d": [
+        3.249915838241577,
+        6.5975542068481445
+      ],
+      "dominant_color": "#16b0b4"
+    },
+    {
+      "country": "Kenia",
+      "code": "KE",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "MW",
+        "BY",
+        "AO",
+        "DE",
+        "TR"
+      ],
+      "embedding_2d": [
+        4.320026874542236,
+        7.747581958770752
+      ],
+      "dominant_color": "#543a1d"
+    },
+    {
+      "country": "Kirgistan",
+      "code": "KG",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "VN",
+        "TN",
+        "ME",
+        "TR",
+        "CN"
+      ],
+      "embedding_2d": [
+        3.6166553497314453,
+        10.356793403625488
+      ],
+      "dominant_color": "#ff1400"
+    },
+    {
+      "country": "Kiribati",
+      "code": "KI",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "BF",
+        "IM",
+        "MW",
+        "BY",
+        "VU"
+      ],
+      "embedding_2d": [
+        5.497485637664795,
+        9.052240371704102
+      ],
+      "dominant_color": "#ac5d5f"
+    },
+    {
+      "country": "Kolumbia",
+      "code": "CO",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "EC",
+        "LT",
+        "MM",
+        "BT",
+        "TL"
+      ],
+      "embedding_2d": [
+        4.993393898010254,
+        10.227500915527344
+      ],
+      "dominant_color": "#b1762d"
+    },
+    {
+      "country": "Komory",
+      "code": "KM",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "BO",
+        "GH",
+        "IN",
+        "PY",
+        "HR"
+      ],
+      "embedding_2d": [
+        2.5433995723724365,
+        9.207683563232422
+      ],
+      "dominant_color": "#8e936a"
+    },
+    {
+      "country": "Kongo",
+      "code": "CG",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "ML",
+        "BJ",
+        "TL",
+        "PT",
+        "MK"
+      ],
+      "embedding_2d": [
+        2.1689083576202393,
+        9.208558082580566
+      ],
+      "dominant_color": "#9d8739"
+    },
+    {
+      "country": "Korea Południowa",
+      "code": "KR",
+      "cluster": 9,
+      "cluster_color": "#a65d7a",
+      "neighbors": [
+        "BL",
+        "YT",
+        "CY",
+        "VI",
+        "JP"
+      ],
+      "embedding_2d": [
+        7.436230659484863,
+        10.421209335327148
+      ],
+      "dominant_color": "#d6d0d6"
+    },
+    {
+      "country": "Korea Północna",
+      "code": "KP",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "SZ",
+        "CN",
+        "BY",
+        "IM",
+        "MA"
+      ],
+      "embedding_2d": [
+        4.558791160583496,
+        8.198216438293457
+      ],
+      "dominant_color": "#a14465"
+    },
+    {
+      "country": "Kosowo",
+      "code": "XK",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "MP",
+        "MO",
+        "BD",
+        "GU",
+        "SB"
+      ],
+      "embedding_2d": [
+        2.7389564514160156,
+        6.779483795166016
+      ],
+      "dominant_color": "#39569d"
+    },
+    {
+      "country": "Kostaryka",
+      "code": "CR",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "SR",
+        "UG",
+        "TH",
+        "ZW",
+        "CU"
+      ],
+      "embedding_2d": [
+        4.901299953460693,
+        8.523159980773926
+      ],
+      "dominant_color": "#9c6b8f"
+    },
+    {
+      "country": "Kuba",
+      "code": "CU",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "TG",
+        "CR",
+        "SR",
+        "TH",
+        "AG"
+      ],
+      "embedding_2d": [
+        4.894328594207764,
+        8.113934516906738
+      ],
+      "dominant_color": "#776598"
+    },
+    {
+      "country": "Kuwejt",
+      "code": "KW",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "AE",
+        "GQ",
+        "SD",
+        "EH",
+        "AT"
+      ],
+      "embedding_2d": [
+        6.793031692504883,
+        6.148656845092773
+      ],
+      "dominant_color": "#7b675b"
+    },
+    {
+      "country": "Laos",
+      "code": "LA",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "MV",
+        "IM",
+        "TN",
+        "HK",
+        "MA"
+      ],
+      "embedding_2d": [
+        4.722230911254883,
+        9.750283241271973
+      ],
+      "dominant_color": "#7c2e53"
+    },
+    {
+      "country": "Lesotho",
+      "code": "LS",
+      "cluster": 7,
+      "cluster_color": "#9b6b4f",
+      "neighbors": [
+        "TJ",
+        "IR",
+        "PF",
+        "LB",
+        "IL"
+      ],
+      "embedding_2d": [
+        5.193073749542236,
+        6.207810401916504
+      ],
+      "dominant_color": "#5e919a"
+    },
+    {
+      "country": "Liban",
+      "code": "LB",
+      "cluster": 7,
+      "cluster_color": "#9b6b4f",
+      "neighbors": [
+        "PF",
+        "TJ",
+        "IR",
+        "LS",
+        "IL"
+      ],
+      "embedding_2d": [
+        6.142086505889893,
+        6.953117370605469
+      ],
+      "dominant_color": "#d78283"
+    },
+    {
+      "country": "Liberia",
+      "code": "LR",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "TL",
+        "MK",
+        "BM",
+        "BT",
+        "WF"
+      ],
+      "embedding_2d": [
+        3.7625536918640137,
+        9.665489196777344
+      ],
+      "dominant_color": "#c67189"
+    },
+    {
+      "country": "Libia",
+      "code": "LY",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "VU",
+        "BY",
+        "MW",
+        "AO",
+        "ZM"
+      ],
+      "embedding_2d": [
+        4.043063640594482,
+        8.687950134277344
+      ],
+      "dominant_color": "#452a19"
+    },
+    {
+      "country": "Liechtenstein",
+      "code": "LI",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "HT",
+        "PH",
+        "SA",
+        "UA",
+        "MQ"
+      ],
+      "embedding_2d": [
+        3.3919641971588135,
+        8.932905197143555
+      ],
+      "dominant_color": "#6d214e"
+    },
+    {
+      "country": "Litwa",
+      "code": "LT",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "MM",
+        "TL",
+        "GD",
+        "LK",
+        "MR"
+      ],
+      "embedding_2d": [
+        5.081289768218994,
+        10.121025085449219
+      ],
+      "dominant_color": "#956e2c"
+    },
+    {
+      "country": "Luksemburg",
+      "code": "LU",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "PY",
+        "NL",
+        "HU",
+        "SL",
+        "IN"
+      ],
+      "embedding_2d": [
+        5.657159805297852,
+        6.04215145111084
+      ],
+      "dominant_color": "#a397b1"
+    },
+    {
+      "country": "Macedonia Północna",
+      "code": "MK",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "TL",
+        "LK",
+        "BT",
+        "BM",
+        "WF"
+      ],
+      "embedding_2d": [
+        4.444148063659668,
+        10.193258285522461
+      ],
+      "dominant_color": "#e26128"
+    },
+    {
+      "country": "Madagaskar",
+      "code": "MG",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "BH",
+        "QA",
+        "MT",
+        "WF",
+        "TL"
+      ],
+      "embedding_2d": [
+        2.691438674926758,
+        9.999234199523926
+      ],
+      "dominant_color": "#a99278"
+    },
+    {
+      "country": "Majotta",
+      "code": "YT",
+      "cluster": 9,
+      "cluster_color": "#a65d7a",
+      "neighbors": [
+        "BL",
+        "VI",
+        "CY",
+        "JP",
+        "KR"
+      ],
+      "embedding_2d": [
+        7.384100437164307,
+        10.30585765838623
+      ],
+      "dominant_color": "#e4d9db"
+    },
+    {
+      "country": "Makau",
+      "code": "MO",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "SA",
+        "TM",
+        "BD",
+        "CX",
+        "XK"
+      ],
+      "embedding_2d": [
+        2.8608925342559814,
+        7.22283411026001
+      ],
+      "dominant_color": "#217f6c"
+    },
+    {
+      "country": "Malawi",
+      "code": "MW",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "BY",
+        "MA",
+        "DE",
+        "VU",
+        "IM"
+      ],
+      "embedding_2d": [
+        4.291338920593262,
+        7.862436294555664
+      ],
+      "dominant_color": "#613b20"
+    },
+    {
+      "country": "Malediwy",
+      "code": "MV",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "IM",
+        "MA",
+        "HK",
+        "CN",
+        "TR"
+      ],
+      "embedding_2d": [
+        4.735989570617676,
+        9.617477416992188
+      ],
+      "dominant_color": "#903638"
+    },
+    {
+      "country": "Malezja",
+      "code": "MY",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "WS",
+        "MA",
+        "DE",
+        "IM",
+        "MW"
+      ],
+      "embedding_2d": [
+        3.6503686904907227,
+        9.44427490234375
+      ],
+      "dominant_color": "#ad6374"
+    },
+    {
+      "country": "Mali",
+      "code": "ML",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "CG",
+        "PT",
+        "BJ",
+        "TL",
+        "MK"
+      ],
+      "embedding_2d": [
+        2.0834975242614746,
+        9.274150848388672
+      ],
+      "dominant_color": "#9e8727"
+    },
+    {
+      "country": "Malta",
+      "code": "MT",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "BH",
+        "QA",
+        "MG",
+        "ML",
+        "TO"
+      ],
+      "embedding_2d": [
+        2.6231443881988525,
+        10.12675952911377
+      ],
+      "dominant_color": "#e58793"
+    },
+    {
+      "country": "Mariany Północne",
+      "code": "MP",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "XK",
+        "MO",
+        "BD",
+        "SA",
+        "GU"
+      ],
+      "embedding_2d": [
+        2.4983413219451904,
+        7.083847522735596
+      ],
+      "dominant_color": "#254ba4"
+    },
+    {
+      "country": "Maroko",
+      "code": "MA",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "IM",
+        "CN",
+        "HK",
+        "BY",
+        "MV"
+      ],
+      "embedding_2d": [
+        4.34168815612793,
+        9.299110412597656
+      ],
+      "dominant_color": "#bb282d"
+    },
+    {
+      "country": "Martynika",
+      "code": "MQ",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "TM",
+        "SA",
+        "CC",
+        "BD",
+        "LI"
+      ],
+      "embedding_2d": [
+        3.6367733478546143,
+        7.9902753829956055
+      ],
+      "dominant_color": "#495032"
+    },
+    {
+      "country": "Mauretania",
+      "code": "MR",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "GD",
+        "LT",
+        "TL",
+        "CG",
+        "ML"
+      ],
+      "embedding_2d": [
+        4.957015514373779,
+        9.427643775939941
+      ],
+      "dominant_color": "#62723e"
+    },
+    {
+      "country": "Mauritius",
+      "code": "MU",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "BY",
+        "MA",
+        "VU",
+        "IM",
+        "CN"
+      ],
+      "embedding_2d": [
+        4.636868000030518,
+        8.01966381072998
+      ],
+      "dominant_color": "#80703d"
+    },
+    {
+      "country": "Meksyk",
+      "code": "MX",
+      "cluster": 2,
+      "cluster_color": "#3d7a5c",
+      "neighbors": [
+        "IT",
+        "FR",
+        "MF",
+        "IE",
+        "NG"
+      ],
+      "embedding_2d": [
+        1.0744267702102661,
+        7.088682651519775
+      ],
+      "dominant_color": "#937570"
+    },
+    {
+      "country": "Mikronezja",
+      "code": "FM",
+      "cluster": 3,
+      "cluster_color": "#b8956a",
+      "neighbors": [
+        "SO",
+        "LC",
+        "FJ",
+        "AW",
+        "GT"
+      ],
+      "embedding_2d": [
+        3.4100842475891113,
+        5.9310126304626465
+      ],
+      "dominant_color": "#78b3dd"
+    },
+    {
+      "country": "Mjanma",
+      "code": "MM",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "LT",
+        "BT",
+        "EC",
+        "MK",
+        "TL"
+      ],
+      "embedding_2d": [
+        4.976384162902832,
+        10.33268928527832
+      ],
+      "dominant_color": "#c39638"
+    },
+    {
+      "country": "Monako",
+      "code": "MC",
+      "cluster": 9,
+      "cluster_color": "#a65d7a",
+      "neighbors": [
+        "SG",
+        "ID",
+        "RS",
+        "BL",
+        "VI"
+      ],
+      "embedding_2d": [
+        5.90076208114624,
+        9.187265396118164
+      ],
+      "dominant_color": "#e68792"
+    },
+    {
+      "country": "Mongolia",
+      "code": "MN",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "ET",
+        "MA",
+        "MV",
+        "HK",
+        "IM"
+      ],
+      "embedding_2d": [
+        4.16395378112793,
+        9.076013565063477
+      ],
+      "dominant_color": "#954258"
+    },
+    {
+      "country": "Montserrat",
+      "code": "MS",
+      "cluster": 4,
+      "cluster_color": "#7b5ea7",
+      "neighbors": [
+        "GS",
+        "SH",
+        "PN",
+        "VG",
+        "FK"
+      ],
+      "embedding_2d": [
+        2.896571636199951,
+        4.551754474639893
+      ],
+      "dominant_color": "#313c73"
+    },
+    {
+      "country": "Mozambik",
+      "code": "MZ",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "DE",
+        "MA",
+        "ZM",
+        "KN",
+        "IM"
+      ],
+      "embedding_2d": [
+        3.7301011085510254,
+        8.860208511352539
+      ],
+      "dominant_color": "#7b6f33"
+    },
+    {
+      "country": "Mołdawia",
+      "code": "MD",
+      "cluster": 5,
+      "cluster_color": "#c45c4a",
+      "neighbors": [
+        "RO",
+        "AD",
+        "TD",
+        "SN",
+        "BB"
+      ],
+      "embedding_2d": [
+        1.7446575164794922,
+        9.063432693481445
+      ],
+      "dominant_color": "#8e564d"
+    },
+    {
+      "country": "Namibia",
+      "code": "NA",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "BD",
+        "SB",
+        "TM",
+        "SA",
+        "MH"
+      ],
+      "embedding_2d": [
+        2.7960870265960693,
+        7.801217079162598
+      ],
+      "dominant_color": "#575e5e"
+    },
+    {
+      "country": "Nauru",
+      "code": "NR",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "SA",
+        "GU",
+        "SE",
+        "MO",
+        "LI"
+      ],
+      "embedding_2d": [
+        2.978611469268799,
+        7.0311994552612305
+      ],
+      "dominant_color": "#1b3367"
+    },
+    {
+      "country": "Nepal",
+      "code": "NP",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "MA",
+        "IM",
+        "CN",
+        "TR",
+        "MV"
+      ],
+      "embedding_2d": [
+        4.142571926116943,
+        9.421073913574219
+      ],
+      "dominant_color": "#83505d"
+    },
+    {
+      "country": "Niemcy",
+      "code": "DE",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "MW",
+        "AL",
+        "ME",
+        "MZ",
+        "KG"
+      ],
+      "embedding_2d": [
+        3.924009084701538,
+        9.22253131866455
+      ],
+      "dominant_color": "#9f4500"
+    },
+    {
+      "country": "Niger",
+      "code": "NE",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "IN",
+        "BO",
+        "HU",
+        "GH",
+        "EG"
+      ],
+      "embedding_2d": [
+        5.885038375854492,
+        6.615725517272949
+      ],
+      "dominant_color": "#a1a056"
+    },
+    {
+      "country": "Nigeria",
+      "code": "NG",
+      "cluster": 2,
+      "cluster_color": "#3d7a5c",
+      "neighbors": [
+        "IT",
+        "NF",
+        "IE",
+        "CI",
+        "MF"
+      ],
+      "embedding_2d": [
+        1.269972324371338,
+        6.892903804779053
+      ],
+      "dominant_color": "#54ae8a"
+    },
+    {
+      "country": "Nikaragua",
+      "code": "NI",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "SV",
+        "SL",
+        "NL",
+        "PY",
+        "SY"
+      ],
+      "embedding_2d": [
+        4.939056873321533,
+        6.032351016998291
+      ],
+      "dominant_color": "#5397d6"
+    },
+    {
+      "country": "Niue",
+      "code": "NU",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "MK",
+        "BT",
+        "CG",
+        "BM",
+        "ML"
+      ],
+      "embedding_2d": [
+        4.350269317626953,
+        10.332927703857422
+      ],
+      "dominant_color": "#e6c121"
+    },
+    {
+      "country": "Norwegia",
+      "code": "NO",
+      "cluster": 8,
+      "cluster_color": "#4a6fa5",
+      "neighbors": [
+        "SJ",
+        "BV",
+        "GM"
+      ],
+      "embedding_2d": [
+        4.632591247558594,
+        9.436361312866211
+      ],
+      "dominant_color": "#a03b5d"
+    },
+    {
+      "country": "Nowa Kaledonia",
+      "code": "NC",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "AZ",
+        "ST",
+        "SE",
+        "AX",
+        "BD"
+      ],
+      "embedding_2d": [
+        4.508244514465332,
+        7.2192463874816895
+      ],
+      "dominant_color": "#5b6d54"
+    },
+    {
+      "country": "Nowa Zelandia",
+      "code": "NZ",
+      "cluster": 4,
+      "cluster_color": "#7b5ea7",
+      "neighbors": [
+        "AU",
+        "CK",
+        "GS",
+        "MS",
+        "SH"
+      ],
+      "embedding_2d": [
+        2.699303388595581,
+        4.406473636627197
+      ],
+      "dominant_color": "#2d3370"
+    },
+    {
+      "country": "Oman",
+      "code": "OM",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "GW",
+        "BY",
+        "CN",
+        "MA",
+        "IM"
+      ],
+      "embedding_2d": [
+        4.169321060180664,
+        8.25338077545166
+      ],
+      "dominant_color": "#b5645a"
+    },
+    {
+      "country": "Pakistan",
+      "code": "PK",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "CC",
+        "SA",
+        "TM",
+        "MO",
+        "SB"
+      ],
+      "embedding_2d": [
+        2.589564800262451,
+        9.873217582702637
+      ],
+      "dominant_color": "#507b62"
+    },
+    {
+      "country": "Palau",
+      "code": "PW",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "BD",
+        "XK",
+        "MP",
+        "GY",
+        "MO"
+      ],
+      "embedding_2d": [
+        2.865480661392212,
+        6.711348533630371
+      ],
+      "dominant_color": "#2caad2"
+    },
+    {
+      "country": "Palestyna",
+      "code": "PS",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "EH",
+        "JO",
+        "AE",
+        "NL",
+        "HU"
+      ],
+      "embedding_2d": [
+        6.5641255378723145,
+        5.7767839431762695
+      ],
+      "dominant_color": "#647056"
+    },
+    {
+      "country": "Panama",
+      "code": "PA",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "TO",
+        "WF",
+        "PT",
+        "BM",
+        "ML"
+      ],
+      "embedding_2d": [
+        3.1409831047058105,
+        4.831214427947998
+      ],
+      "dominant_color": "#b38595"
+    },
+    {
+      "country": "Papua-Nowa Gwinea",
+      "code": "PG",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "AO",
+        "IM",
+        "TR",
+        "MA",
+        "VU"
+      ],
+      "embedding_2d": [
+        3.263408660888672,
+        9.571356773376465
+      ],
+      "dominant_color": "#6e1816"
+    },
+    {
+      "country": "Paragwaj",
+      "code": "PY",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "NL",
+        "HR",
+        "LU",
+        "SL",
+        "IN"
+      ],
+      "embedding_2d": [
+        5.610058784484863,
+        6.063689231872559
+      ],
+      "dominant_color": "#9a7394"
+    },
+    {
+      "country": "Peru",
+      "code": "PE",
+      "cluster": 2,
+      "cluster_color": "#3d7a5c",
+      "neighbors": [
+        "IT",
+        "MF",
+        "FR",
+        "MX",
+        "NG"
+      ],
+      "embedding_2d": [
+        1.0282968282699585,
+        6.992542266845703
+      ],
+      "dominant_color": "#e55e6b"
+    },
+    {
+      "country": "Pitcairn",
+      "code": "PN",
+      "cluster": 4,
+      "cluster_color": "#7b5ea7",
+      "neighbors": [
+        "VG",
+        "GS",
+        "KY",
+        "SH",
+        "MS"
+      ],
+      "embedding_2d": [
+        3.150524854660034,
+        4.552738666534424
+      ],
+      "dominant_color": "#383f6a"
+    },
+    {
+      "country": "Polinezja Francuska",
+      "code": "PF",
+      "cluster": 7,
+      "cluster_color": "#9b6b4f",
+      "neighbors": [
+        "LB",
+        "TJ",
+        "IR",
+        "LS",
+        "IL"
+      ],
+      "embedding_2d": [
+        6.140394687652588,
+        6.897989749908447
+      ],
+      "dominant_color": "#df7b85"
+    },
+    {
+      "country": "Polska",
+      "code": "PL",
+      "cluster": 0,
+      "cluster_color": "#8b4513",
+      "neighbors": [
+        "CL",
+        "CZ",
+        "BG",
+        "GI",
+        "GL"
+      ],
+      "embedding_2d": [
+        5.720117092132568,
+        11.050716400146484
+      ],
+      "dominant_color": "#ed899d"
+    },
+    {
+      "country": "Portoryko",
+      "code": "PR",
+      "cluster": 7,
+      "cluster_color": "#9b6b4f",
+      "neighbors": [
+        "LB",
+        "PF",
+        "TJ",
+        "IR",
+        "LS"
+      ],
+      "embedding_2d": [
+        6.057287216186523,
+        7.210472106933594
+      ],
+      "dominant_color": "#b3598b"
+    },
+    {
+      "country": "Portugalia",
+      "code": "PT",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "TL",
+        "BJ",
+        "ML",
+        "CG",
+        "CM"
+      ],
+      "embedding_2d": [
+        3.1230263710021973,
+        9.865275382995605
+      ],
+      "dominant_color": "#a23406"
+    },
+    {
+      "country": "Południowa Afryka",
+      "code": "ZA",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "VU",
+        "TT",
+        "BY",
+        "GW",
+        "AO"
+      ],
+      "embedding_2d": [
+        3.8721354007720947,
+        8.327680587768555
+      ],
+      "dominant_color": "#5d5e5d"
+    },
+    {
+      "country": "Republika Zielonego Przylądka",
+      "code": "CV",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "CW",
+        "NR",
+        "XK",
+        "MO",
+        "RW"
+      ],
+      "embedding_2d": [
+        3.214116334915161,
+        7.068828105926514
+      ],
+      "dominant_color": "#3e5799"
+    },
+    {
+      "country": "Republika Środkowoafrykańska",
+      "code": "CF",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "BM",
+        "WF",
+        "TL",
+        "CM",
+        "BJ"
+      ],
+      "embedding_2d": [
+        3.8153035640716553,
+        9.383438110351562
+      ],
+      "dominant_color": "#978d5f"
+    },
+    {
+      "country": "Reunion",
+      "code": "RE",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "BM",
+        "MR",
+        "TL",
+        "WF",
+        "GD"
+      ],
+      "embedding_2d": [
+        2.8673527240753174,
+        6.677718639373779
+      ],
+      "dominant_color": "#7a5ca2"
+    },
+    {
+      "country": "Rosja",
+      "code": "RU",
+      "cluster": 0,
+      "cluster_color": "#8b4513",
+      "neighbors": [
+        "BG",
+        "SK",
+        "VE",
+        "SI",
+        "CZ"
+      ],
+      "embedding_2d": [
+        5.572888374328613,
+        10.66020393371582
+      ],
+      "dominant_color": "#9c7596"
+    },
+    {
+      "country": "Rumunia",
+      "code": "RO",
+      "cluster": 5,
+      "cluster_color": "#c45c4a",
+      "neighbors": [
+        "TD",
+        "MD",
+        "AD",
+        "SN",
+        "BE"
+      ],
+      "embedding_2d": [
+        1.7681925296783447,
+        8.961135864257812
+      ],
+      "dominant_color": "#98593e"
+    },
+    {
+      "country": "Rwanda",
+      "code": "RW",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "UA",
+        "LI",
+        "MQ",
+        "AZ",
+        "CW"
+      ],
+      "embedding_2d": [
+        3.38912034034729,
+        8.387842178344727
+      ],
+      "dominant_color": "#4a9e7c"
+    },
+    {
+      "country": "Sahara Zachodnia",
+      "code": "EH",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "PS",
+        "JO",
+        "AE",
+        "BO",
+        "GH"
+      ],
+      "embedding_2d": [
+        6.541927814483643,
+        5.81022834777832
+      ],
+      "dominant_color": "#5d6050"
+    },
+    {
+      "country": "Saint Kitts i Nevis",
+      "code": "KN",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "ZM",
+        "MA",
+        "WS",
+        "ET",
+        "IM"
+      ],
+      "embedding_2d": [
+        3.3430426120758057,
+        8.288871765136719
+      ],
+      "dominant_color": "#5d4e24"
+    },
+    {
+      "country": "Saint Lucia",
+      "code": "LC",
+      "cluster": 3,
+      "cluster_color": "#b8956a",
+      "neighbors": [
+        "FM",
+        "GT",
+        "SO",
+        "AW",
+        "AR"
+      ],
+      "embedding_2d": [
+        3.210766553878784,
+        6.169125080108643
+      ],
+      "dominant_color": "#71c6e4"
+    },
+    {
+      "country": "Saint Vincent i Grenadyny",
+      "code": "VC",
+      "cluster": 5,
+      "cluster_color": "#c45c4a",
+      "neighbors": [
+        "BB",
+        "SN",
+        "TD",
+        "AD",
+        "MD"
+      ],
+      "embedding_2d": [
+        2.0912530422210693,
+        8.323838233947754
+      ],
+      "dominant_color": "#6e8b3a"
+    },
+    {
+      "country": "Saint-Barthélemy",
+      "code": "BL",
+      "cluster": 9,
+      "cluster_color": "#a65d7a",
+      "neighbors": [
+        "YT",
+        "CY",
+        "JP",
+        "VI",
+        "KR"
+      ],
+      "embedding_2d": [
+        7.336021900177002,
+        10.286762237548828
+      ],
+      "dominant_color": "#e4dcd5"
+    },
+    {
+      "country": "Saint-Martin",
+      "code": "MF",
+      "cluster": 2,
+      "cluster_color": "#3d7a5c",
+      "neighbors": [
+        "FR",
+        "IT",
+        "MX",
+        "PE",
+        "IE"
+      ],
+      "embedding_2d": [
+        0.9477990865707397,
+        7.015045166015625
+      ],
+      "dominant_color": "#99657c"
+    },
+    {
+      "country": "Saint-Pierre i Miquelon",
+      "code": "PM",
+      "cluster": 3,
+      "cluster_color": "#b8956a",
+      "neighbors": [
+        "KZ",
+        "FJ",
+        "AW",
+        "AR",
+        "SO"
+      ],
+      "embedding_2d": [
+        3.7360806465148926,
+        7.130559921264648
+      ],
+      "dominant_color": "#689080"
+    },
+    {
+      "country": "Salwador",
+      "code": "SV",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "NI",
+        "SL",
+        "NL",
+        "SY",
+        "PY"
+      ],
+      "embedding_2d": [
+        4.968074798583984,
+        6.063626766204834
+      ],
+      "dominant_color": "#5180c2"
+    },
+    {
+      "country": "Samoa",
+      "code": "WS",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "MA",
+        "IM",
+        "CN",
+        "TR",
+        "TT"
+      ],
+      "embedding_2d": [
+        3.458167314529419,
+        9.340170860290527
+      ],
+      "dominant_color": "#9d193d"
+    },
+    {
+      "country": "Samoa Amerykańskie",
+      "code": "AS",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "KW",
+        "SD",
+        "YE",
+        "SY",
+        "AE"
+      ],
+      "embedding_2d": [
+        6.873600006103516,
+        6.349264621734619
+      ],
+      "dominant_color": "#6d5889"
+    },
+    {
+      "country": "San Marino",
+      "code": "SM",
+      "cluster": 3,
+      "cluster_color": "#b8956a",
+      "neighbors": [
+        "FM",
+        "LC",
+        "AR",
+        "FJ",
+        "GT"
+      ],
+      "embedding_2d": [
+        7.341355323791504,
+        10.145051002502441
+      ],
+      "dominant_color": "#a7cddd"
+    },
+    {
+      "country": "Senegal",
+      "code": "SN",
+      "cluster": 5,
+      "cluster_color": "#c45c4a",
+      "neighbors": [
+        "TD",
+        "RO",
+        "MD",
+        "BE",
+        "AD"
+      ],
+      "embedding_2d": [
+        1.8867592811584473,
+        8.963960647583008
+      ],
+      "dominant_color": "#9a8236"
+    },
+    {
+      "country": "Serbia",
+      "code": "RS",
+      "cluster": 9,
+      "cluster_color": "#a65d7a",
+      "neighbors": [
+        "MC",
+        "SG",
+        "ID",
+        "VI",
+        "BL"
+      ],
+      "embedding_2d": [
+        5.886927604675293,
+        9.338540077209473
+      ],
+      "dominant_color": "#aa8390"
+    },
+    {
+      "country": "Seszele",
+      "code": "SC",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "CN",
+        "MA",
+        "VU",
+        "BY",
+        "AF"
+      ],
+      "embedding_2d": [
+        2.751431465148926,
+        8.01803207397461
+      ],
+      "dominant_color": "#9a755e"
+    },
+    {
+      "country": "Sierra Leone",
+      "code": "SL",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "NL",
+        "PY",
+        "NI",
+        "SV",
+        "LU"
+      ],
+      "embedding_2d": [
+        5.197014808654785,
+        5.989118576049805
+      ],
+      "dominant_color": "#5db6a9"
+    },
+    {
+      "country": "Singapur",
+      "code": "SG",
+      "cluster": 9,
+      "cluster_color": "#a65d7a",
+      "neighbors": [
+        "MC",
+        "ID",
+        "RS",
+        "BL",
+        "CY"
+      ],
+      "embedding_2d": [
+        6.059656620025635,
+        9.2675142288208
+      ],
+      "dominant_color": "#f699a1"
+    },
+    {
+      "country": "Sint Maarten",
+      "code": "SX",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "BY",
+        "BF",
+        "VU",
+        "MW",
+        "MA"
+      ],
+      "embedding_2d": [
+        4.107041835784912,
+        8.023887634277344
+      ],
+      "dominant_color": "#854f69"
+    },
+    {
+      "country": "Somalia",
+      "code": "SO",
+      "cluster": 3,
+      "cluster_color": "#b8956a",
+      "neighbors": [
+        "FM",
+        "AW",
+        "KZ",
+        "LC",
+        "GT"
+      ],
+      "embedding_2d": [
+        3.059781312942505,
+        6.031562805175781
+      ],
+      "dominant_color": "#4993df"
+    },
+    {
+      "country": "Sri Lanka",
+      "code": "LK",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "MK",
+        "TL",
+        "WF",
+        "BT",
+        "LT"
+      ],
+      "embedding_2d": [
+        4.281600475311279,
+        9.868191719055176
+      ],
+      "dominant_color": "#b6702d"
+    },
+    {
+      "country": "Stany Zjednoczone",
+      "code": "US",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "UM",
+        "MA",
+        "KI",
+        "IM",
+        "SR"
+      ],
+      "embedding_2d": [
+        5.166606426239014,
+        9.199259757995605
+      ],
+      "dominant_color": "#b07791"
+    },
+    {
+      "country": "Suazi",
+      "code": "SZ",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "KP",
+        "MA",
+        "IM",
+        "BY",
+        "CN"
+      ],
+      "embedding_2d": [
+        4.563068866729736,
+        8.219645500183105
+      ],
+      "dominant_color": "#86575c"
+    },
+    {
+      "country": "Sudan",
+      "code": "SS",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "PT",
+        "ML",
+        "TL",
+        "BJ",
+        "CG"
+      ],
+      "embedding_2d": [
+        4.531866073608398,
+        7.651679992675781
+      ],
+      "dominant_color": "#44675f"
+    },
+    {
+      "country": "Sudan",
+      "code": "SD",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "YE",
+        "EG",
+        "IQ",
+        "AE",
+        "KW"
+      ],
+      "embedding_2d": [
+        6.5533576011657715,
+        6.167945861816406
+      ],
+      "dominant_color": "#7b5352"
+    },
+    {
+      "country": "Surinam",
+      "code": "SR",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "MA",
+        "TH",
+        "IM",
+        "BY",
+        "CR"
+      ],
+      "embedding_2d": [
+        4.82012414932251,
+        8.791364669799805
+      ],
+      "dominant_color": "#926e5d"
+    },
+    {
+      "country": "Svalbard i Jan Mayen",
+      "code": "SJ",
+      "cluster": 8,
+      "cluster_color": "#4a6fa5",
+      "neighbors": [
+        "BV",
+        "NO",
+        "GM"
+      ],
+      "embedding_2d": [
+        4.538674354553223,
+        9.431848526000977
+      ],
+      "dominant_color": "#a03b5d"
+    },
+    {
+      "country": "Syria",
+      "code": "SY",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "IQ",
+        "EG",
+        "YE",
+        "AE",
+        "SV"
+      ],
+      "embedding_2d": [
+        6.238719463348389,
+        6.2270283699035645
+      ],
+      "dominant_color": "#52725e"
+    },
+    {
+      "country": "Szwajcaria",
+      "code": "CH",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "TN",
+        "KG",
+        "VN",
+        "HK",
+        "ME"
+      ],
+      "embedding_2d": [
+        3.7863564491271973,
+        10.430519104003906
+      ],
+      "dominant_color": "#ff3232"
+    },
+    {
+      "country": "Szwecja",
+      "code": "SE",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "IS",
+        "AX",
+        "NC",
+        "NR",
+        "BD"
+      ],
+      "embedding_2d": [
+        4.354319095611572,
+        6.86102294921875
+      ],
+      "dominant_color": "#4c7667"
+    },
+    {
+      "country": "Słowacja",
+      "code": "SK",
+      "cluster": 0,
+      "cluster_color": "#8b4513",
+      "neighbors": [
+        "BG",
+        "RU",
+        "VE",
+        "PL",
+        "SI"
+      ],
+      "embedding_2d": [
+        5.587226867675781,
+        10.83627986907959
+      ],
+      "dominant_color": "#b67690"
+    },
+    {
+      "country": "Słowenia",
+      "code": "SI",
+      "cluster": 0,
+      "cluster_color": "#8b4513",
+      "neighbors": [
+        "RU",
+        "SK",
+        "VE",
+        "BG",
+        "CZ"
+      ],
+      "embedding_2d": [
+        5.654438495635986,
+        10.799832344055176
+      ],
+      "dominant_color": "#a953a8"
+    },
+    {
+      "country": "Tadżykistan",
+      "code": "TJ",
+      "cluster": 7,
+      "cluster_color": "#9b6b4f",
+      "neighbors": [
+        "PF",
+        "LB",
+        "IR",
+        "LS",
+        "IL"
+      ],
+      "embedding_2d": [
+        6.10453462600708,
+        6.709477424621582
+      ],
+      "dominant_color": "#a7896a"
+    },
+    {
+      "country": "Tajlandia",
+      "code": "TH",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "SR",
+        "UG",
+        "CR",
+        "MV",
+        "MA"
+      ],
+      "embedding_2d": [
+        5.00359582901001,
+        8.748080253601074
+      ],
+      "dominant_color": "#97687b"
+    },
+    {
+      "country": "Tajwan",
+      "code": "TW",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "WF",
+        "PT",
+        "TL",
+        "TO",
+        "BM"
+      ],
+      "embedding_2d": [
+        3.4286105632781982,
+        9.932068824768066
+      ],
+      "dominant_color": "#c70828"
+    },
+    {
+      "country": "Tanzania",
+      "code": "TZ",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "TM",
+        "BD",
+        "SA",
+        "CC",
+        "DM"
+      ],
+      "embedding_2d": [
+        3.5451173782348633,
+        8.01252269744873
+      ],
+      "dominant_color": "#287d53"
+    },
+    {
+      "country": "Timor Wschodni",
+      "code": "TL",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "WF",
+        "MK",
+        "PT",
+        "CG",
+        "LK"
+      ],
+      "embedding_2d": [
+        3.4246387481689453,
+        9.690520286560059
+      ],
+      "dominant_color": "#bd331c"
+    },
+    {
+      "country": "Togo",
+      "code": "TG",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "ES",
+        "MA",
+        "HK",
+        "IM",
+        "CN"
+      ],
+      "embedding_2d": [
+        5.067059516906738,
+        7.894601345062256
+      ],
+      "dominant_color": "#827c34"
+    },
+    {
+      "country": "Tokelau",
+      "code": "TK",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "GP",
+        "BD",
+        "XK",
+        "SA",
+        "JM"
+      ],
+      "embedding_2d": [
+        2.3900585174560547,
+        8.602616310119629
+      ],
+      "dominant_color": "#48524d"
+    },
+    {
+      "country": "Tonga",
+      "code": "TO",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "WF",
+        "BM",
+        "TL",
+        "PT",
+        "BH"
+      ],
+      "embedding_2d": [
+        3.427949905395508,
+        10.161908149719238
+      ],
+      "dominant_color": "#cb2b2b"
+    },
+    {
+      "country": "Trynidad i Tobago",
+      "code": "TT",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "MA",
+        "IM",
+        "CN",
+        "HK",
+        "BY"
+      ],
+      "embedding_2d": [
+        4.427148342132568,
+        9.492246627807617
+      ],
+      "dominant_color": "#b22c3f"
+    },
+    {
+      "country": "Tunezja",
+      "code": "TN",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "KG",
+        "HK",
+        "VN",
+        "IM",
+        "TR"
+      ],
+      "embedding_2d": [
+        3.976980447769165,
+        10.182462692260742
+      ],
+      "dominant_color": "#e91828"
+    },
+    {
+      "country": "Turcja",
+      "code": "TR",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "CN",
+        "IM",
+        "KG",
+        "VN",
+        "TN"
+      ],
+      "embedding_2d": [
+        3.5501112937927246,
+        9.98890209197998
+      ],
+      "dominant_color": "#e41824"
+    },
+    {
+      "country": "Turkmenistan",
+      "code": "TM",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "SA",
+        "CC",
+        "MO",
+        "BR",
+        "MQ"
+      ],
+      "embedding_2d": [
+        3.3824710845947266,
+        7.831296443939209
+      ],
+      "dominant_color": "#227d3e"
+    },
+    {
+      "country": "Turks i Caicos",
+      "code": "TC",
+      "cluster": 4,
+      "cluster_color": "#7b5ea7",
+      "neighbors": [
+        "SH",
+        "AI",
+        "PN",
+        "MS",
+        "VG"
+      ],
+      "embedding_2d": [
+        2.90510630607605,
+        4.484381675720215
+      ],
+      "dominant_color": "#37406b"
+    },
+    {
+      "country": "Tuvalu",
+      "code": "TV",
+      "cluster": 4,
+      "cluster_color": "#7b5ea7",
+      "neighbors": [
+        "MS",
+        "GS",
+        "CK",
+        "PN",
+        "VG"
+      ],
+      "embedding_2d": [
+        3.067309856414795,
+        4.808650970458984
+      ],
+      "dominant_color": "#3491bf"
+    },
+    {
+      "country": "Uganda",
+      "code": "UG",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "ZW",
+        "TN",
+        "KG",
+        "DE",
+        "TR"
+      ],
+      "embedding_2d": [
+        4.592144012451172,
+        8.954619407653809
+      ],
+      "dominant_color": "#a3560c"
+    },
+    {
+      "country": "Ukraina",
+      "code": "UA",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "RW",
+        "LI",
+        "GF",
+        "PH",
+        "HT"
+      ],
+      "embedding_2d": [
+        3.5098915100097656,
+        8.732840538024902
+      ],
+      "dominant_color": "#7f985d"
+    },
+    {
+      "country": "Urugwaj",
+      "code": "UY",
+      "cluster": 9,
+      "cluster_color": "#a65d7a",
+      "neighbors": [
+        "YT",
+        "VI",
+        "BL",
+        "KR",
+        "VA"
+      ],
+      "embedding_2d": [
+        5.505881309509277,
+        7.220413684844971
+      ],
+      "dominant_color": "#9eaed2"
+    },
+    {
+      "country": "Uzbekistan",
+      "code": "UZ",
+      "cluster": 3,
+      "cluster_color": "#b8956a",
+      "neighbors": [
+        "AR",
+        "HN",
+        "DJ",
+        "SO",
+        "FM"
+      ],
+      "embedding_2d": [
+        4.697124481201172,
+        5.924379825592041
+      ],
+      "dominant_color": "#7ba6b3"
+    },
+    {
+      "country": "Vanuatu",
+      "code": "VU",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "BY",
+        "BF",
+        "LY",
+        "MA",
+        "MW"
+      ],
+      "embedding_2d": [
+        4.010720252990723,
+        8.212392807006836
+      ],
+      "dominant_color": "#5d4a27"
+    },
+    {
+      "country": "Wallis i Futuna",
+      "code": "WF",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "TL",
+        "BM",
+        "LK",
+        "TO",
+        "MK"
+      ],
+      "embedding_2d": [
+        3.767918109893799,
+        9.590625762939453
+      ],
+      "dominant_color": "#c7283d"
+    },
+    {
+      "country": "Watykan",
+      "code": "VA",
+      "cluster": 9,
+      "cluster_color": "#a65d7a",
+      "neighbors": [
+        "CY",
+        "YT",
+        "VI",
+        "BL",
+        "FO"
+      ],
+      "embedding_2d": [
+        6.840287208557129,
+        10.513141632080078
+      ],
+      "dominant_color": "#f7ef72"
+    },
+    {
+      "country": "Wenezuela",
+      "code": "VE",
+      "cluster": 0,
+      "cluster_color": "#8b4513",
+      "neighbors": [
+        "RU",
+        "BG",
+        "SK",
+        "CZ",
+        "SI"
+      ],
+      "embedding_2d": [
+        5.359140396118164,
+        10.27930736541748
+      ],
+      "dominant_color": "#9e5939"
+    },
+    {
+      "country": "Wietnam",
+      "code": "VN",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "KG",
+        "ME",
+        "TN",
+        "TR",
+        "AL"
+      ],
+      "embedding_2d": [
+        3.5266950130462646,
+        10.363260269165039
+      ],
+      "dominant_color": "#ff1000"
+    },
+    {
+      "country": "WybrzeŻe Kości Słoniowej",
+      "code": "CI",
+      "cluster": 2,
+      "cluster_color": "#3d7a5c",
+      "neighbors": [
+        "NG",
+        "PE",
+        "NF",
+        "IT",
+        "IE"
+      ],
+      "embedding_2d": [
+        1.445525884628296,
+        6.877731800079346
+      ],
+      "dominant_color": "#a7b374"
+    },
+    {
+      "country": "Wyspa Bouveta",
+      "code": "BV",
+      "cluster": 8,
+      "cluster_color": "#4a6fa5",
+      "neighbors": [
+        "SJ",
+        "NO",
+        "GM"
+      ],
+      "embedding_2d": [
+        4.702875137329102,
+        9.576092720031738
+      ],
+      "dominant_color": "#a03b5d"
+    },
+    {
+      "country": "Wyspa Bożego Narodzenia",
+      "code": "CX",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "SA",
+        "MO",
+        "TM",
+        "CC",
+        "BD"
+      ],
+      "embedding_2d": [
+        3.1932594776153564,
+        7.44647741317749
+      ],
+      "dominant_color": "#1a7148"
+    },
+    {
+      "country": "Wyspa Man",
+      "code": "IM",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "MA",
+        "CN",
+        "HK",
+        "TR",
+        "TN"
+      ],
+      "embedding_2d": [
+        4.293053150177002,
+        9.391093254089355
+      ],
+      "dominant_color": "#ce1d32"
+    },
+    {
+      "country": "Wyspa Norfolk",
+      "code": "NF",
+      "cluster": 2,
+      "cluster_color": "#3d7a5c",
+      "neighbors": [
+        "NG",
+        "MX",
+        "IT",
+        "CI",
+        "FR"
+      ],
+      "embedding_2d": [
+        1.3378806114196777,
+        7.126500129699707
+      ],
+      "dominant_color": "#4fa272"
+    },
+    {
+      "country": "Wyspa Świętej Heleny, Wyspa Wniebowstąpienia i Tristan da Cunha",
+      "code": "SH",
+      "cluster": 4,
+      "cluster_color": "#7b5ea7",
+      "neighbors": [
+        "TC",
+        "AI",
+        "MS",
+        "PN",
+        "VG"
+      ],
+      "embedding_2d": [
+        2.7878310680389404,
+        4.436831951141357
+      ],
+      "dominant_color": "#343971"
+    },
+    {
+      "country": "Wyspy Alandzkie",
+      "code": "AX",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "IS",
+        "SE",
+        "NC",
+        "GA",
+        "DM"
+      ],
+      "embedding_2d": [
+        4.316816329956055,
+        6.853367328643799
+      ],
+      "dominant_color": "#676e67"
+    },
+    {
+      "country": "Wyspy Cooka",
+      "code": "CK",
+      "cluster": 4,
+      "cluster_color": "#7b5ea7",
+      "neighbors": [
+        "NZ",
+        "AU",
+        "GS",
+        "PN",
+        "MS"
+      ],
+      "embedding_2d": [
+        2.828845500946045,
+        4.355555057525635
+      ],
+      "dominant_color": "#363c76"
+    },
+    {
+      "country": "Wyspy Dziewicze Stanów Zjednoczonych",
+      "code": "VI",
+      "cluster": 9,
+      "cluster_color": "#a65d7a",
+      "neighbors": [
+        "YT",
+        "CY",
+        "BL",
+        "JP",
+        "KR"
+      ],
+      "embedding_2d": [
+        7.345300674438477,
+        10.341238975524902
+      ],
+      "dominant_color": "#ddd8c6"
+    },
+    {
+      "country": "Wyspy Heard i McDonalda",
+      "code": "HM",
+      "cluster": 4,
+      "cluster_color": "#7b5ea7",
+      "neighbors": [
+        "AU",
+        "NZ",
+        "CK",
+        "MS",
+        "SH"
+      ],
+      "embedding_2d": [
+        2.6482841968536377,
+        4.336214542388916
+      ],
+      "dominant_color": "#361f8b"
+    },
+    {
+      "country": "Wyspy Kokosowe",
+      "code": "CC",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "SA",
+        "TM",
+        "MO",
+        "BD",
+        "CX"
+      ],
+      "embedding_2d": [
+        3.148747444152832,
+        7.953959941864014
+      ],
+      "dominant_color": "#1a8900"
+    },
+    {
+      "country": "Wyspy Marshalla",
+      "code": "MH",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "SB",
+        "NA",
+        "XK",
+        "MO",
+        "CX"
+      ],
+      "embedding_2d": [
+        2.795559883117676,
+        7.365113735198975
+      ],
+      "dominant_color": "#3d5a93"
+    },
+    {
+      "country": "Wyspy Owcze",
+      "code": "FO",
+      "cluster": 9,
+      "cluster_color": "#a65d7a",
+      "neighbors": [
+        "FI",
+        "BL",
+        "GG",
+        "YT",
+        "CY"
+      ],
+      "embedding_2d": [
+        7.052521228790283,
+        10.323606491088867
+      ],
+      "dominant_color": "#ccb7ca"
+    },
+    {
+      "country": "Wyspy Salomona",
+      "code": "SB",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "SA",
+        "MH",
+        "NA",
+        "MO",
+        "TM"
+      ],
+      "embedding_2d": [
+        2.7630786895751953,
+        7.536097049713135
+      ],
+      "dominant_color": "#30676e"
+    },
+    {
+      "country": "Wyspy Świętego Tomasza i Książęca",
+      "code": "ST",
+      "cluster": 10,
+      "cluster_color": "#6b8e23",
+      "neighbors": [
+        "NC",
+        "GY",
+        "GA",
+        "BS",
+        "MQ"
+      ],
+      "embedding_2d": [
+        4.758411407470703,
+        7.281847953796387
+      ],
+      "dominant_color": "#6d9726"
+    },
+    {
+      "country": "Węgry",
+      "code": "HU",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "NL",
+        "AT",
+        "IN",
+        "NE",
+        "LU"
+      ],
+      "embedding_2d": [
+        5.9123921394348145,
+        6.10856819152832
+      ],
+      "dominant_color": "#b08681"
+    },
+    {
+      "country": "Włochy",
+      "code": "IT",
+      "cluster": 2,
+      "cluster_color": "#3d7a5c",
+      "neighbors": [
+        "IE",
+        "FR",
+        "MF",
+        "MX",
+        "NG"
+      ],
+      "embedding_2d": [
+        1.016386866569519,
+        7.0599493980407715
+      ],
+      "dominant_color": "#99937d"
+    },
+    {
+      "country": "Zambia",
+      "code": "ZM",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "MA",
+        "KN",
+        "BY",
+        "IM",
+        "VU"
+      ],
+      "embedding_2d": [
+        3.242845296859741,
+        8.16837215423584
+      ],
+      "dominant_color": "#3a7501"
+    },
+    {
+      "country": "Zimbabwe",
+      "code": "ZW",
+      "cluster": 11,
+      "cluster_color": "#8b6914",
+      "neighbors": [
+        "UG",
+        "ZM",
+        "CN",
+        "TG",
+        "BY"
+      ],
+      "embedding_2d": [
+        4.568845748901367,
+        8.665488243103027
+      ],
+      "dominant_color": "#917222"
+    },
+    {
+      "country": "Zjednoczone Królestwo",
+      "code": "GB",
+      "cluster": 6,
+      "cluster_color": "#5a8f7b",
+      "neighbors": [
+        "BM",
+        "WF",
+        "TL",
+        "MK",
+        "LK"
+      ],
+      "embedding_2d": [
+        3.9210007190704346,
+        9.699934959411621
+      ],
+      "dominant_color": "#a26383"
+    },
+    {
+      "country": "Łotwa",
+      "code": "LV",
+      "cluster": 1,
+      "cluster_color": "#2e6b8a",
+      "neighbors": [
+        "AT",
+        "HU",
+        "NL",
+        "YE",
+        "EG"
+      ],
+      "embedding_2d": [
+        5.889188766479492,
+        7.676747798919678
+      ],
+      "dominant_color": "#af4c5b"
+    }
+  ],
+  "clusters": [
+    {
+      "id": 0,
+      "count": 10,
+      "sample_codes": [
+        "bg",
+        "cl",
+        "cz",
+        "gi",
+        "gl",
+        "pl",
+        "ru",
+        "sk"
+      ],
+      "traits": {
+        "mean_color": "#bd7888",
+        "description": "czerwone tony"
+      },
+      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #1 charakteryzuje się dominacją czerwonych tonów, które często występują w połączeniu z białymi lub innymi kolorami, tworząc prosty i wyrazisty układ pasów. Większość flag w tej grupie składa się z dwóch lub trzech pasów, przy czym symbole lub herby są stosunkowo rzadkie, a ogólna jasność flag jest dość wysoka, co nadaje im wyrazisty i czytelny wygląd."
+    },
+    {
+      "id": 1,
+      "count": 27,
+      "sample_codes": [
+        "at",
+        "bo",
+        "hr",
+        "eg",
+        "ae",
+        "gh",
+        "gq",
+        "nl"
+      ],
+      "traits": {
+        "mean_color": "#887370",
+        "description": "mieszane kolory"
+      },
+      "ai_description": "Wspólny wizualny charakter grupy flag w tym klastrze charakteryzuje się dominacją prostych układów pasów, często w poziomej lub pionowej orientacji, z wykorzystaniem szerokiej gamy kolorów, od jasnych po ciemne. Większość flag w tej grupie zawiera proste, geometryczne wzory, a symbolika herbowa lub inne dodatkowe elementy są stosunkowo rzadkie, co nadaje tym flagom wyrazisty i zwięzły wygląd."
+    },
+    {
+      "id": 2,
+      "count": 9,
+      "sample_codes": [
+        "fr",
+        "ie",
+        "mx",
+        "ng",
+        "pe",
+        "mf",
+        "ci",
+        "nf"
+      ],
+      "traits": {
+        "mean_color": "#958c7a",
+        "description": "czerwone tony, zielone tony"
+      },
+      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #3 charakteryzuje się dominacją czerwonych i zielonych tonów, które często występują w postaci poziomych lub pionowych pasów. Większość flag w tej grupie ma prosty układ pasów, bez skomplikowanych symboli lub herbów, co nadaje im wyrazisty i czytelny wygląd, przy czym niektóre flagi mają jaśniejsze lub ciemniejsze odcienie, co dodatkowo wyróżnia je w grupie."
+    },
+    {
+      "id": 3,
+      "count": 16,
+      "sample_codes": [
+        "aq",
+        "ar",
+        "aw",
+        "bw",
+        "dj",
+        "fj",
+        "gr",
+        "gt"
+      ],
+      "traits": {
+        "mean_color": "#6bafca",
+        "description": "zielone tony, niebieskie tony"
+      },
+      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #4 charakteryzuje się dominacją zielonych i niebieskich tonów, które często występują w połączeniu z pasami ułożonymi poziomo lub pionowo. Wiele flag w tej grupie zawiera również symbole lub herby, które są umieszczone na tle tych dominujących kolorów, a ogólna jasność flag jest dość zróżnicowana, od ciemnych odcieni zielonego i niebieskiego po jaśniejsze, bardziej pastelowe wersje."
+    },
+    {
+      "id": 4,
+      "count": 17,
+      "sample_codes": [
+        "ai",
+        "bq",
+        "au",
+        "io",
+        "vg",
+        "fk",
+        "tf",
+        "gs"
+      ],
+      "traits": {
+        "mean_color": "#3f4a7f",
+        "description": "ciemne tło"
+      },
+      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #5 charakteryzuje się ciemnym tłem, które często jest w kolorze niebieskim lub czerwonym, oraz układem pasów, które są zwykle poziome i występują w różnych odcieniach. Dominującymi kolorami w tej grupie są odcienie czerwieni, bieli i niebieskiego, a wiele flag zawiera symbole lub herby, które są umieszczone centralnie lub w lewym górnym rogu, nadając im wyrazisty i charakterystyczny wygląd."
+    },
+    {
+      "id": 5,
+      "count": 10,
+      "sample_codes": [
+        "ad",
+        "bb",
+        "be",
+        "bz",
+        "ba",
+        "td",
+        "md",
+        "ro"
+      ],
+      "traits": {
+        "mean_color": "#7f5b4b",
+        "description": "mieszane kolory"
+      },
+      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #6 charakteryzuje się układem pasów, które są często ułożone poziomo lub pionowo, a także dominacją mieszanych kolorów, w tym czerwonego, niebieskiego, żółtego i zielonego. Większość flag w tej grupie zawiera herby lub symbole, które są umieszczone centralnie lub w rogach, a ogólna jasność flag jest dość zróżnicowana, od ciemnych, głębokich kolorów po jaśniejsze, pastelowe odcienie."
+    },
+    {
+      "id": 6,
+      "count": 32,
+      "sample_codes": [
+        "bh",
+        "bj",
+        "bm",
+        "bt",
+        "bn",
+        "bi",
+        "ec",
+        "gd"
+      ],
+      "traits": {
+        "mean_color": "#b16f4a",
+        "description": "czerwone tony"
+      },
+      "ai_description": "W klastrze #7 dominują flagi z czerwonymi tonami, które często występują w połączeniu z innymi kolorami, tworząc charakterystyczne układy pasów, zarówno poziomych, jak i pionowych. Większość flag w tej grupie ma prosty układ kolorystyczny, z niewielką liczbą symboli lub herbów, a dominujące kolory są często żywe i intensywne, nadając flagom wyrazisty i zdecydowany wygląd."
+    },
+    {
+      "id": 7,
+      "count": 7,
+      "sample_codes": [
+        "ir",
+        "il",
+        "ls",
+        "lb",
+        "pf",
+        "pr",
+        "tj"
+      ],
+      "traits": {
+        "mean_color": "#ae8890",
+        "description": "czerwone tony, niebieskie tony"
+      },
+      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #8 charakteryzuje się dominacją czerwonych i niebieskich tonów, które często występują w układzie pasów, zarówno poziomych, jak i pionowych. Większość flag w tej grupie ma prosty układ kolorystyczny, z niewielką liczbą symboli lub herbów, a ogólna jasność flag jest dość wysoka, co nadaje im wyrazisty i czytelny wygląd."
+    },
+    {
+      "id": 8,
+      "count": 4,
+      "sample_codes": [
+        "gm",
+        "no",
+        "sj",
+        "bv"
+      ],
+      "traits": {
+        "mean_color": "#95405b",
+        "description": "czerwone tony"
+      },
+      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #9 charakteryzuje się dominacją czerwonych tonów, które są umieszczone w układzie pasów, często poziomych lub skośnych. Flagi te mają zwykle prosty układ kolorystyczny, bez skomplikowanych symboli lub herbów, a ich jasność jest dość wysoka, co sprawia, że są one wyraźnie widoczne i rozpoznawalne."
+    },
+    {
+      "id": 9,
+      "count": 18,
+      "sample_codes": [
+        "dz",
+        "cy",
+        "fi",
+        "ge",
+        "gg",
+        "id",
+        "jp",
+        "je"
+      ],
+      "traits": {
+        "mean_color": "#dab9b5",
+        "description": "czerwone tony, zielone tony, niebieskie tony"
+      },
+      "ai_description": "Wspólny wizualny charakter grupy flag w tym klastrze charakteryzuje się dominacją trzech podstawowych kolorów, tj. czerwonych, zielonych i niebieskich tonów, które często występują w postaci prostych pasów lub prostych kompozycji. Większość flag w tej grupie ma prosty układ pasów, niezbyt wiele symboli lub herbów, a ogólna jasność kolorów jest dość zrównoważona, co nadaje im schludny i czytelny wygląd."
+    },
+    {
+      "id": 10,
+      "count": 42,
+      "sample_codes": [
+        "sa",
+        "az",
+        "bs",
+        "bd",
+        "br",
+        "cw",
+        "cd",
+        "dm"
+      ],
+      "traits": {
+        "mean_color": "#476a62",
+        "description": "mieszane kolory"
+      },
+      "ai_description": "Wspólny wizualny charakter grupy flag w tym klastrze charakteryzuje się zróżnicowanymi układami pasów, często poziomych lub pionowych, oraz dominacją różnych kolorów, co nadaje każdej fladze unikalny wygląd. Flagi w tej grupie często zawierają symbole lub herby, a ich ogólna jasność jest różnorodna, od bardzo jasnych po ciemniejsze odcienie, co dodaje im wyrazistości i odrębności."
+    },
+    {
+      "id": 11,
+      "count": 58,
+      "sample_codes": [
+        "af",
+        "al",
+        "ao",
+        "ag",
+        "am",
+        "by",
+        "bf",
+        "cn"
+      ],
+      "traits": {
+        "mean_color": "#9e4a3e",
+        "description": "czerwone tony"
+      },
+      "ai_description": "Wspólny wizualny charakter grupy flag w klastrze #12 charakteryzuje się dominacją czerwonych tonów, które często występują w połączeniu z innymi kolorami, tworząc charakterystyczne układy pasów. Większość flag w tej grupie ma prosty układ pasów, a dominujące czerwone tony są często uzupełnione symbolami lub herbami, które dodają flagom głębi i znaczenia, przy czym ogólna jasność flag jest dość zróżnicowana."
+    }
+  ],
+  "cluster_colors": [
+    "#8b4513",
+    "#2e6b8a",
+    "#3d7a5c",
+    "#b8956a",
+    "#7b5ea7",
+    "#c45c4a",
+    "#5a8f7b",
+    "#9b6b4f",
+    "#4a6fa5",
+    "#a65d7a",
+    "#6b8e23",
+    "#8b6914"
+  ],
+  "architecture": {
+    "input": "64×64×3 RGB, normalizacja ÷255",
+    "encoder": [
+      "Conv2d(3→64, 3×3) + BN + ReLU → 64×64",
+      "Conv2d(64→128, 4×4 s=2) + BN + ReLU → 32×32",
+      "Conv2d(128→256, 3×3) + BN + ReLU → 32×32",
+      "Conv2d(256→256, 4×4 s=2) + BN + ReLU → 16×16",
+      "Conv2d(256→256, 3×3) + BN + ReLU → 16×16",
+      "Linear(65536 → 128) — bottleneck"
+    ],
+    "decoder": [
+      "Linear(128 → 65536)",
+      "ConvTranspose2d + Conv2d (256→128→64→3) + Sigmoid → 64×64"
+    ],
+    "loss": "MSE",
+    "latent_dim": 128,
+    "epochs": 100,
+    "n_countries": 250,
+    "n_clusters": 12,
+    "scheduler": "ReduceLROnPlateau(patience=10, factor=0.5)"
+  },
+  "reconstructions": [
+    {
+      "code": "PL",
+      "country": "Polska",
+      "orig_url": "/api/recon/recon_pl_orig.png",
+      "rec_url": "/api/recon/recon_pl_rec.png"
+    },
+    {
+      "code": "DE",
+      "country": "Niemcy",
+      "orig_url": "/api/recon/recon_de_orig.png",
+      "rec_url": "/api/recon/recon_de_rec.png"
+    },
+    {
+      "code": "AF",
+      "country": "Afganistan",
+      "orig_url": "/api/recon/recon_af_orig.png",
+      "rec_url": "/api/recon/recon_af_rec.png"
+    },
+    {
+      "code": "MX",
+      "country": "Meksyk",
+      "orig_url": "/api/recon/recon_mx_orig.png",
+      "rec_url": "/api/recon/recon_mx_rec.png"
+    }
+  ],
+  "default_interpolation": {
+    "a": "PL",
+    "b": "DE"
+  },
+  "reduction_method": "UMAP"
+}
