@@ -378,6 +378,7 @@ function ensureTourUi() {
   tourState.prevBtn = overlay.querySelector(".tour-prev");
   tourState.nextBtn = overlay.querySelector(".tour-next");
   tourState.skipBtn = overlay.querySelector(".tour-skip");
+  overlay.querySelector(".tour-backdrop")?.addEventListener("click", () => stopTour());
   tourState.prevBtn.addEventListener("click", () => goTourStep(-1));
   tourState.nextBtn.addEventListener("click", () => goTourStep(1));
   tourState.skipBtn.addEventListener("click", () => stopTour());
@@ -428,14 +429,29 @@ function stopTour() {
 
 function goTourStep(delta) {
   if (!tourState.active) return;
-  const next = tourState.step + delta;
-  if (next < 0) return;
-  if (next >= TOUR_STEPS.length) {
-    stopTour();
-    return;
+  let next = tourState.step;
+  while (true) {
+    next += delta;
+    if (next < 0) return;
+    if (next >= TOUR_STEPS.length) {
+      stopTour();
+      return;
+    }
+    const candidate = document.querySelector(TOUR_STEPS[next].selector);
+    if (isTourTargetRenderable(candidate)) {
+      tourState.step = next;
+      renderTourStep();
+      return;
+    }
   }
-  tourState.step = next;
-  renderTourStep();
+}
+
+function isTourTargetRenderable(el) {
+  if (!el) return false;
+  const style = window.getComputedStyle(el);
+  if (style.display === "none" || style.visibility === "hidden") return false;
+  const rect = el.getBoundingClientRect();
+  return rect.width > 6 && rect.height > 6;
 }
 
 function renderTourStep() {
@@ -446,7 +462,7 @@ function renderTourStep() {
   }
   tourState.target?.classList.remove("tour-highlight");
   const target = document.querySelector(stepCfg.selector);
-  if (!target) {
+  if (!isTourTargetRenderable(target)) {
     goTourStep(1);
     return;
   }
